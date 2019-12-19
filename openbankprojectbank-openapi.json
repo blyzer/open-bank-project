@@ -1,0 +1,1165 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "version": "v3_1_0",
+        "title": "OpenBankProject-Bank",
+        "description": "An Open Source API for Banks. (c) TESOBE Ltd. 2011 - 2018. Licensed under the AGPL and commercial licences.",
+        "termsOfService": "http:\/\/exmple.com\/license\/"
+    },
+    "servers": [
+        "http:\/\/api.openbankproject.com\/obp-bank"
+    ],
+    "paths": {
+        "\/obp\/v2.0.0\/banks\/{BANK_ID}\/transaction-types": {
+            "get": {
+                "summary": "Get Transaction Types at Bank",
+                "description": "<p>Get Transaction Types for the bank specified by BANK_ID:<\/p><p>Lists the possible Transaction Types available at the bank (as opposed to Transaction Request Types which are the possible ways Transactions can be created by this API Server).<\/p><ul>  <li>id : Unique transaction type id across the API instance. SHOULD be a UUID. MUST be unique.<\/li>  <li>bank_id : The bank that supports this TransactionType<\/li>  <li>short_code : A short code (SHOULD have no-spaces) which MUST be unique across t",
+                "operationId": "Vv200GetTransactionTypes",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "BANK_ID",
+                        "in": "path",
+                        "description": "The bank id"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/TransactionTypesJsonV200"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "\/obp\/v2.1.0\/banks\/{BANK_ID}\/transaction-request-types": {
+            "get": {
+                "summary": "Get supported Transaction Request Types",
+                "description": "<p>Get the list of the Transaction Request Types supported by the bank.<\/p><p>Authentication is Optional<\/p>",
+                "operationId": "Vv210GetTransactionRequestTypesSupportedByBank",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "BANK_ID",
+                        "in": "path",
+                        "description": "The bank id"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/TransactionTypesJsonV200"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "\/obp\/v2.1.0\/banks\/{BANK_ID}\/transaction-types": {
+            "put": {
+                "summary": "Create Transaction Type at bank",
+                "description": "<p>Create Transaction Types for the bank specified by BANK_ID:<\/p><ul>  <li>id : Unique transaction type id across the API instance. SHOULD be a UUID. MUST be unique.<\/li>  <li>bank_id : The bank that supports this TransactionType<\/li>  <li>short_code : A short code (SHOULD have no-spaces) which MUST be unique across the bank. May be stored with Transactions to link here<\/li>  <li>summary : A succinct summary<\/li>  <li>description : A longer description<\/li>  <li>charge : The charge to the custo",
+                "operationId": "Vv210CreateTransactionType",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "BANK_ID",
+                        "in": "path",
+                        "description": "The bank id"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/TransactionTypesJsonV200"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "\/obp\/v2.2.0\/banks": {
+            "post": {
+                "summary": "Create Bank",
+                "description": "<p>Create a new bank (Authenticated access). Authentication is Mandatory<\/p>",
+                "operationId": "Vv220CreateBank",
+                "deprecated": 0,
+                "parameters": [],
+                "responses": {
+                    "201": {
+                        "description": "Success",
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/BankJSONV220"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "\/obp\/v3.0.0\/banks": {
+            "get": {
+                "summary": "Get Banks",
+                "description": "<p>Get banks on this API instance Returns a list of banks supported on this server:<\/p><ul>  <li>ID used as parameter in URLs<\/li>  <li>Short and full name of bank<\/li>  <li>Logo URL<\/li>  <li>Website<\/li><\/ul>",
+                "operationId": "Vv300GetBanks",
+                "deprecated": 0,
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/TransactionTypesJsonV200"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "\/obp\/v3.0.0\/banks\/{BANK_ID}": {
+            "get": {
+                "summary": "Get Bank",
+                "description": "<p>Get the bank specified by BANK_ID Returns information about a single bank specified by BANK_ID including:<\/p><ul>  <li>Short and full name of bank<\/li>  <li>Logo URL<\/li>  <li>Website<\/li><\/ul>",
+                "operationId": "Vv300BankById",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "BANK_ID",
+                        "in": "path",
+                        "description": "The bank id"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/TransactionTypesJsonV200"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "\/obp\/v3.0.0\/banks\/{BANK_ID}\/branches": {
+            "get": {
+                "summary": "Get Branches for a Bank",
+                "description": "<p>Returns information about branches for a single bank specified by BANK_ID including:<\/p><ul>  <li>Name<\/li>  <li>Address<\/li>  <li>Geo Location<\/li>  <li>License the data under this endpoint is released under<\/li>  <li>Structured opening hours<\/li>  <li>Accessible flag<\/li>  <li>Branch Type<\/li>  <li>More Info<\/li><\/ul><p>Pagination:<\/p><p>By default, 50 records are returned.<\/p><p>You can use the url query parameters <em>limit<\/em> and <em>offset<\/em> for pagination<\/p><p>Authentication is O",
+                "operationId": "Vv300GetBranches",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "BANK_ID",
+                        "in": "path",
+                        "description": "The bank id"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/TransactionTypesJsonV200"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "\/obp\/v3.0.0\/banks\/{BANK_ID}\/branches\/{BRANCH_ID}": {
+            "get": {
+                "summary": "Get Branch",
+                "description": "<p>Returns information about a single Branch specified by BANK_ID and BRANCH_ID including:<\/p><ul>  <li>Name<\/li>  <li>Address<\/li>  <li>Geo Location<\/li>  <li>License the data under this endpoint is released under.<\/li><\/ul><p>Authentication is Optional<\/p>",
+                "operationId": "Vv300GetBranch",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "BRANCH_ID",
+                        "in": "path",
+                        "description": "The branch id"
+                    },
+                    {
+                        "name": "BANK_ID",
+                        "in": "path",
+                        "description": "The bank id"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/TransactionTypesJsonV200"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "\/obp\/v3.1.0\/banks\/{BANK_ID}\/accounts\/{ACCOUNT_ID}\/{VIEW_ID}\/checkbook\/orders": {
+            "get": {
+                "summary": "get Checkbook orders",
+                "description": "<p>Get all checkbook orders<\/p>",
+                "operationId": "Vv310GetCheckbookOrders",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "VIEW_ID",
+                        "in": "path",
+                        "description": "The view id"
+                    },
+                    {
+                        "name": "ACCOUNT_ID",
+                        "in": "path",
+                        "description": "The account id"
+                    },
+                    {
+                        "name": "BANK_ID",
+                        "in": "path",
+                        "description": "The bank id"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/TransactionTypesJsonV200"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "\/obp\/v3.1.0\/banks\/{BANK_ID}\/accounts\/{ACCOUNT_ID}\/{VIEW_ID}\/credit_cards\/orders": {
+            "get": {
+                "summary": "Get status of Credit Card order ",
+                "description": "<p>Get status of Credit Card orders Get all orders<\/p>",
+                "operationId": "Vv310GetStatusOfCreditCardOrder",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "VIEW_ID",
+                        "in": "path",
+                        "description": "The view id"
+                    },
+                    {
+                        "name": "ACCOUNT_ID",
+                        "in": "path",
+                        "description": "The account id"
+                    },
+                    {
+                        "name": "BANK_ID",
+                        "in": "path",
+                        "description": "The bank id"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/TransactionTypesJsonV200"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "\/obp\/v3.1.0\/banks\/{BANK_ID}\/customers\/{CUSTOMER_ID}\/credit_limit\/requests": {
+            "get": {
+                "summary": "Get Credit Limit Order Requests ",
+                "description": "<p>Get Credit Limit Order Requests <\/p>",
+                "operationId": "Vv310GetCreditLimitOrderRequests",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "CUSTOMER_ID",
+                        "in": "path",
+                        "description": "The customer id"
+                    },
+                    {
+                        "name": "BANK_ID",
+                        "in": "path",
+                        "description": "The bank id"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/TransactionTypesJsonV200"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "post": {
+                "summary": "Create Credit Limit Order Request",
+                "description": "<p>Create credit limit order request<\/p>",
+                "operationId": "Vv310CreateCreditLimitOrderRequest",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "CUSTOMER_ID",
+                        "in": "path",
+                        "description": "The customer id"
+                    },
+                    {
+                        "name": "BANK_ID",
+                        "in": "path",
+                        "description": "The bank id"
+                    }
+                ],
+                "responses": {
+                    "201": {
+                        "description": "Success",
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/BankJSONV220"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "\/obp\/v3.1.0\/banks\/{BANK_ID}\/customers\/{CUSTOMER_ID}\/credit_limit\/requests\/REQUEST_ID": {
+            "get": {
+                "summary": "Get Creadit Limit Order Request By Request Id",
+                "description": "<p>Get Creadit Limit Order Request By Request Id<\/p>",
+                "operationId": "Vv310GetCreditLimitOrderRequestByRequestId",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "CUSTOMER_ID",
+                        "in": "path",
+                        "description": "The customer id"
+                    },
+                    {
+                        "name": "BANK_ID",
+                        "in": "path",
+                        "description": "The bank id"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/TransactionTypesJsonV200"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "components": {
+        "schemas": {
+            "TransactionTypesJsonV200": {
+                "type": "object",
+                "properties": {
+                    "transaction_types": {
+                        "description": "",
+                        "type": "array"
+                    }
+                }
+            },
+            "transaction_types": {
+                "type": "array"
+            },
+            "TransactionTypeJsonV200": {
+                "type": "object",
+                "properties": {
+                    "description": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "short_code": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "bank_id": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "id": {
+                        "description": "",
+                        "type": ""
+                    },
+                    "charge": {
+                        "description": "",
+                        "type": ""
+                    },
+                    "summary": {
+                        "description": "",
+                        "type": "string"
+                    }
+                }
+            },
+            "id": {
+                "type": "object"
+            },
+            "charge": {
+                "type": "object"
+            },
+            "TransactionTypeId": {
+                "type": "object",
+                "properties": {
+                    "value": {
+                        "description": "",
+                        "type": "string"
+                    }
+                }
+            },
+            "AmountOfMoneyJsonV121": {
+                "type": "object",
+                "properties": {
+                    "amount": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "currency": {
+                        "description": "",
+                        "type": "string"
+                    }
+                }
+            },
+            "ErrorBankNotFound": {
+                "type": "object",
+                "properties": {
+                    "message": {
+                        "description": "",
+                        "type": "string"
+                    }
+                }
+            },
+            "TransactionRequestTypesJSON": {
+                "type": "object",
+                "properties": {
+                    "transaction_request_types": {
+                        "description": "",
+                        "type": "array"
+                    }
+                }
+            },
+            "transaction_request_types": {
+                "type": "array"
+            },
+            "TransactionRequestTypeJSONV210": {
+                "type": "object",
+                "properties": {
+                    "transaction_request_type": {
+                        "description": "",
+                        "type": "string"
+                    }
+                }
+            },
+            "ErrorUserNotLoggedIn": {
+                "type": "object",
+                "properties": {
+                    "message": {
+                        "description": "",
+                        "type": "string"
+                    }
+                }
+            },
+            "TransactionType": {
+                "type": "object",
+                "properties": {
+                    "shortCode": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "description": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "TransactionTypeId": {
+                        "description": "",
+                        "type": "object"
+                    },
+                    "id": {
+                        "description": "",
+                        "type": ""
+                    },
+                    "charge": {
+                        "description": "",
+                        "type": ""
+                    },
+                    "bankId": {
+                        "description": "",
+                        "type": ""
+                    },
+                    "summary": {
+                        "description": "",
+                        "type": "string"
+                    }
+                }
+            },
+            "bankId": {
+                "type": "object",
+                "properties": {
+                    "value": {
+                        "description": "",
+                        "type": "string"
+                    }
+                }
+            },
+            "AmountOfMoney": {
+                "type": "object",
+                "properties": {
+                    "amount": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "currency": {
+                        "description": "",
+                        "type": "string"
+                    }
+                }
+            },
+            "BankJSONV220": {
+                "type": "object",
+                "properties": {
+                    "national_identifier": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "full_name": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "swift_bic": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "logo_url": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "id": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "short_name": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "bank_routing": {
+                        "description": "",
+                        "type": ""
+                    },
+                    "website_url": {
+                        "description": "",
+                        "type": "string"
+                    }
+                }
+            },
+            "bank_routing": {
+                "type": "object"
+            },
+            "BankRoutingJsonV121": {
+                "type": "object",
+                "properties": {
+                    "address": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "scheme": {
+                        "description": "",
+                        "type": "string"
+                    }
+                }
+            },
+            "ErrorInvalidJsonFormat": {
+                "type": "object",
+                "properties": {
+                    "message": {
+                        "description": "",
+                        "type": "string"
+                    }
+                }
+            },
+            "BanksJSON": {
+                "type": "object",
+                "properties": {
+                    "banks": {
+                        "description": "",
+                        "type": "array"
+                    }
+                }
+            },
+            "banks": {
+                "type": "array"
+            },
+            "BankJSON": {
+                "type": "object",
+                "properties": {
+                    "website": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "full_name": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "logo": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "id": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "short_name": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "BankRoutingJsonV121": {
+                        "description": "",
+                        "type": "object"
+                    },
+                    "bank_routing": {
+                        "description": "",
+                        "type": ""
+                    }
+                }
+            },
+            "ErrorUnknownError": {
+                "type": "object",
+                "properties": {
+                    "message": {
+                        "description": "",
+                        "type": "string"
+                    }
+                }
+            },
+            "BranchesJsonV300": {
+                "type": "object",
+                "properties": {
+                    "branches": {
+                        "description": "",
+                        "type": "array"
+                    }
+                }
+            },
+            "branches": {
+                "type": "array"
+            },
+            "BranchJsonV300": {
+                "type": "object",
+                "properties": {
+                    "name": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "phone_number": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "location": {
+                        "description": "",
+                        "type": ""
+                    },
+                    "branch_type": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "branch_routing": {
+                        "description": "",
+                        "type": ""
+                    },
+                    "drive_up": {
+                        "description": "",
+                        "type": ""
+                    },
+                    "more_info": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "bank_id": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "id": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "meta": {
+                        "description": "",
+                        "type": ""
+                    },
+                    "lobby": {
+                        "description": "",
+                        "type": ""
+                    },
+                    "accessibleFeatures": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "address": {
+                        "description": "",
+                        "type": ""
+                    },
+                    "is_accessible": {
+                        "description": "",
+                        "type": "string"
+                    }
+                }
+            },
+            "location": {
+                "type": "object"
+            },
+            "branch_routing": {
+                "type": "object"
+            },
+            "drive_up": {
+                "type": "object"
+            },
+            "meta": {
+                "type": "object"
+            },
+            "lobby": {
+                "type": "object"
+            },
+            "address": {
+                "type": "object"
+            },
+            "LocationJsonV140": {
+                "type": "object",
+                "properties": {
+                    "longitude": {
+                        "description": "",
+                        "type": "number"
+                    },
+                    "latitude": {
+                        "description": "",
+                        "type": "number"
+                    }
+                }
+            },
+            "BranchRoutingJsonV141": {
+                "type": "object",
+                "properties": {
+                    "address": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "scheme": {
+                        "description": "",
+                        "type": "string"
+                    }
+                }
+            },
+            "DriveUpJsonV330": {
+                "type": "object",
+                "properties": {
+                    "sunday": {
+                        "description": "",
+                        "type": ""
+                    },
+                    "tuesday": {
+                        "description": "",
+                        "type": ""
+                    },
+                    "wednesday": {
+                        "description": "",
+                        "type": ""
+                    },
+                    "monday": {
+                        "description": "",
+                        "type": ""
+                    },
+                    "friday": {
+                        "description": "",
+                        "type": ""
+                    },
+                    "thursday": {
+                        "description": "",
+                        "type": ""
+                    },
+                    "saturday": {
+                        "description": "",
+                        "type": ""
+                    }
+                }
+            },
+            "sunday": {
+                "type": "array"
+            },
+            "tuesday": {
+                "type": "array"
+            },
+            "wednesday": {
+                "type": "array"
+            },
+            "monday": {
+                "type": "array"
+            },
+            "friday": {
+                "type": "array"
+            },
+            "thursday": {
+                "type": "array"
+            },
+            "saturday": {
+                "type": "array"
+            },
+            "OpeningTimesV300": {
+                "type": "object",
+                "properties": {
+                    "closing_time": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "opening_time": {
+                        "description": "",
+                        "type": "string"
+                    }
+                }
+            },
+            "MetaJsonV140": {
+                "type": "object",
+                "properties": {
+                    "license": {
+                        "description": "",
+                        "type": ""
+                    }
+                }
+            },
+            "license": {
+                "type": "object"
+            },
+            "LicenseJsonV140": {
+                "type": "object",
+                "properties": {
+                    "name": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "id": {
+                        "description": "",
+                        "type": "string"
+                    }
+                }
+            },
+            "LobbyJsonV330": {
+                "type": "object",
+                "properties": {
+                    "sunday": {
+                        "description": "",
+                        "type": "array"
+                    },
+                    "tuesday": {
+                        "description": "",
+                        "type": "array"
+                    },
+                    "wednesday": {
+                        "description": "",
+                        "type": "array"
+                    },
+                    "monday": {
+                        "description": "",
+                        "type": "array"
+                    },
+                    "friday": {
+                        "description": "",
+                        "type": "array"
+                    },
+                    "thursday": {
+                        "description": "",
+                        "type": "array"
+                    },
+                    "saturday": {
+                        "description": "",
+                        "type": "array"
+                    }
+                }
+            },
+            "AddressJsonV300": {
+                "type": "object",
+                "properties": {
+                    "city": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "line_2": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "state": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "postcode": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "county": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "country_code": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "line_3": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "line_1": {
+                        "description": "",
+                        "type": "string"
+                    }
+                }
+            },
+            "CheckbookOrdersJson": {
+                "type": "object",
+                "properties": {
+                    "orders": {
+                        "description": "",
+                        "type": "array"
+                    },
+                    "account": {
+                        "description": "",
+                        "type": ""
+                    }
+                }
+            },
+            "orders": {
+                "type": "array"
+            },
+            "account": {
+                "type": "object"
+            },
+            "OrderJson": {
+                "type": "object",
+                "properties": {
+                    "order": {
+                        "description": "",
+                        "type": ""
+                    }
+                }
+            },
+            "order": {
+                "type": "object"
+            },
+            "OrderObjectJson": {
+                "type": "object",
+                "properties": {
+                    "order_id": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "number_of_checkbooks": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "first_check_number": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "order_date": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "status": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "shipping_code": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "distribution_channel": {
+                        "description": "",
+                        "type": "string"
+                    }
+                }
+            },
+            "AccountV310Json": {
+                "type": "object",
+                "properties": {
+                    "account_routings": {
+                        "description": "",
+                        "type": "array"
+                    },
+                    "account_type": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "bank_id": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "account_id": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "branch_routings": {
+                        "description": "",
+                        "type": "array"
+                    }
+                }
+            },
+            "account_routings": {
+                "type": "array"
+            },
+            "branch_routings": {
+                "type": "array"
+            },
+            "AccountRoutingJsonV121": {
+                "type": "object",
+                "properties": {
+                    "address": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "scheme": {
+                        "description": "",
+                        "type": "string"
+                    }
+                }
+            },
+            "CreditCardOrderStatusResponseJson": {
+                "type": "object",
+                "properties": {
+                    "cards": {
+                        "description": "",
+                        "type": "array"
+                    }
+                }
+            },
+            "cards": {
+                "type": "array"
+            },
+            "CardObjectJson": {
+                "type": "object",
+                "properties": {
+                    "use_type": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "card_description": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "card_type": {
+                        "description": "",
+                        "type": "string"
+                    }
+                }
+            },
+            "CreditLimitOrderJson": {
+                "type": "object",
+                "properties": {
+                    "nominal_interest_2": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "rank_amount_2": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "nominal_interest_1": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "rank_amount_1": {
+                        "description": "",
+                        "type": "string"
+                    }
+                }
+            },
+            "CreditLimitOrderRequestJson": {
+                "type": "object",
+                "properties": {
+                    "requested_current_rate_amount1": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "temporary_credit_documentation": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "requested_current_valid_end_date": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "temporary_requested_current_amount": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "requested_current_rate_amount2": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "requested_temporary_valid_end_date": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "current_credit_documentation": {
+                        "description": "",
+                        "type": "string"
+                    }
+                }
+            },
+            "CreditLimitOrderResponseJson": {
+                "type": "object",
+                "properties": {
+                    "short_reference": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "token": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "execution_date": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "execution_time": {
+                        "description": "",
+                        "type": "string"
+                    }
+                }
+            }
+        }
+    }
+}
