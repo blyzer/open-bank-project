@@ -1,0 +1,151 @@
+{
+    "id": "318d5140ca04659ccabe6e44aad010b5",
+    "name": "OpenBankProject-API-Metric",
+    "description": null,
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [
+        {
+            "id": "1ffbf2a45a523375f2af6f60c6716c10",
+            "name": "Search API Metrics via Elasticsearch.",
+            "url": "http:\/\/api.openbankproject.com\/obp-api-metric\/obp\/v2.0.0\/search\/metrics",
+            "description": "<p>Search the API calls made to this API instance via Elastic Search.<\/p><p>Login is required.<\/p><p>CanSearchMetrics entitlement is required to search metrics data.<\/p><p>parameters:<\/p><p>esType - elasticsearch type<\/p><p>simple query:<\/p><p>q - plain_text_query<\/p><p>df - default field to search<\/p><p>sort - field to sort on<\/p><p>size - number of hits returned, default 10<\/p><p>from - show hits starting from<\/p><p>json query:<\/p><p>source - JSON_query_(URL-escaped)<\/p><p>example usage:<\/p><p",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "318d5140ca04659ccabe6e44aad010b5",
+            "rawModeData": ""
+        },
+        {
+            "id": "47a2093b287e03cef20773791868d63a",
+            "name": "Get Metrics",
+            "url": "http:\/\/api.openbankproject.com\/obp-api-metric\/obp\/v2.1.0\/management\/metrics",
+            "description": "<p>Get the all metrics<\/p><p>require CanReadMetrics role<\/p><p>Filters Part 1.*filtering* (no wilde cards etc.) parameters to GET \/management\/metrics<\/p><p>Should be able to filter on the following metrics fields<\/p><p>eg: \/management\/metrics?from_date=2017-09-19T02:31:05.000Z&amp;to_date=2017-09-19T02:31:05.000Z&amp;limit=50&amp;offset=2<\/p><p>1 from_date (defaults to one week before current date): eg:from_date=2017-09-19T02:31:05.000Z<\/p><p>2 to_date (defaults to current date) eg:to_date=2017-",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "318d5140ca04659ccabe6e44aad010b5",
+            "rawModeData": ""
+        },
+        {
+            "id": "788fe12dc43ca75a5dd26fd5f6769506",
+            "name": "Get Connector Metrics",
+            "url": "http:\/\/api.openbankproject.com\/obp-api-metric\/obp\/v2.2.0\/management\/connector\/metrics",
+            "description": "<p>Get the all metrics<\/p><p>require CanGetConnectorMetrics role<\/p><p>Filters Part 1.*filtering* (no wilde cards etc.) parameters to GET \/management\/connector\/metrics<\/p><p>Should be able to filter on the following metrics fields<\/p><p>eg: \/management\/connector\/metrics?from_date=2017-09-19&amp;to_date=2017-09-19&amp;limit=50&amp;offset=2<\/p><p>1 from_date (defaults to one week before current date): eg:from_date=2017-09-19<\/p><p>2 to_date (defaults to current date) eg:to_date=2017-09-19<\/p><p>3 ",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "318d5140ca04659ccabe6e44aad010b5",
+            "rawModeData": ""
+        },
+        {
+            "id": "c47a474ae2b255f3c0287449e6d78e12",
+            "name": "Get Aggregate Metrics",
+            "url": "http:\/\/api.openbankproject.com\/obp-api-metric\/obp\/v3.0.0\/management\/aggregate-metrics",
+            "description": "<p>Returns aggregate metrics on api usage eg. total count, response time (in ms), etc.<\/p><p>Should be able to filter on the following fields<\/p><p>eg: \/management\/aggregate-metrics?from_date=2017-09-19T02:31:05.000Z&amp;to_date=2017-09-19T02:31:05.000Z&amp;consumer_id=5 &amp;user_id=66214b8e-259e-44ad-8868-3eb47be70646&amp;implemented_by_partial_function=getTransactionsForBankAccount &amp;implemented_in_version=v3.0.0&amp;url=\/obp\/v3.0.0\/banks\/gh.29.uk\/accounts\/8ca8a7e4-6d02-48e3-a029-0b2bf89de",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "318d5140ca04659ccabe6e44aad010b5",
+            "rawModeData": ""
+        },
+        {
+            "id": "3da81a030620ae3ca68df9aa377555af",
+            "name": "get top apis",
+            "url": "http:\/\/api.openbankproject.com\/obp-api-metric\/obp\/v3.1.0\/management\/metrics\/top-apis",
+            "description": "<p>Returns get top apis. eg. total count, response time (in ms), etc.<\/p><p>Should be able to filter on the following fields<\/p><p>eg: \/management\/metrics\/top-apis?from_date=2017-09-19T02:31:05.000Z&amp;to_date=2017-09-19T02:31:05.000Z&amp;consumer_id=5 &amp;user_id=66214b8e-259e-44ad-8868-3eb47be70646&amp;implemented_by_partial_function=getTransactionsForBankAccount &amp;implemented_in_version=v3.0.0&amp;url=\/obp\/v3.0.0\/banks\/gh.29.uk\/accounts\/8ca8a7e4-6d02-48e3-a029-0b2bf89de9f0\/owner\/transact",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "318d5140ca04659ccabe6e44aad010b5",
+            "rawModeData": ""
+        },
+        {
+            "id": "287382bd58e695f7768dd3e4d985170a",
+            "name": "get metrics top consumers",
+            "url": "http:\/\/api.openbankproject.com\/obp-api-metric\/obp\/v3.1.0\/management\/metrics\/top-consumers",
+            "description": "<p>get metrics top consumers on api usage eg. total count, consumer_id and app_name.<\/p><p>Should be able to filter on the following fields<\/p><p>eg: \/management\/metrics\/top-consumers?from_date=2017-09-19T02:31:05.000Z&amp;to_date=2017-05-22T01:02:03.000Z&amp;consumer_id=5 &amp;user_id=66214b8e-259e-44ad-8868-3eb47be70646&amp;implemented_by_partial_function=getTransactionsForBankAccount &amp;implemented_in_version=v3.0.0&amp;url=\/obp\/v3.0.0\/banks\/gh.29.uk\/accounts\/8ca8a7e4-6d02-48e3-a029-0b2bf89",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "318d5140ca04659ccabe6e44aad010b5",
+            "rawModeData": ""
+        }
+    ]
+}
