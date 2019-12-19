@@ -1,0 +1,44 @@
+{
+    "id": "0150b1f20edfaf9bb16c5374f42ee6fd",
+    "name": "API URI: \/banks\/{BANK_ID}\/products\/PRODUCT_CODE",
+    "description": null,
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [
+        {
+            "id": "ef190684a1bc4ca794c08bad9353d5ee",
+            "name": "Get Bank Product",
+            "url": "http:\/\/apisandbox.openbankproject.com\/obp\/v3_0_0\/banks\/{BANK_ID}\/products\/PRODUCT_CODE",
+            "description": "<p>Returns information about the financial products offered by a bank specified by BANK_ID and PRODUCT_CODE including:<\/p><ul>  <li>Name<\/li>  <li>Code<\/li>  <li>Category<\/li>  <li>Family<\/li>  <li>Super Family<\/li>  <li>More info URL<\/li>  <li>Description<\/li>  <li>Terms and Conditions<\/li>  <li>License the data under this endpoint is released under Authentication is Optional<\/li><\/ul>",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "BANK_ID",
+                    "description": "The bank id",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "0150b1f20edfaf9bb16c5374f42ee6fd",
+            "rawModeData": ""
+        }
+    ]
+}
