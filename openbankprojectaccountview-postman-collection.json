@@ -1,0 +1,501 @@
+{
+    "id": "d5506a8e4ce739dc0ea031733c66621e",
+    "name": "OpenBankProject-Account-View",
+    "description": null,
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [
+        {
+            "id": "0b855d0b7fb5519cfe00a4a5d1dee108",
+            "name": "Grant User access to a list of views.",
+            "url": "http:\/\/api.openbankproject.com\/obp-account-view\/obp\/v1.2.1\/banks\/{BANK_ID}\/accounts\/{ACCOUNT_ID}\/permissions\/PROVIDER\/{PROVIDER_ID}\/views",
+            "description": "<p>Grants the user identified by PROVIDER_ID at their provider PROVIDER access to a list of views at BANK_ID for account ACCOUNT_ID.<\/p><p>All url parameters must be <a href=\"http:\/\/en.wikipedia.org\/wiki\/Percent-encoding\">%-encoded<\/a>, which is often especially relevant for PROVIDER_ID and PROVIDER.<\/p><p>Authentication is Mandatory<\/p><p>The User needs to have access to the owner view.<\/p>",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "post",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "PROVIDER_ID",
+                    "description": "The provider id",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "ACCOUNT_ID",
+                    "description": "The account id",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "BANK_ID",
+                    "description": "The bank id",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "d5506a8e4ce739dc0ea031733c66621e",
+            "rawModeData": ""
+        },
+        {
+            "id": "ffc7e563809a006b4cbb532e502606fb",
+            "name": "Grant User access to View.",
+            "url": "http:\/\/api.openbankproject.com\/obp-account-view\/obp\/v1.2.1\/banks\/{BANK_ID}\/accounts\/{ACCOUNT_ID}\/permissions\/PROVIDER\/{PROVIDER_ID}\/views\/{VIEW_ID}",
+            "description": "<p>Grants the User identified by PROVIDER_ID at PROVIDER access to the view VIEW_ID at BANK_ID for account ACCOUNT_ID.<\/p><p>All url parameters must be <a href=\"http:\/\/en.wikipedia.org\/wiki\/Percent-encoding\">%-encoded<\/a>, which is often especially relevant for PROVIDER and PROVIDER_ID.<\/p><p>Authentication is Mandatory and the user needs to have access to the owner view.<\/p><p>Granting access to a public view will return an error message, as the user already has access.<\/p>",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "post",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "PROVIDER_ID",
+                    "description": "The provider id",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "VIEW_ID",
+                    "description": "The view id",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "ACCOUNT_ID",
+                    "description": "The account id",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "BANK_ID",
+                    "description": "The bank id",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "d5506a8e4ce739dc0ea031733c66621e",
+            "rawModeData": ""
+        },
+        {
+            "id": "e8238ed8481c7b2d6796897a27bd5a85",
+            "name": "Revoke access to all Views on Account",
+            "url": "http:\/\/api.openbankproject.com\/obp-account-view\/obp\/v1.2.1\/banks\/{BANK_ID}\/accounts\/{ACCOUNT_ID}\/permissions\/{PROVIDER_ID}\/{USER_ID}\/views",
+            "description": "<p>Revokes the user identified by PROVIDER_ID at their provider PROVIDER access to all the views at BANK_ID for account ACCOUNT_ID.<\/p><p>Authentication is Mandatory and the user needs to have access to the owner view.<\/p>",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "delete",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "PROVIDER_ID",
+                    "description": "The provider id",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "USER_ID",
+                    "description": "The user id",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "ACCOUNT_ID",
+                    "description": "The account id",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "BANK_ID",
+                    "description": "The bank id",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "d5506a8e4ce739dc0ea031733c66621e",
+            "rawModeData": ""
+        },
+        {
+            "id": "8208f4420b48fd5d8eb30bc2fe0c5e37",
+            "name": "Revoke access to one View.",
+            "url": "http:\/\/api.openbankproject.com\/obp-account-view\/obp\/v1.2.1\/banks\/{BANK_ID}\/accounts\/{ACCOUNT_ID}\/permissions\/{PROVIDER_ID}\/{USER_ID}\/views\/{VIEW_ID}",
+            "description": "<p>Revokes the user identified by PROVIDER_ID at their provider PROVIDER access to the view VIEW_ID at BANK_ID for account ACCOUNT_ID.<\/p><p>Revoking a user access to a public view will return an error message.<\/p><p>Authentication is Mandatory and the user needs to have access to the owner view.<\/p>",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "delete",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "PROVIDER_ID",
+                    "description": "The provider id",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "USER_ID",
+                    "description": "The user id",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "VIEW_ID",
+                    "description": "The view id",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "ACCOUNT_ID",
+                    "description": "The account id",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "BANK_ID",
+                    "description": "The bank id",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "d5506a8e4ce739dc0ea031733c66621e",
+            "rawModeData": ""
+        },
+        {
+            "id": "6e1e8b65790afa844c46d08831724326",
+            "name": "Delete View",
+            "url": "http:\/\/api.openbankproject.com\/obp-account-view\/obp\/v1.2.1\/banks\/{BANK_ID}\/accounts\/{ACCOUNT_ID}\/views\/{VIEW_ID}",
+            "description": "<p>Deletes the view specified by VIEW_ID on the bank account specified by ACCOUNT_ID at bank BANK_ID.<\/p>",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "delete",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "VIEW_ID",
+                    "description": "The view id",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "ACCOUNT_ID",
+                    "description": "The account id",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "BANK_ID",
+                    "description": "The bank id",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "d5506a8e4ce739dc0ea031733c66621e",
+            "rawModeData": ""
+        },
+        {
+            "id": "4678e91e7455dc6323d1fe8f8d6f7fd0",
+            "name": "Get access.",
+            "url": "http:\/\/api.openbankproject.com\/obp-account-view\/obp\/v2.0.0\/banks\/{BANK_ID}\/accounts\/{ACCOUNT_ID}\/permissions",
+            "description": "<p>Returns the list of the permissions at BANK_ID for account ACCOUNT_ID, with each time a pair composed of the user and the views that he has access to.<\/p><p>Authentication is Mandatory and the user needs to have access to the owner view.<\/p>",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "ACCOUNT_ID",
+                    "description": "The account id",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "BANK_ID",
+                    "description": "The bank id",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "d5506a8e4ce739dc0ea031733c66621e",
+            "rawModeData": ""
+        },
+        {
+            "id": "dbc829a8c5c06ed0107177bfdc963821",
+            "name": "Get Accounts Held",
+            "url": "http:\/\/api.openbankproject.com\/obp-account-view\/obp\/v3.0.0\/banks\/{BANK_ID}\/accounts-held",
+            "description": "<p>Get Accounts held by the current User if even the User has not been assigned the owner View yet.<\/p><p>Can be used to onboard the account to the API - since all other account and transaction endpoints require views to be assigned.<\/p><p>Authentication is Mandatory<\/p>",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "BANK_ID",
+                    "description": "The bank id",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "d5506a8e4ce739dc0ea031733c66621e",
+            "rawModeData": ""
+        },
+        {
+            "id": "636f77292273060b47fd4b42feb837f8",
+            "name": "Get Account access for User.",
+            "url": "http:\/\/api.openbankproject.com\/obp-account-view\/obp\/v3.0.0\/banks\/{BANK_ID}\/accounts\/{ACCOUNT_ID}\/permissions\/PROVIDER\/{PROVIDER_ID}",
+            "description": "<p>Returns the list of the views at BANK_ID for account ACCOUNT_ID that a user identified by PROVIDER_ID at their provider PROVIDER has access to. All url parameters must be <a href=\"http:\/\/en.wikipedia.org\/wiki\/Percent-encoding\">%-encoded<\/a>, which is often especially relevant for USER_ID and PROVIDER.<\/p><p>Authentication is Mandatory<\/p><p>The user needs to have access to the owner view.<\/p>",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "PROVIDER_ID",
+                    "description": "The provider id",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "ACCOUNT_ID",
+                    "description": "The account id",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "BANK_ID",
+                    "description": "The bank id",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "d5506a8e4ce739dc0ea031733c66621e",
+            "rawModeData": ""
+        },
+        {
+            "id": "5397575bff66030d742432c52bd758d6",
+            "name": "Get Views for Account.",
+            "url": "http:\/\/api.openbankproject.com\/obp-account-view\/obp\/v3.0.0\/banks\/{BANK_ID}\/accounts\/{ACCOUNT_ID}\/views",
+            "description": "<h1>Views<\/h1><p>Views in Open Bank Project provide a mechanism for fine grained access control and delegation to Accounts and Transactions. Account holders use the 'owner' view by default. Delegated access is made through other views for example 'accountants', 'share-holders' or 'tagging-application'. Views can be created via the API and each view has a list of entitlements.<\/p><p>Views on accounts and transactions filter the underlying data to redact certain fields for certain users. For insta",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "ACCOUNT_ID",
+                    "description": "The account id",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "BANK_ID",
+                    "description": "The bank id",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "d5506a8e4ce739dc0ea031733c66621e",
+            "rawModeData": ""
+        },
+        {
+            "id": "b853389fe9988821fabe31ba210e7196",
+            "name": "Create View.",
+            "url": "http:\/\/api.openbankproject.com\/obp-account-view\/obp\/v3.0.0\/banks\/{BANK_ID}\/accounts\/{ACCOUNT_ID}\/views",
+            "description": "<p>Create a view on bank account<\/p><p>Authentication is Mandatory and the user needs to have access to the owner view.  The 'alias' field in the JSON can take one of three values:<\/p><ul>  <li><em>public<\/em>: to use the public alias if there is one specified for the other account.<\/li>  <li><em>private<\/em>: to use the public alias if there is one specified for the other account.<\/li>  <li>  <p><em>''(empty string)<\/em>: to use no alias; the view shows the real name of the other account.<\/p><\/",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "post",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "ACCOUNT_ID",
+                    "description": "The account id",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "BANK_ID",
+                    "description": "The bank id",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "d5506a8e4ce739dc0ea031733c66621e",
+            "rawModeData": ""
+        },
+        {
+            "id": "f49bfff94d739a61bb720ca7fb356dae",
+            "name": "Update View.",
+            "url": "http:\/\/api.openbankproject.com\/obp-account-view\/obp\/v3.0.0\/banks\/{BANK_ID}\/accounts\/{ACCOUNT_ID}\/views\/{VIEW_ID}",
+            "description": "<p>Update an existing view on a bank account<\/p><p>Authentication is Mandatory and the user needs to have access to the owner view.<\/p><p>The json sent is the same as during view creation (above), with one difference: the 'name' field of a view is not editable (it is only set when a view is created)<\/p>",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "put",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "VIEW_ID",
+                    "description": "The view id",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "ACCOUNT_ID",
+                    "description": "The account id",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "BANK_ID",
+                    "description": "The bank id",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "d5506a8e4ce739dc0ea031733c66621e",
+            "rawModeData": ""
+        }
+    ]
+}
