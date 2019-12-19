@@ -1,0 +1,58 @@
+{
+    "id": "6f32fd7d19690c763c4a76442b0ad5df",
+    "name": "API URI: \/banks\/{BANK_ID}\/accounts\/{ACCOUNT_ID}\/{VIEW_ID}\/transaction-request-types\/SEPA\/transaction-requests",
+    "description": null,
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [
+        {
+            "id": "ba3666a9624ff1a2c5c1227281b7c0aa",
+            "name": "Create Transaction Request (SEPA)",
+            "url": "http:\/\/apisandbox.openbankproject.com\/obp\/v3_0_0\/banks\/{BANK_ID}\/accounts\/{ACCOUNT_ID}\/{VIEW_ID}\/transaction-request-types\/SEPA\/transaction-requests",
+            "description": "<p>Special instructions for SEPA:<\/p><p>When using a SEPA Transaction Request, you specify the IBAN of a Counterparty in the body of the request. The routing details (IBAN) of the counterparty will be forwarded to the core banking system for the transfer.<\/p><p>Initiate a Payment via creating a Transaction Request.<\/p><p>In OBP, a <code>transaction request<\/code> may or may not result in a <code>transaction<\/code>. However, a <code>transaction<\/code> only has one possible state: completed.<\/p><p",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "post",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "VIEW_ID",
+                    "description": "The view id",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "ACCOUNT_ID",
+                    "description": "The account id",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "BANK_ID",
+                    "description": "The bank id",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "6f32fd7d19690c763c4a76442b0ad5df",
+            "rawModeData": ""
+        }
+    ]
+}
