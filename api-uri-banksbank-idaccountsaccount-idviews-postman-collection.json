@@ -1,0 +1,89 @@
+{
+    "id": "fe3c5a3c782fb529ad46f058db5599d3",
+    "name": "API URI: \/banks\/{BANK_ID}\/accounts\/{ACCOUNT_ID}\/views",
+    "description": null,
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [
+        {
+            "id": "43086e162a3dcc55bf212056a7a25986",
+            "name": "Get Views for Account.",
+            "url": "http:\/\/apisandbox.openbankproject.com\/obp\/v3_0_0\/banks\/{BANK_ID}\/accounts\/{ACCOUNT_ID}\/views",
+            "description": "<h1>Views<\/h1><p>Views in Open Bank Project provide a mechanism for fine grained access control and delegation to Accounts and Transactions. Account holders use the 'owner' view by default. Delegated access is made through other views for example 'accountants', 'share-holders' or 'tagging-application'. Views can be created via the API and each view has a list of entitlements.<\/p><p>Views on accounts and transactions filter the underlying data to redact certain fields for certain users. For insta",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "ACCOUNT_ID",
+                    "description": "The account id",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "BANK_ID",
+                    "description": "The bank id",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "fe3c5a3c782fb529ad46f058db5599d3",
+            "rawModeData": ""
+        },
+        {
+            "id": "1725d5b2aa513263aa0f81aa1bc07e46",
+            "name": "Create View.",
+            "url": "http:\/\/apisandbox.openbankproject.com\/obp\/v3_0_0\/banks\/{BANK_ID}\/accounts\/{ACCOUNT_ID}\/views",
+            "description": "<p>Create a view on bank account<\/p><p>OAuth authentication is required and the user needs to have access to the owner view.  The 'alias' field in the JSON can take one of three values:<\/p><ul>  <li><em>public<\/em>: to use the public alias if there is one specified for the other account.<\/li>  <li><em>private<\/em>: to use the public alias if there is one specified for the other account.<\/li>  <li>  <p><em>''(empty string)<\/em>: to use no alias; the view shows the real name of the other account.<",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "post",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "ACCOUNT_ID",
+                    "description": "The account id",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "BANK_ID",
+                    "description": "The bank id",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "fe3c5a3c782fb529ad46f058db5599d3",
+            "rawModeData": ""
+        }
+    ]
+}
