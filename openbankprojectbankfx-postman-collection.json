@@ -1,0 +1,89 @@
+{
+    "id": "bfb598b8596888b495fbc02c24523385",
+    "name": "OpenBankProject-Bank-FX",
+    "description": null,
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [
+        {
+            "id": "49365949a0b547cf03888bed553be392",
+            "name": "Create Fx",
+            "url": "http:\/\/api.openbankproject.com\/obp-bank-fx\/obp\/v2.2.0\/banks\/{BANK_ID}\/fx",
+            "description": "<p>Create or Update Fx for the Bank.<\/p><p>Authentication is Mandatory<\/p><p>OBP-20006: User is missing one or more roles: CanCreateFxRate OR CanCreateFxRateAtAnyBank<\/p>",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "put",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "BANK_ID",
+                    "description": "The bank id",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "bfb598b8596888b495fbc02c24523385",
+            "rawModeData": ""
+        },
+        {
+            "id": "0928e913e2f6a35a2c43a5c770150eae",
+            "name": "Get Current FxRate",
+            "url": "http:\/\/api.openbankproject.com\/obp-bank-fx\/obp\/v2.2.0\/banks\/{BANK_ID}\/fx\/{FROM_CURRENCY_CODE}\/{TO_CURRENCY_CODE}",
+            "description": "<p>Get the latest FXRate specified by BANK_ID, FROM_CURRENCY_CODE and TO_CURRENCY_CODE <\/p>",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "TO_CURRENCY_CODE",
+                    "description": "The to currency code",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "FROM_CURRENCY_CODE",
+                    "description": "The from currency code",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "BANK_ID",
+                    "description": "The bank id",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "bfb598b8596888b495fbc02c24523385",
+            "rawModeData": ""
+        }
+    ]
+}
