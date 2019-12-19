@@ -1,0 +1,997 @@
+{
+    "id": "5697357b4bffff0fdbe6c6a13fb33980",
+    "name": "OpenBankProject-User",
+    "description": null,
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [
+        {
+            "id": "2f8fff9aa8079ba3179126802a06856a",
+            "name": "Grant User access to a list of views.",
+            "url": "http:\/\/api.openbankproject.com\/obp-user\/obp\/v1.2.1\/banks\/{BANK_ID}\/accounts\/{ACCOUNT_ID}\/permissions\/PROVIDER\/{PROVIDER_ID}\/views",
+            "description": "<p>Grants the user identified by PROVIDER_ID at their provider PROVIDER access to a list of views at BANK_ID for account ACCOUNT_ID.<\/p><p>All url parameters must be <a href=\"http:\/\/en.wikipedia.org\/wiki\/Percent-encoding\">%-encoded<\/a>, which is often especially relevant for PROVIDER_ID and PROVIDER.<\/p><p>Authentication is Mandatory<\/p><p>The User needs to have access to the owner view.<\/p>",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "post",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "PROVIDER_ID",
+                    "description": "The provider id",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "ACCOUNT_ID",
+                    "description": "The account id",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "BANK_ID",
+                    "description": "The bank id",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "5697357b4bffff0fdbe6c6a13fb33980",
+            "rawModeData": ""
+        },
+        {
+            "id": "21639aa40cd7565a789b805f08e475ff",
+            "name": "Grant User access to View.",
+            "url": "http:\/\/api.openbankproject.com\/obp-user\/obp\/v1.2.1\/banks\/{BANK_ID}\/accounts\/{ACCOUNT_ID}\/permissions\/PROVIDER\/{PROVIDER_ID}\/views\/{VIEW_ID}",
+            "description": "<p>Grants the User identified by PROVIDER_ID at PROVIDER access to the view VIEW_ID at BANK_ID for account ACCOUNT_ID.<\/p><p>All url parameters must be <a href=\"http:\/\/en.wikipedia.org\/wiki\/Percent-encoding\">%-encoded<\/a>, which is often especially relevant for PROVIDER and PROVIDER_ID.<\/p><p>Authentication is Mandatory and the user needs to have access to the owner view.<\/p><p>Granting access to a public view will return an error message, as the user already has access.<\/p>",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "post",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "PROVIDER_ID",
+                    "description": "The provider id",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "VIEW_ID",
+                    "description": "The view id",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "ACCOUNT_ID",
+                    "description": "The account id",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "BANK_ID",
+                    "description": "The bank id",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "5697357b4bffff0fdbe6c6a13fb33980",
+            "rawModeData": ""
+        },
+        {
+            "id": "6f1906e44516979532609ed3a416c522",
+            "name": "Revoke access to all Views on Account",
+            "url": "http:\/\/api.openbankproject.com\/obp-user\/obp\/v1.2.1\/banks\/{BANK_ID}\/accounts\/{ACCOUNT_ID}\/permissions\/{PROVIDER_ID}\/{USER_ID}\/views",
+            "description": "<p>Revokes the user identified by PROVIDER_ID at their provider PROVIDER access to all the views at BANK_ID for account ACCOUNT_ID.<\/p><p>Authentication is Mandatory and the user needs to have access to the owner view.<\/p>",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "delete",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "PROVIDER_ID",
+                    "description": "The provider id",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "USER_ID",
+                    "description": "The user id",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "ACCOUNT_ID",
+                    "description": "The account id",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "BANK_ID",
+                    "description": "The bank id",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "5697357b4bffff0fdbe6c6a13fb33980",
+            "rawModeData": ""
+        },
+        {
+            "id": "14e871833564f023d6c3f3681fef06a4",
+            "name": "Revoke access to one View.",
+            "url": "http:\/\/api.openbankproject.com\/obp-user\/obp\/v1.2.1\/banks\/{BANK_ID}\/accounts\/{ACCOUNT_ID}\/permissions\/{PROVIDER_ID}\/{USER_ID}\/views\/{VIEW_ID}",
+            "description": "<p>Revokes the user identified by PROVIDER_ID at their provider PROVIDER access to the view VIEW_ID at BANK_ID for account ACCOUNT_ID.<\/p><p>Revoking a user access to a public view will return an error message.<\/p><p>Authentication is Mandatory and the user needs to have access to the owner view.<\/p>",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "delete",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "PROVIDER_ID",
+                    "description": "The provider id",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "USER_ID",
+                    "description": "The user id",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "VIEW_ID",
+                    "description": "The view id",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "ACCOUNT_ID",
+                    "description": "The account id",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "BANK_ID",
+                    "description": "The bank id",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "5697357b4bffff0fdbe6c6a13fb33980",
+            "rawModeData": ""
+        },
+        {
+            "id": "45951ce523a127333fdb8ffa609fe9c0",
+            "name": "Get cards for the current user",
+            "url": "http:\/\/api.openbankproject.com\/obp-user\/obp\/v1.3.0\/cards",
+            "description": "<p>Returns data about all the physical cards a user has been issued. These could be debit cards, credit cards, etc.<\/p>",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "5697357b4bffff0fdbe6c6a13fb33980",
+            "rawModeData": ""
+        },
+        {
+            "id": "61dec364744efc9826e192128118717f",
+            "name": "Get access.",
+            "url": "http:\/\/api.openbankproject.com\/obp-user\/obp\/v2.0.0\/banks\/{BANK_ID}\/accounts\/{ACCOUNT_ID}\/permissions",
+            "description": "<p>Returns the list of the permissions at BANK_ID for account ACCOUNT_ID, with each time a pair composed of the user and the views that he has access to.<\/p><p>Authentication is Mandatory and the user needs to have access to the owner view.<\/p>",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "ACCOUNT_ID",
+                    "description": "The account id",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "BANK_ID",
+                    "description": "The bank id",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "5697357b4bffff0fdbe6c6a13fb33980",
+            "rawModeData": ""
+        },
+        {
+            "id": "36076b2624f5f46250ab7b2a8eb1002c",
+            "name": "Get Meetings",
+            "url": "http:\/\/api.openbankproject.com\/obp-user\/obp\/v2.0.0\/banks\/{BANK_ID}\/meetings",
+            "description": "<p>Meetings contain meta data about, and are used to facilitate, video conferences \/ chats etc.<\/p><p>The actual conference\/chats are handled by external services.<\/p><p>Login is required.<\/p><p>This call is <strong>experimental<\/strong> and will require further authorisation in the future.<\/p>",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "BANK_ID",
+                    "description": "The bank id",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "5697357b4bffff0fdbe6c6a13fb33980",
+            "rawModeData": ""
+        },
+        {
+            "id": "e5712de503e640a75bfc1aca3b36d993",
+            "name": "Create Meeting (video conference\/call)",
+            "url": "http:\/\/api.openbankproject.com\/obp-user\/obp\/v2.0.0\/banks\/{BANK_ID}\/meetings",
+            "description": "<p>Create Meeting: Initiate a video conference\/call with the bank.<\/p><p>The Meetings resource contains meta data about video\/other conference sessions, not the video\/audio\/chat itself.<\/p><p>The actual conferencing is handled by external providers. Currently OBP supports tokbox video conferences (WIP).<\/p><p>This is not a recomendation of tokbox per se.<\/p><p>provider_id determines the provider of the meeting \/ video chat service. MUST be url friendly (no spaces).<\/p><p>purpose_id explains the ",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "post",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "BANK_ID",
+                    "description": "The bank id",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "5697357b4bffff0fdbe6c6a13fb33980",
+            "rawModeData": ""
+        },
+        {
+            "id": "467474064da7b9974a900c02b273e2d3",
+            "name": "Get Meeting",
+            "url": "http:\/\/api.openbankproject.com\/obp-user\/obp\/v2.0.0\/banks\/{BANK_ID}\/meetings\/MEETING_ID",
+            "description": "<p>Get Meeting specified by BANK_ID \/ MEETING_ID Meetings contain meta data about, and are used to facilitate, video conferences \/ chats etc.<\/p><p>The actual conference\/chats are handled by external services.<\/p><p>Login is required.<\/p><p>This call is <strong>experimental<\/strong> and will require further authorisation in the future.<\/p>",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "BANK_ID",
+                    "description": "The bank id",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "5697357b4bffff0fdbe6c6a13fb33980",
+            "rawModeData": ""
+        },
+        {
+            "id": "5d888f401a2cc0a87eef6a67d4254ec1",
+            "name": "Create User Customer Link.",
+            "url": "http:\/\/api.openbankproject.com\/obp-user\/obp\/v2.0.0\/banks\/{BANK_ID}\/user_customer_links",
+            "description": "<p>Link a User to a Customer<\/p><p>Authentication is Mandatory<\/p><p>CanCreateUserCustomerLink OR CanCreateUserCustomerLinkAtAnyBank entitlements are required.<\/p>",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "post",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "BANK_ID",
+                    "description": "The bank id",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "5697357b4bffff0fdbe6c6a13fb33980",
+            "rawModeData": ""
+        },
+        {
+            "id": "565faa018822059794b8cd52b32964c1",
+            "name": "Create User.",
+            "url": "http:\/\/api.openbankproject.com\/obp-user\/obp\/v2.0.0\/users",
+            "description": "<p>Creates OBP user.  No authorisation (currently) required.<\/p><p>Mimics current webform to Register.<\/p><p>Requires username(email) and password.<\/p><p>Returns 409 error if username not unique.<\/p><p>May require validation of email address.<\/p>",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "post",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "5697357b4bffff0fdbe6c6a13fb33980",
+            "rawModeData": ""
+        },
+        {
+            "id": "3cbad198caa99233805b9d548a349463",
+            "name": "Delete Entitlement",
+            "url": "http:\/\/api.openbankproject.com\/obp-user\/obp\/v2.0.0\/users\/{USER_ID}\/entitlement\/{ENTITLEMENT_ID}",
+            "description": "<p>Delete Entitlement specified by ENTITLEMENT_ID for an user specified by USER_ID<\/p><p>Authentication is required and the user needs to be a Super Admin. Super Admins are listed in the Props file.<\/p>",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "delete",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "ENTITLEMENT_ID",
+                    "description": "The entitblement id",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "USER_ID",
+                    "description": "The user id",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "5697357b4bffff0fdbe6c6a13fb33980",
+            "rawModeData": ""
+        },
+        {
+            "id": "ce20e37fbc82748852ab35fd3561af86",
+            "name": "Get Entitlements for User",
+            "url": "http:\/\/api.openbankproject.com\/obp-user\/obp\/v2.0.0\/users\/{USER_ID}\/entitlements",
+            "description": "<p>Authentication is Mandatory<\/p>",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "USER_ID",
+                    "description": "The user id",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "5697357b4bffff0fdbe6c6a13fb33980",
+            "rawModeData": ""
+        },
+        {
+            "id": "8f0e8f05bff8d3c7708fe65a07d486ea",
+            "name": "Add Entitlement for a User.",
+            "url": "http:\/\/api.openbankproject.com\/obp-user\/obp\/v2.0.0\/users\/{USER_ID}\/entitlements",
+            "description": "<p>Create Entitlement. Grant Role to User.<\/p><p>Entitlements are used to grant System or Bank level roles to Users. (For Account level privileges, see Views)<\/p><p>For a System level Role (.e.g CanGetAnyUser), set bank_id to an empty string i.e. \"bank_id\":\"\"<\/p><p>For a Bank level Role (e.g. CanCreateAccount), set bank_id to a valid value e.g. \"bank_id\":\"my-bank-id\"<\/p><p>Authentication is required and the user needs to be a Super Admin. Super Admins are listed in the Props file.<\/p>",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "post",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "USER_ID",
+                    "description": "The user id",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "5697357b4bffff0fdbe6c6a13fb33980",
+            "rawModeData": ""
+        },
+        {
+            "id": "22fe1e232dc0708a81549b906c9f6f47",
+            "name": "Get Entitlements for User at Bank.",
+            "url": "http:\/\/api.openbankproject.com\/obp-user\/obp\/v2.1.0\/banks\/{BANK_ID}\/users\/{USER_ID}\/entitlements",
+            "description": "<p>Get Entitlements specified by BANK_ID and USER_ID<\/p><p>Authentication is Mandatory<\/p>",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "USER_ID",
+                    "description": "The user id",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "BANK_ID",
+                    "description": "The bank id",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "5697357b4bffff0fdbe6c6a13fb33980",
+            "rawModeData": ""
+        },
+        {
+            "id": "9a61f1ccf85156bd165796a6e5699912",
+            "name": "Get Account access for User.",
+            "url": "http:\/\/api.openbankproject.com\/obp-user\/obp\/v3.0.0\/banks\/{BANK_ID}\/accounts\/{ACCOUNT_ID}\/permissions\/PROVIDER\/{PROVIDER_ID}",
+            "description": "<p>Returns the list of the views at BANK_ID for account ACCOUNT_ID that a user identified by PROVIDER_ID at their provider PROVIDER has access to. All url parameters must be <a href=\"http:\/\/en.wikipedia.org\/wiki\/Percent-encoding\">%-encoded<\/a>, which is often especially relevant for USER_ID and PROVIDER.<\/p><p>Authentication is Mandatory<\/p><p>The user needs to have access to the owner view.<\/p>",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "PROVIDER_ID",
+                    "description": "The provider id",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "ACCOUNT_ID",
+                    "description": "The account id",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "BANK_ID",
+                    "description": "The bank id",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "5697357b4bffff0fdbe6c6a13fb33980",
+            "rawModeData": ""
+        },
+        {
+            "id": "cc08349e4dfe2939d81381bc4f0fbe85",
+            "name": "Delete Consumer Scope",
+            "url": "http:\/\/api.openbankproject.com\/obp-user\/obp\/v3.0.0\/consumers\/{CONSUMER_ID}\/scope\/SCOPE_ID",
+            "description": "<p>Delete Consumer Scope specified by SCOPE_ID for an consumer specified by CONSUMER_ID<\/p><p>Authentication is required and the user needs to be a Super Admin. Super Admins are listed in the Props file.<\/p>",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "delete",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "CONSUMER_ID",
+                    "description": "new consumer id",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "5697357b4bffff0fdbe6c6a13fb33980",
+            "rawModeData": ""
+        },
+        {
+            "id": "b85cf1b68e03e313f2141ba470ac78a9",
+            "name": "Get Scopes for Consumer",
+            "url": "http:\/\/api.openbankproject.com\/obp-user\/obp\/v3.0.0\/consumers\/{CONSUMER_ID}\/scopes",
+            "description": "<p>Get all the scopes for an consumer specified by CONSUMER_ID<\/p><p>Authentication is Mandatory<\/p>",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "CONSUMER_ID",
+                    "description": "new consumer id",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "5697357b4bffff0fdbe6c6a13fb33980",
+            "rawModeData": ""
+        },
+        {
+            "id": "7dd3c9a114d7df1158e49a570ff57d21",
+            "name": "Add Scope for a Consumer.",
+            "url": "http:\/\/api.openbankproject.com\/obp-user\/obp\/v3.0.0\/consumers\/{CONSUMER_ID}\/scopes",
+            "description": "<p>Create Scope. Grant Role to Consumer.<\/p><p>Scopes are used to grant System or Bank level roles to the Consumer (App). (For Account level privileges, see Views)<\/p><p>For a System level Role (.e.g CanGetAnyUser), set bank_id to an empty string i.e. \"bank_id\":\"\"<\/p><p>For a Bank level Role (e.g. CanCreateAccount), set bank_id to a valid value e.g. \"bank_id\":\"my-bank-id\"<\/p>",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "post",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "CONSUMER_ID",
+                    "description": "new consumer id",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "5697357b4bffff0fdbe6c6a13fb33980",
+            "rawModeData": ""
+        },
+        {
+            "id": "3b21c41c660bcfea7fa0ea33be300009",
+            "name": "Get all Entitlement Requests",
+            "url": "http:\/\/api.openbankproject.com\/obp-user\/obp\/v3.0.0\/entitlement-requests",
+            "description": "<p>Get all Entitlement Requests<\/p><p>Authentication is Mandatory<\/p>",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "5697357b4bffff0fdbe6c6a13fb33980",
+            "rawModeData": ""
+        },
+        {
+            "id": "037e77698961271f2c0ee0ccac81bfd7",
+            "name": "Add Entitlement Request for a Logged User.",
+            "url": "http:\/\/api.openbankproject.com\/obp-user\/obp\/v3.0.0\/entitlement-requests",
+            "description": "<p>Create Entitlement Request.<\/p><p>Any logged in User can use this endpoint to request an Entitlement<\/p><p>Entitlements are used to grant System or Bank level roles to Users. (For Account level privileges, see Views)<\/p><p>For a System level Role (.e.g CanGetAnyUser), set bank_id to an empty string i.e. \"bank_id\":\"\"<\/p><p>For a Bank level Role (e.g. CanCreateAccount), set bank_id to a valid value e.g. \"bank_id\":\"my-bank-id\"<\/p><p>Authentication is Mandatory<\/p>",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "post",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "5697357b4bffff0fdbe6c6a13fb33980",
+            "rawModeData": ""
+        },
+        {
+            "id": "375485a833452dbba4b07519f73339ef",
+            "name": "Delete Entitlement Request",
+            "url": "http:\/\/api.openbankproject.com\/obp-user\/obp\/v3.0.0\/entitlement-requests\/ENTITLEMENT_REQUEST_ID",
+            "description": "<p>Delete the Entitlement Request specified by ENTITLEMENT_REQUEST_ID for a user specified by USER_ID<\/p><p>Authentication is Mandatory<\/p>",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "delete",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "5697357b4bffff0fdbe6c6a13fb33980",
+            "rawModeData": ""
+        },
+        {
+            "id": "6523608bf1bec72255b8445e4946c664",
+            "name": "Get Entitlement Requests for the current User.",
+            "url": "http:\/\/api.openbankproject.com\/obp-user\/obp\/v3.0.0\/my\/entitlement-requests",
+            "description": "<p>Get Entitlement Requests for the current User.<\/p><p>Authentication is Mandatory<\/p>",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "5697357b4bffff0fdbe6c6a13fb33980",
+            "rawModeData": ""
+        },
+        {
+            "id": "5d2dcd4604477dad6d01f9ab811dcf99",
+            "name": "Get Entitlements for the current User.",
+            "url": "http:\/\/api.openbankproject.com\/obp-user\/obp\/v3.0.0\/my\/entitlements",
+            "description": "<p>Get Entitlements for the current User.<\/p><p>Authentication is Mandatory<\/p>",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "5697357b4bffff0fdbe6c6a13fb33980",
+            "rawModeData": ""
+        },
+        {
+            "id": "d9de35b2b83b6354d998173e1c3afa40",
+            "name": "Get all Users",
+            "url": "http:\/\/api.openbankproject.com\/obp-user\/obp\/v3.0.0\/users",
+            "description": "<p>Get all users<\/p><p>Authentication is Mandatory<\/p><p>CanGetAnyUser entitlement is required,<\/p>",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "5697357b4bffff0fdbe6c6a13fb33980",
+            "rawModeData": ""
+        },
+        {
+            "id": "647c580e955c46d32b801d8f94f076f1",
+            "name": "Get Entitlement Requests for a User.",
+            "url": "http:\/\/api.openbankproject.com\/obp-user\/obp\/v3.0.0\/users\/{USER_ID}\/entitlement-requests",
+            "description": "<p>Get Entitlement Requests for a User.<\/p><p>Authentication is Mandatory<\/p>",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "USER_ID",
+                    "description": "The user id",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "5697357b4bffff0fdbe6c6a13fb33980",
+            "rawModeData": ""
+        },
+        {
+            "id": "b69af7ff1ddf47b3c1ae73b9e73f9d63",
+            "name": "Get User (Current)",
+            "url": "http:\/\/api.openbankproject.com\/obp-user\/obp\/v3.0.0\/users\/current",
+            "description": "<p>Get the logged in user<\/p><p>Authentication is Mandatory<\/p>",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "5697357b4bffff0fdbe6c6a13fb33980",
+            "rawModeData": ""
+        },
+        {
+            "id": "9240b4cf208c13ffa2c1eb8aa4a66df5",
+            "name": "Get Customers for Current User",
+            "url": "http:\/\/api.openbankproject.com\/obp-user\/obp\/v3.0.0\/users\/current\/customers",
+            "description": "<p>Gets all Customers that are linked to a User.<\/p><p>Authentication is Mandatory<\/p>",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "5697357b4bffff0fdbe6c6a13fb33980",
+            "rawModeData": ""
+        },
+        {
+            "id": "48ff99aed9ad43421cf62e3ec1f94a35",
+            "name": "Get Users by Email Address",
+            "url": "http:\/\/api.openbankproject.com\/obp-user\/obp\/v3.0.0\/users\/email\/EMAIL\/terminator",
+            "description": "<p>Get users by email address<\/p><p>Authentication is Mandatory CanGetAnyUser entitlement is required,<\/p>",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "5697357b4bffff0fdbe6c6a13fb33980",
+            "rawModeData": ""
+        },
+        {
+            "id": "51a7053708014eb1711531a26cf589ff",
+            "name": "Get User by USER_ID",
+            "url": "http:\/\/api.openbankproject.com\/obp-user\/obp\/v3.0.0\/users\/user_id\/{USER_ID}",
+            "description": "<p>Get user by USER_ID<\/p><p>Authentication is Mandatory CanGetAnyUser entitlement is required,<\/p>",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "USER_ID",
+                    "description": "The user id",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "5697357b4bffff0fdbe6c6a13fb33980",
+            "rawModeData": ""
+        },
+        {
+            "id": "4fe4150804a280ade7273534376d98d7",
+            "name": "Get User by USERNAME",
+            "url": "http:\/\/api.openbankproject.com\/obp-user\/obp\/v3.0.0\/users\/username\/USERNAME",
+            "description": "<p>Get user by USERNAME<\/p><p>Authentication is Mandatory<\/p><p>CanGetAnyUser entitlement is required,<\/p>",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "5697357b4bffff0fdbe6c6a13fb33980",
+            "rawModeData": ""
+        }
+    ]
+}
