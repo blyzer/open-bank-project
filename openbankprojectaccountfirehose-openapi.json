@@ -1,0 +1,596 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "version": "v3_1_0",
+        "title": "OpenBankProject-Account-Firehose",
+        "description": "An Open Source API for Banks. (c) TESOBE Ltd. 2011 - 2018. Licensed under the AGPL and commercial licences.",
+        "termsOfService": "http:\/\/exmple.com\/license\/"
+    },
+    "servers": [
+        "http:\/\/api.openbankproject.com\/obp-account-firehose"
+    ],
+    "paths": {
+        "\/obp\/v3.0.0\/banks\/{BANK_ID}\/firehose\/accounts\/{ACCOUNT_ID}\/views\/{VIEW_ID}\/transactions": {
+            "get": {
+                "summary": "Get Firehose Transactions for Account",
+                "description": "<p>Get Transactions for an Account that has a firehose View.<\/p><p>Allows bulk access to an account's transactions. User must have the CanUseFirehoseAtAnyBank Role<\/p><p>To find ACCOUNT_IDs, use the getFirehoseAccountsAtOneBank call.<\/p><p>For VIEW_ID try 'firehose'<\/p><p>Authentication is Mandatory<\/p>",
+                "operationId": "Vv300GetFirehoseTransactionsForBankAccount",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "VIEW_ID",
+                        "in": "path",
+                        "description": "The view id"
+                    },
+                    {
+                        "name": "ACCOUNT_ID",
+                        "in": "path",
+                        "description": "The account id"
+                    },
+                    {
+                        "name": "BANK_ID",
+                        "in": "path",
+                        "description": "The bank id"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/TransactionsJsonV300"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "\/obp\/v3.0.0\/banks\/{BANK_ID}\/firehose\/accounts\/views\/{VIEW_ID}": {
+            "get": {
+                "summary": "Get Firehose Accounts at Bank",
+                "description": "<p>Get Accounts which have a firehose view assigned to them.<\/p><p>This endpoint allows bulk access to accounts.<\/p><p>Requires the CanUseFirehoseAtAnyBank Role<\/p><p>To be shown on the list, each Account must have a firehose View linked to it.<\/p><p>For VIEW_ID try 'firehose'<\/p><p>Authentication is Mandatory<\/p>",
+                "operationId": "Vv300GetFirehoseAccountsAtOneBank",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "VIEW_ID",
+                        "in": "path",
+                        "description": "The view id"
+                    },
+                    {
+                        "name": "BANK_ID",
+                        "in": "path",
+                        "description": "The bank id"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/TransactionsJsonV300"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "\/obp\/v3.1.0\/banks\/{BANK_ID}\/firehose\/customers": {
+            "get": {
+                "summary": "Get Firehose Customers",
+                "description": "<p>Get Customers that has a firehose View.<\/p><p>Allows bulk access to customers. User must have the CanUseFirehoseAtAnyBank Role<\/p><p>For VIEW_ID try 'firehose'<\/p><p>Possible custom URL parameters for pagination:<\/p><ul>  <li>sort_direction=ASC\/DESC<\/li>  <li>limit=NUMBER ==&gt; default value: 50<\/li>  <li>offset=NUMBER ==&gt; default value: 0<\/li>  <li>from_date=DATE =&gt; default value: date of the oldest customer created (format below)<\/li>  <li>to_date=DATE =&gt; default value: date of th",
+                "operationId": "Vv310GetFirehoseCustomers",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "BANK_ID",
+                        "in": "path",
+                        "description": "The bank id"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/TransactionsJsonV300"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "components": {
+        "schemas": {
+            "TransactionsJsonV300": {
+                "type": "object",
+                "properties": {
+                    "transactions": {
+                        "description": "",
+                        "type": "array"
+                    }
+                }
+            },
+            "transactions": {
+                "type": "array"
+            },
+            "TransactionJsonV300": {
+                "type": "object",
+                "properties": {
+                    "this_account": {
+                        "description": "",
+                        "type": ""
+                    },
+                    "id": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "details": {
+                        "description": "",
+                        "type": ""
+                    },
+                    "metadata": {
+                        "description": "",
+                        "type": ""
+                    },
+                    "other_account": {
+                        "description": "",
+                        "type": ""
+                    }
+                }
+            },
+            "this_account": {
+                "type": "object"
+            },
+            "details": {
+                "type": "object"
+            },
+            "metadata": {
+                "type": "object"
+            },
+            "other_account": {
+                "type": "object"
+            },
+            "ThisAccountJsonV300": {
+                "type": "object",
+                "properties": {
+                    "holders": {
+                        "description": "",
+                        "type": "array"
+                    },
+                    "account_routings": {
+                        "description": "",
+                        "type": "array"
+                    },
+                    "bank_routing": {
+                        "description": "",
+                        "type": ""
+                    },
+                    "id": {
+                        "description": "",
+                        "type": "string"
+                    }
+                }
+            },
+            "holders": {
+                "type": "array"
+            },
+            "account_routings": {
+                "type": "array"
+            },
+            "bank_routing": {
+                "type": "object"
+            },
+            "AccountHolderJSON": {
+                "type": "object",
+                "properties": {
+                    "is_alias": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "name": {
+                        "description": "",
+                        "type": "string"
+                    }
+                }
+            },
+            "AccountRoutingJsonV121": {
+                "type": "object",
+                "properties": {
+                    "address": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "scheme": {
+                        "description": "",
+                        "type": "string"
+                    }
+                }
+            },
+            "BankRoutingJsonV121": {
+                "type": "object",
+                "properties": {
+                    "address": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "scheme": {
+                        "description": "",
+                        "type": "string"
+                    }
+                }
+            },
+            "TransactionDetailsJSON": {
+                "type": "object",
+                "properties": {
+                    "new_balance": {
+                        "description": "",
+                        "type": ""
+                    },
+                    "description": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "completed": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "type": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "value": {
+                        "description": "",
+                        "type": ""
+                    },
+                    "posted": {
+                        "description": "",
+                        "type": "string"
+                    }
+                }
+            },
+            "new_balance": {
+                "type": "object"
+            },
+            "value": {
+                "type": "object"
+            },
+            "AmountOfMoneyJsonV121": {
+                "type": "object",
+                "properties": {
+                    "amount": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "currency": {
+                        "description": "",
+                        "type": "string"
+                    }
+                }
+            },
+            "TransactionMetadataJSON": {
+                "type": "object",
+                "properties": {
+                    "narrative": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "tags": {
+                        "description": "",
+                        "type": "array"
+                    },
+                    "where": {
+                        "description": "",
+                        "type": ""
+                    },
+                    "images": {
+                        "description": "",
+                        "type": "array"
+                    },
+                    "comments": {
+                        "description": "",
+                        "type": "array"
+                    }
+                }
+            },
+            "tags": {
+                "type": "array"
+            },
+            "where": {
+                "type": "object"
+            },
+            "images": {
+                "type": "array"
+            },
+            "comments": {
+                "type": "array"
+            },
+            "TransactionTagJSON": {
+                "type": "object",
+                "properties": {
+                    "user": {
+                        "description": "",
+                        "type": ""
+                    },
+                    "date": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "value": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "id": {
+                        "description": "",
+                        "type": "string"
+                    }
+                }
+            },
+            "user": {
+                "type": "object"
+            },
+            "UserJSONV121": {
+                "type": "object",
+                "properties": {
+                    "display_name": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "provider": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "id": {
+                        "description": "",
+                        "type": "string"
+                    }
+                }
+            },
+            "LocationJSONV121": {
+                "type": "object",
+                "properties": {
+                    "UserJSONV121": {
+                        "description": "",
+                        "type": "object"
+                    },
+                    "user": {
+                        "description": "",
+                        "type": ""
+                    },
+                    "date": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "longitude": {
+                        "description": "",
+                        "type": "number"
+                    },
+                    "latitude": {
+                        "description": "",
+                        "type": "number"
+                    }
+                }
+            },
+            "TransactionImageJSON": {
+                "type": "object",
+                "properties": {
+                    "URL": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "label": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "id": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "date": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "UserJSONV121": {
+                        "description": "",
+                        "type": "object"
+                    },
+                    "user": {
+                        "description": "",
+                        "type": ""
+                    }
+                }
+            },
+            "TransactionCommentJSON": {
+                "type": "object",
+                "properties": {
+                    "UserJSONV121": {
+                        "description": "",
+                        "type": "object"
+                    },
+                    "user": {
+                        "description": "",
+                        "type": ""
+                    },
+                    "date": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "value": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "id": {
+                        "description": "",
+                        "type": "string"
+                    }
+                }
+            },
+            "OtherAccountJsonV300": {
+                "type": "object",
+                "properties": {
+                    "account_routings": {
+                        "description": "",
+                        "type": "array"
+                    },
+                    "AccountHolderJSON": {
+                        "description": "",
+                        "type": "object"
+                    },
+                    "holder": {
+                        "description": "",
+                        "type": ""
+                    },
+                    "id": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "metadata": {
+                        "description": "",
+                        "type": ""
+                    },
+                    "BankRoutingJsonV121": {
+                        "description": "",
+                        "type": "object"
+                    },
+                    "bank_routing": {
+                        "description": "",
+                        "type": ""
+                    }
+                }
+            },
+            "OtherAccountMetadataJSON": {
+                "type": "object",
+                "properties": {
+                    "public_alias": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "image_URL": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "LocationJSONV121": {
+                        "description": "",
+                        "type": "object"
+                    },
+                    "physical_location": {
+                        "description": "",
+                        "type": ""
+                    },
+                    "private_alias": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "URL": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "more_info": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "corporate_location": {
+                        "description": "",
+                        "type": ""
+                    },
+                    "open_corporates_URL": {
+                        "description": "",
+                        "type": "string"
+                    }
+                }
+            },
+            "ErrorUserNotLoggedIn": {
+                "type": "object",
+                "properties": {
+                    "message": {
+                        "description": "",
+                        "type": "string"
+                    }
+                }
+            },
+            "ModeratedCoreAccountsJsonV300": {
+                "type": "object",
+                "properties": {
+                    "accounts": {
+                        "description": "",
+                        "type": "array"
+                    }
+                }
+            },
+            "accounts": {
+                "type": "array"
+            },
+            "ModeratedCoreAccountJsonV300": {
+                "type": "object",
+                "properties": {
+                    "number": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "account_routings": {
+                        "description": "",
+                        "type": "array"
+                    },
+                    "label": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "owners": {
+                        "description": "",
+                        "type": "array"
+                    },
+                    "AmountOfMoneyJsonV121": {
+                        "description": "",
+                        "type": "object"
+                    },
+                    "balance": {
+                        "description": "",
+                        "type": ""
+                    },
+                    "bank_id": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "id": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "type": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "account_rules": {
+                        "description": "",
+                        "type": "array"
+                    }
+                }
+            },
+            "owners": {
+                "type": "array"
+            },
+            "account_rules": {
+                "type": "array"
+            },
+            "AccountRuleJsonV300": {
+                "type": "object",
+                "properties": {
+                    "value": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "scheme": {
+                        "description": "",
+                        "type": "string"
+                    }
+                }
+            }
+        }
+    }
+}
