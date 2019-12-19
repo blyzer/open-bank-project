@@ -1,0 +1,58 @@
+{
+    "id": "2345754e94b8c4c6770747c0e9cc3eef",
+    "name": "API URI: \/banks\/{BANK_ID}\/accounts\/{ACCOUNT_ID}\/{VIEW_ID}\/transactions",
+    "description": null,
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [
+        {
+            "id": "5b98ea8923b7dfe2197cc4a45a94eba4",
+            "name": "Get Transactions for Account (Full)",
+            "url": "http:\/\/apisandbox.openbankproject.com\/obp\/v3_0_0\/banks\/{BANK_ID}\/accounts\/{ACCOUNT_ID}\/{VIEW_ID}\/transactions",
+            "description": "<p>Returns transactions list of the account specified by ACCOUNT_ID and <a href=\"#1_2_1-getViewsForBankAccount\">moderated<\/a> by the view (VIEW_ID).<\/p><p>Authentication via OAuth is required if the view is not public.<\/p><p>Possible custom headers for pagination:<\/p><ul>  <li>obp_sort_by=CRITERIA ==&gt; default value: \"completed\" field<\/li>  <li>obp_sort_direction=ASC\/DESC ==&gt; default value: DESC<\/li>  <li>obp_limit=NUMBER ==&gt; default value: 50<\/li>  <li>obp_offset=NUMBER ==&gt; default v",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "VIEW_ID",
+                    "description": "The view id",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "ACCOUNT_ID",
+                    "description": "The account id",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "BANK_ID",
+                    "description": "The bank id",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "2345754e94b8c4c6770747c0e9cc3eef",
+            "rawModeData": ""
+        }
+    ]
+}
