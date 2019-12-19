@@ -1,0 +1,89 @@
+{
+    "id": "d00352a7334ff33c6d09133fb75fd3fb",
+    "name": "API URI: \/banks\/{BANK_ID}\/branches\/{BRANCH_ID}",
+    "description": null,
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [
+        {
+            "id": "14cc26683f872eb2636d8800948779dc",
+            "name": "Get Branch",
+            "url": "http:\/\/apisandbox.openbankproject.com\/obp\/v3_0_0\/banks\/{BANK_ID}\/branches\/{BRANCH_ID}",
+            "description": "<p>Returns information about a single Branch specified by BANK_ID and BRANCH_ID including:<\/p><ul>  <li>Name<\/li>  <li>Address<\/li>  <li>Geo Location<\/li>  <li>License the data under this endpoint is released under.<\/li><\/ul><p>Authentication is Optional<\/p>",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "BRANCH_ID",
+                    "description": "The branch id",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "BANK_ID",
+                    "description": "The bank id",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "d00352a7334ff33c6d09133fb75fd3fb",
+            "rawModeData": ""
+        },
+        {
+            "id": "e4fad66ffa712b134551150cc938b14a",
+            "name": "Update Branch",
+            "url": "http:\/\/apisandbox.openbankproject.com\/obp\/v3_0_0\/banks\/{BANK_ID}\/branches\/{BRANCH_ID}",
+            "description": "<p>Update an existing branch for a bank account (Authenticated access). Authentication is Mandatory<\/p>",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "put",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "BRANCH_ID",
+                    "description": "The branch id",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "BANK_ID",
+                    "description": "The bank id",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "d00352a7334ff33c6d09133fb75fd3fb",
+            "rawModeData": ""
+        }
+    ]
+}
