@@ -1,0 +1,590 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "version": "v3_1_0",
+        "title": "OpenBankProject-Card",
+        "description": "An Open Source API for Banks. (c) TESOBE Ltd. 2011 - 2018. Licensed under the AGPL and commercial licences.",
+        "termsOfService": "http:\/\/exmple.com\/license\/"
+    },
+    "servers": [
+        "http:\/\/api.openbankproject.com\/obp-card"
+    ],
+    "paths": {
+        "\/obp\/v1.3.0\/banks\/{BANK_ID}\/cards": {
+            "get": {
+                "summary": "Get cards for the specified bank",
+                "description": "",
+                "operationId": "Vv130GetCardsForBank",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "BANK_ID",
+                        "in": "path",
+                        "description": "The bank id"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/PhysicalCardsJSON"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "\/obp\/v1.3.0\/cards": {
+            "get": {
+                "summary": "Get cards for the current user",
+                "description": "<p>Returns data about all the physical cards a user has been issued. These could be debit cards, credit cards, etc.<\/p>",
+                "operationId": "Vv130GetCards",
+                "deprecated": 0,
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/PhysicalCardsJSON"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "\/obp\/v2.1.0\/banks\/{BANK_ID}\/cards": {
+            "post": {
+                "summary": "Create Card",
+                "description": "<p>Create Card at bank specified by BANK_ID .<\/p><p>Authentication is Mandatory<\/p>",
+                "operationId": "Vv210AddCardsForBank",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "BANK_ID",
+                        "in": "path",
+                        "description": "The bank id"
+                    }
+                ],
+                "responses": {
+                    "201": {
+                        "description": "Success",
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/PhysicalCardJSON"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "components": {
+        "schemas": {
+            "PhysicalCardsJSON": {
+                "type": "object",
+                "properties": {
+                    "cards": {
+                        "description": "",
+                        "type": "array"
+                    }
+                }
+            },
+            "cards": {
+                "type": "array"
+            },
+            "PhysicalCardJSON": {
+                "type": "object",
+                "properties": {
+                    "allows": {
+                        "description": "",
+                        "type": "array"
+                    },
+                    "expires_date": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "networks": {
+                        "description": "",
+                        "type": "array"
+                    },
+                    "issue_number": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "replacement": {
+                        "description": "",
+                        "type": ""
+                    },
+                    "enabled": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "collected": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "technology": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "cancelled": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "bank_id": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "pin_reset": {
+                        "description": "",
+                        "type": "array"
+                    },
+                    "serial_number": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "account": {
+                        "description": "",
+                        "type": ""
+                    },
+                    "valid_from_date": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "bank_card_number": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "name_on_card": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "posted": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "on_hot_list": {
+                        "description": "",
+                        "type": "boolean"
+                    }
+                }
+            },
+            "allows": {
+                "type": "array"
+            },
+            "networks": {
+                "type": "array"
+            },
+            "replacement": {
+                "type": "object"
+            },
+            "pin_reset": {
+                "type": "array"
+            },
+            "account": {
+                "type": "object"
+            },
+            "ReplacementJSON": {
+                "type": "object",
+                "properties": {
+                    "reason_requested": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "requested_date": {
+                        "description": "",
+                        "type": "string"
+                    }
+                }
+            },
+            "PinResetJSON": {
+                "type": "object",
+                "properties": {
+                    "reason_requested": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "requested_date": {
+                        "description": "",
+                        "type": "string"
+                    }
+                }
+            },
+            "AccountJSON": {
+                "type": "object",
+                "properties": {
+                    "bank_id": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "views_available": {
+                        "description": "",
+                        "type": "array"
+                    },
+                    "label": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "id": {
+                        "description": "",
+                        "type": "string"
+                    }
+                }
+            },
+            "views_available": {
+                "type": "array"
+            },
+            "ViewJSONV121": {
+                "type": "object",
+                "properties": {
+                    "can_see_transaction_start_date": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "can_add_url": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "can_add_where_tag": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "can_see_transaction_this_bank_account": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "can_see_bank_account_owners": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "can_see_private_alias": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "can_edit_owner_comment": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "can_see_other_account_national_identifier": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "can_see_public_alias": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "can_see_physical_location": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "can_see_owner_comment": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "can_see_bank_account_iban": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "can_see_corporate_location": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "can_see_bank_account_number": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "can_see_other_account_bank_name": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "description": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "can_see_transaction_other_bank_account": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "can_delete_corporate_location": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "can_see_comments": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "can_see_bank_account_bank_name": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "can_add_more_info": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "can_see_other_account_number": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "can_see_other_account_swift_bic": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "can_add_open_corporates_url": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "can_see_other_account_kind": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "can_delete_physical_location": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "can_see_bank_account_label": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "can_see_transaction_currency": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "is_public": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "can_see_transaction_finish_date": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "can_add_tag": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "can_see_images": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "can_see_bank_account_currency": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "hide_metadata_if_alias_used": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "can_delete_where_tag": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "alias": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "can_add_image_url": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "can_add_comment": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "can_see_image_url": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "id": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "can_see_bank_account_national_identifier": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "can_see_tags": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "can_see_open_corporates_url": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "short_name": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "can_delete_tag": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "can_see_more_info": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "can_see_transaction_metadata": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "can_delete_comment": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "can_see_where_tag": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "can_add_private_alias": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "can_add_public_alias": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "can_see_bank_account_swift_bic": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "can_add_image": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "can_see_transaction_type": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "can_see_other_account_iban": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "can_add_physical_location": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "can_add_corporate_location": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "can_delete_image": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "can_see_url": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "can_see_bank_account_balance": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "can_see_transaction_balance": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "can_see_transaction_amount": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "can_see_other_account_metadata": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "can_see_bank_account_type": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "can_see_transaction_description": {
+                        "description": "",
+                        "type": "boolean"
+                    }
+                }
+            },
+            "ErrorUserNotLoggedIn": {
+                "type": "object",
+                "properties": {
+                    "message": {
+                        "description": "",
+                        "type": "string"
+                    }
+                }
+            },
+            "PostPhysicalCardJSON": {
+                "type": "object",
+                "properties": {
+                    "allows": {
+                        "description": "",
+                        "type": "array"
+                    },
+                    "expires_date": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "networks": {
+                        "description": "",
+                        "type": "array"
+                    },
+                    "issue_number": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "ReplacementJSON": {
+                        "description": "",
+                        "type": "object"
+                    },
+                    "replacement": {
+                        "description": "",
+                        "type": ""
+                    },
+                    "enabled": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "collected": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "technology": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "account_id": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "pin_reset": {
+                        "description": "",
+                        "type": "array"
+                    },
+                    "serial_number": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "valid_from_date": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "bank_card_number": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "name_on_card": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "posted": {
+                        "description": "",
+                        "type": "string"
+                    }
+                }
+            }
+        }
+    }
+}
