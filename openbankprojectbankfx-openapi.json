@@ -1,0 +1,129 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "version": "v3_1_0",
+        "title": "OpenBankProject-Bank-FX",
+        "description": "An Open Source API for Banks. (c) TESOBE Ltd. 2011 - 2018. Licensed under the AGPL and commercial licences.",
+        "termsOfService": "http:\/\/exmple.com\/license\/"
+    },
+    "servers": [
+        "http:\/\/api.openbankproject.com\/obp-bank-fx"
+    ],
+    "paths": {
+        "\/obp\/v2.2.0\/banks\/{BANK_ID}\/fx": {
+            "put": {
+                "summary": "Create Fx",
+                "description": "<p>Create or Update Fx for the Bank.<\/p><p>Authentication is Mandatory<\/p><p>OBP-20006: User is missing one or more roles: CanCreateFxRate OR CanCreateFxRateAtAnyBank<\/p>",
+                "operationId": "Vv220CreateFx",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "BANK_ID",
+                        "in": "path",
+                        "description": "The bank id"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/FXRateJsonV220"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "\/obp\/v2.2.0\/banks\/{BANK_ID}\/fx\/{FROM_CURRENCY_CODE}\/{TO_CURRENCY_CODE}": {
+            "get": {
+                "summary": "Get Current FxRate",
+                "description": "<p>Get the latest FXRate specified by BANK_ID, FROM_CURRENCY_CODE and TO_CURRENCY_CODE <\/p>",
+                "operationId": "Vv220GetCurrentFxRate",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "TO_CURRENCY_CODE",
+                        "in": "path",
+                        "description": "The to currency code"
+                    },
+                    {
+                        "name": "FROM_CURRENCY_CODE",
+                        "in": "path",
+                        "description": "The from currency code"
+                    },
+                    {
+                        "name": "BANK_ID",
+                        "in": "path",
+                        "description": "The bank id"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/FXRateJsonV220"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "components": {
+        "schemas": {
+            "FXRateJsonV220": {
+                "type": "object",
+                "properties": {
+                    "inverse_conversion_value": {
+                        "description": "",
+                        "type": "number"
+                    },
+                    "to_currency_code": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "effective_date": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "conversion_value": {
+                        "description": "",
+                        "type": "number"
+                    },
+                    "bank_id": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "from_currency_code": {
+                        "description": "",
+                        "type": "string"
+                    }
+                }
+            },
+            "ErrorUserNotLoggedIn": {
+                "type": "object",
+                "properties": {
+                    "message": {
+                        "description": "",
+                        "type": "string"
+                    }
+                }
+            },
+            "ErrorInvalidISOCurrencyCode": {
+                "type": "object",
+                "properties": {
+                    "message": {
+                        "description": "",
+                        "type": "string"
+                    }
+                }
+            }
+        }
+    }
+}
