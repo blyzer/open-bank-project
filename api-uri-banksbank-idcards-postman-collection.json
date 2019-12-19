@@ -1,0 +1,75 @@
+{
+    "id": "a0db2753a027606e11bf1cacd37300e0",
+    "name": "API URI: \/banks\/{BANK_ID}\/cards",
+    "description": null,
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [
+        {
+            "id": "55896fc605d713e69644d2c6891f17b2",
+            "name": "Get cards for the specified bank",
+            "url": "http:\/\/apisandbox.openbankproject.com\/obp\/v3_0_0\/banks\/{BANK_ID}\/cards",
+            "description": "",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "BANK_ID",
+                    "description": "The bank id",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "a0db2753a027606e11bf1cacd37300e0",
+            "rawModeData": ""
+        },
+        {
+            "id": "7030602efc55471ad0a2a1dc210f42bd",
+            "name": "Create Card",
+            "url": "http:\/\/apisandbox.openbankproject.com\/obp\/v3_0_0\/banks\/{BANK_ID}\/cards",
+            "description": "<p>Create Card at bank specified by BANK_ID .<\/p><p>Authentication is Mandatory<\/p>",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "post",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "BANK_ID",
+                    "description": "The bank id",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "a0db2753a027606e11bf1cacd37300e0",
+            "rawModeData": ""
+        }
+    ]
+}
