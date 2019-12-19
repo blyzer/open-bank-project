@@ -1,0 +1,456 @@
+{
+    "id": "a84c5fd9a304b1da5b038b5d8f67dbde",
+    "name": "OpenBankProject-Bank",
+    "description": null,
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [
+        {
+            "id": "8047e3a06e20cc7a2245a6b27acf259b",
+            "name": "Get Transaction Types at Bank",
+            "url": "http:\/\/api.openbankproject.com\/obp-bank\/obp\/v2.0.0\/banks\/{BANK_ID}\/transaction-types",
+            "description": "<p>Get Transaction Types for the bank specified by BANK_ID:<\/p><p>Lists the possible Transaction Types available at the bank (as opposed to Transaction Request Types which are the possible ways Transactions can be created by this API Server).<\/p><ul>  <li>id : Unique transaction type id across the API instance. SHOULD be a UUID. MUST be unique.<\/li>  <li>bank_id : The bank that supports this TransactionType<\/li>  <li>short_code : A short code (SHOULD have no-spaces) which MUST be unique across t",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "BANK_ID",
+                    "description": "The bank id",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "a84c5fd9a304b1da5b038b5d8f67dbde",
+            "rawModeData": ""
+        },
+        {
+            "id": "1a7fc5a5cbc61366ba4d1fc69c361808",
+            "name": "Get supported Transaction Request Types",
+            "url": "http:\/\/api.openbankproject.com\/obp-bank\/obp\/v2.1.0\/banks\/{BANK_ID}\/transaction-request-types",
+            "description": "<p>Get the list of the Transaction Request Types supported by the bank.<\/p><p>Authentication is Optional<\/p>",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "BANK_ID",
+                    "description": "The bank id",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "a84c5fd9a304b1da5b038b5d8f67dbde",
+            "rawModeData": ""
+        },
+        {
+            "id": "925872af21c822a86c450329e93ac73d",
+            "name": "Create Transaction Type at bank",
+            "url": "http:\/\/api.openbankproject.com\/obp-bank\/obp\/v2.1.0\/banks\/{BANK_ID}\/transaction-types",
+            "description": "<p>Create Transaction Types for the bank specified by BANK_ID:<\/p><ul>  <li>id : Unique transaction type id across the API instance. SHOULD be a UUID. MUST be unique.<\/li>  <li>bank_id : The bank that supports this TransactionType<\/li>  <li>short_code : A short code (SHOULD have no-spaces) which MUST be unique across the bank. May be stored with Transactions to link here<\/li>  <li>summary : A succinct summary<\/li>  <li>description : A longer description<\/li>  <li>charge : The charge to the custo",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "put",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "BANK_ID",
+                    "description": "The bank id",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "a84c5fd9a304b1da5b038b5d8f67dbde",
+            "rawModeData": ""
+        },
+        {
+            "id": "cf589c0320968541e474d0b3e0648fac",
+            "name": "Create Bank",
+            "url": "http:\/\/api.openbankproject.com\/obp-bank\/obp\/v2.2.0\/banks",
+            "description": "<p>Create a new bank (Authenticated access). Authentication is Mandatory<\/p>",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "post",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "a84c5fd9a304b1da5b038b5d8f67dbde",
+            "rawModeData": ""
+        },
+        {
+            "id": "af6830e93776c45e185187505f41eb2c",
+            "name": "Get Banks",
+            "url": "http:\/\/api.openbankproject.com\/obp-bank\/obp\/v3.0.0\/banks",
+            "description": "<p>Get banks on this API instance Returns a list of banks supported on this server:<\/p><ul>  <li>ID used as parameter in URLs<\/li>  <li>Short and full name of bank<\/li>  <li>Logo URL<\/li>  <li>Website<\/li><\/ul>",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "a84c5fd9a304b1da5b038b5d8f67dbde",
+            "rawModeData": ""
+        },
+        {
+            "id": "cc6cc0851ef2e3d78bd17d65b04c2a20",
+            "name": "Get Bank",
+            "url": "http:\/\/api.openbankproject.com\/obp-bank\/obp\/v3.0.0\/banks\/{BANK_ID}",
+            "description": "<p>Get the bank specified by BANK_ID Returns information about a single bank specified by BANK_ID including:<\/p><ul>  <li>Short and full name of bank<\/li>  <li>Logo URL<\/li>  <li>Website<\/li><\/ul>",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "BANK_ID",
+                    "description": "The bank id",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "a84c5fd9a304b1da5b038b5d8f67dbde",
+            "rawModeData": ""
+        },
+        {
+            "id": "f55152e464a0fd0b7289697252e6d504",
+            "name": "Get Branches for a Bank",
+            "url": "http:\/\/api.openbankproject.com\/obp-bank\/obp\/v3.0.0\/banks\/{BANK_ID}\/branches",
+            "description": "<p>Returns information about branches for a single bank specified by BANK_ID including:<\/p><ul>  <li>Name<\/li>  <li>Address<\/li>  <li>Geo Location<\/li>  <li>License the data under this endpoint is released under<\/li>  <li>Structured opening hours<\/li>  <li>Accessible flag<\/li>  <li>Branch Type<\/li>  <li>More Info<\/li><\/ul><p>Pagination:<\/p><p>By default, 50 records are returned.<\/p><p>You can use the url query parameters <em>limit<\/em> and <em>offset<\/em> for pagination<\/p><p>Authentication is O",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "BANK_ID",
+                    "description": "The bank id",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "a84c5fd9a304b1da5b038b5d8f67dbde",
+            "rawModeData": ""
+        },
+        {
+            "id": "fea37b4d69d709955f1b11584089e6f5",
+            "name": "Get Branch",
+            "url": "http:\/\/api.openbankproject.com\/obp-bank\/obp\/v3.0.0\/banks\/{BANK_ID}\/branches\/{BRANCH_ID}",
+            "description": "<p>Returns information about a single Branch specified by BANK_ID and BRANCH_ID including:<\/p><ul>  <li>Name<\/li>  <li>Address<\/li>  <li>Geo Location<\/li>  <li>License the data under this endpoint is released under.<\/li><\/ul><p>Authentication is Optional<\/p>",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "BRANCH_ID",
+                    "description": "The branch id",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "BANK_ID",
+                    "description": "The bank id",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "a84c5fd9a304b1da5b038b5d8f67dbde",
+            "rawModeData": ""
+        },
+        {
+            "id": "3630bc22029c0d62d218e4150f2f660d",
+            "name": "get Checkbook orders",
+            "url": "http:\/\/api.openbankproject.com\/obp-bank\/obp\/v3.1.0\/banks\/{BANK_ID}\/accounts\/{ACCOUNT_ID}\/{VIEW_ID}\/checkbook\/orders",
+            "description": "<p>Get all checkbook orders<\/p>",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "VIEW_ID",
+                    "description": "The view id",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "ACCOUNT_ID",
+                    "description": "The account id",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "BANK_ID",
+                    "description": "The bank id",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "a84c5fd9a304b1da5b038b5d8f67dbde",
+            "rawModeData": ""
+        },
+        {
+            "id": "385d6b22c8a5f785c7a67ab754bb1e77",
+            "name": "Get status of Credit Card order ",
+            "url": "http:\/\/api.openbankproject.com\/obp-bank\/obp\/v3.1.0\/banks\/{BANK_ID}\/accounts\/{ACCOUNT_ID}\/{VIEW_ID}\/credit_cards\/orders",
+            "description": "<p>Get status of Credit Card orders Get all orders<\/p>",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "VIEW_ID",
+                    "description": "The view id",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "ACCOUNT_ID",
+                    "description": "The account id",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "BANK_ID",
+                    "description": "The bank id",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "a84c5fd9a304b1da5b038b5d8f67dbde",
+            "rawModeData": ""
+        },
+        {
+            "id": "12910936c74f8a8250ccd6104b5ccdf4",
+            "name": "Get Credit Limit Order Requests ",
+            "url": "http:\/\/api.openbankproject.com\/obp-bank\/obp\/v3.1.0\/banks\/{BANK_ID}\/customers\/{CUSTOMER_ID}\/credit_limit\/requests",
+            "description": "<p>Get Credit Limit Order Requests <\/p>",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "CUSTOMER_ID",
+                    "description": "The customer id",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "BANK_ID",
+                    "description": "The bank id",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "a84c5fd9a304b1da5b038b5d8f67dbde",
+            "rawModeData": ""
+        },
+        {
+            "id": "efc5bdf0fa9ac4314f4e42f831c48481",
+            "name": "Create Credit Limit Order Request",
+            "url": "http:\/\/api.openbankproject.com\/obp-bank\/obp\/v3.1.0\/banks\/{BANK_ID}\/customers\/{CUSTOMER_ID}\/credit_limit\/requests",
+            "description": "<p>Create credit limit order request<\/p>",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "post",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "CUSTOMER_ID",
+                    "description": "The customer id",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "BANK_ID",
+                    "description": "The bank id",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "a84c5fd9a304b1da5b038b5d8f67dbde",
+            "rawModeData": ""
+        },
+        {
+            "id": "383d3a69c7a117d8fb58e8d3f83bd416",
+            "name": "Get Creadit Limit Order Request By Request Id",
+            "url": "http:\/\/api.openbankproject.com\/obp-bank\/obp\/v3.1.0\/banks\/{BANK_ID}\/customers\/{CUSTOMER_ID}\/credit_limit\/requests\/REQUEST_ID",
+            "description": "<p>Get Creadit Limit Order Request By Request Id<\/p>",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "CUSTOMER_ID",
+                    "description": "The customer id",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "BANK_ID",
+                    "description": "The bank id",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "a84c5fd9a304b1da5b038b5d8f67dbde",
+            "rawModeData": ""
+        }
+    ]
+}
