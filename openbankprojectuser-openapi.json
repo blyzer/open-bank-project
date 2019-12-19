@@ -1,0 +1,2136 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "version": "v3_1_0",
+        "title": "OpenBankProject-User",
+        "description": "An Open Source API for Banks. (c) TESOBE Ltd. 2011 - 2018. Licensed under the AGPL and commercial licences.",
+        "termsOfService": "http:\/\/exmple.com\/license\/"
+    },
+    "servers": [
+        "http:\/\/api.openbankproject.com\/obp-user"
+    ],
+    "paths": {
+        "\/obp\/v1.2.1\/banks\/{BANK_ID}\/accounts\/{ACCOUNT_ID}\/permissions\/PROVIDER\/{PROVIDER_ID}\/views": {
+            "post": {
+                "summary": "Grant User access to a list of views.",
+                "description": "<p>Grants the user identified by PROVIDER_ID at their provider PROVIDER access to a list of views at BANK_ID for account ACCOUNT_ID.<\/p><p>All url parameters must be <a href=\"http:\/\/en.wikipedia.org\/wiki\/Percent-encoding\">%-encoded<\/a>, which is often especially relevant for PROVIDER_ID and PROVIDER.<\/p><p>Authentication is Mandatory<\/p><p>The User needs to have access to the owner view.<\/p>",
+                "operationId": "Vv121AddPermissionForUserForBankAccountForMultipleViews",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "PROVIDER_ID",
+                        "in": "path",
+                        "description": "The provider id"
+                    },
+                    {
+                        "name": "ACCOUNT_ID",
+                        "in": "path",
+                        "description": "The account id"
+                    },
+                    {
+                        "name": "BANK_ID",
+                        "in": "path",
+                        "description": "The bank id"
+                    }
+                ],
+                "responses": {
+                    "201": {
+                        "description": "Success",
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/ViewsJSONV121"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "\/obp\/v1.2.1\/banks\/{BANK_ID}\/accounts\/{ACCOUNT_ID}\/permissions\/PROVIDER\/{PROVIDER_ID}\/views\/{VIEW_ID}": {
+            "post": {
+                "summary": "Grant User access to View.",
+                "description": "<p>Grants the User identified by PROVIDER_ID at PROVIDER access to the view VIEW_ID at BANK_ID for account ACCOUNT_ID.<\/p><p>All url parameters must be <a href=\"http:\/\/en.wikipedia.org\/wiki\/Percent-encoding\">%-encoded<\/a>, which is often especially relevant for PROVIDER and PROVIDER_ID.<\/p><p>Authentication is Mandatory and the user needs to have access to the owner view.<\/p><p>Granting access to a public view will return an error message, as the user already has access.<\/p>",
+                "operationId": "Vv121AddPermissionForUserForBankAccountForOneView",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "PROVIDER_ID",
+                        "in": "path",
+                        "description": "The provider id"
+                    },
+                    {
+                        "name": "VIEW_ID",
+                        "in": "path",
+                        "description": "The view id"
+                    },
+                    {
+                        "name": "ACCOUNT_ID",
+                        "in": "path",
+                        "description": "The account id"
+                    },
+                    {
+                        "name": "BANK_ID",
+                        "in": "path",
+                        "description": "The bank id"
+                    }
+                ],
+                "responses": {
+                    "201": {
+                        "description": "Success",
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/ViewsJSONV121"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "\/obp\/v1.2.1\/banks\/{BANK_ID}\/accounts\/{ACCOUNT_ID}\/permissions\/{PROVIDER_ID}\/{USER_ID}\/views": {
+            "delete": {
+                "summary": "Revoke access to all Views on Account",
+                "description": "<p>Revokes the user identified by PROVIDER_ID at their provider PROVIDER access to all the views at BANK_ID for account ACCOUNT_ID.<\/p><p>Authentication is Mandatory and the user needs to have access to the owner view.<\/p>",
+                "operationId": "Vv121RemovePermissionForUserForBankAccountForAllViews",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "PROVIDER_ID",
+                        "in": "path",
+                        "description": "The provider id"
+                    },
+                    {
+                        "name": "USER_ID",
+                        "in": "path",
+                        "description": "The user id"
+                    },
+                    {
+                        "name": "ACCOUNT_ID",
+                        "in": "path",
+                        "description": "The account id"
+                    },
+                    {
+                        "name": "BANK_ID",
+                        "in": "path",
+                        "description": "The bank id"
+                    }
+                ],
+                "responses": {
+                    "204": {
+                        "description": "Success",
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/EmptyClassJson"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "\/obp\/v1.2.1\/banks\/{BANK_ID}\/accounts\/{ACCOUNT_ID}\/permissions\/{PROVIDER_ID}\/{USER_ID}\/views\/{VIEW_ID}": {
+            "delete": {
+                "summary": "Revoke access to one View.",
+                "description": "<p>Revokes the user identified by PROVIDER_ID at their provider PROVIDER access to the view VIEW_ID at BANK_ID for account ACCOUNT_ID.<\/p><p>Revoking a user access to a public view will return an error message.<\/p><p>Authentication is Mandatory and the user needs to have access to the owner view.<\/p>",
+                "operationId": "Vv121RemovePermissionForUserForBankAccountForOneView",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "PROVIDER_ID",
+                        "in": "path",
+                        "description": "The provider id"
+                    },
+                    {
+                        "name": "USER_ID",
+                        "in": "path",
+                        "description": "The user id"
+                    },
+                    {
+                        "name": "VIEW_ID",
+                        "in": "path",
+                        "description": "The view id"
+                    },
+                    {
+                        "name": "ACCOUNT_ID",
+                        "in": "path",
+                        "description": "The account id"
+                    },
+                    {
+                        "name": "BANK_ID",
+                        "in": "path",
+                        "description": "The bank id"
+                    }
+                ],
+                "responses": {
+                    "204": {
+                        "description": "Success",
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/EmptyClassJson"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "\/obp\/v1.3.0\/cards": {
+            "get": {
+                "summary": "Get cards for the current user",
+                "description": "<p>Returns data about all the physical cards a user has been issued. These could be debit cards, credit cards, etc.<\/p>",
+                "operationId": "Vv130GetCards",
+                "deprecated": 0,
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/PhysicalCardsJSON"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "\/obp\/v2.0.0\/banks\/{BANK_ID}\/accounts\/{ACCOUNT_ID}\/permissions": {
+            "get": {
+                "summary": "Get access.",
+                "description": "<p>Returns the list of the permissions at BANK_ID for account ACCOUNT_ID, with each time a pair composed of the user and the views that he has access to.<\/p><p>Authentication is Mandatory and the user needs to have access to the owner view.<\/p>",
+                "operationId": "Vv200GetPermissionsForBankAccount",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "ACCOUNT_ID",
+                        "in": "path",
+                        "description": "The account id"
+                    },
+                    {
+                        "name": "BANK_ID",
+                        "in": "path",
+                        "description": "The bank id"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/PhysicalCardsJSON"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "\/obp\/v2.0.0\/banks\/{BANK_ID}\/meetings": {
+            "get": {
+                "summary": "Get Meetings",
+                "description": "<p>Meetings contain meta data about, and are used to facilitate, video conferences \/ chats etc.<\/p><p>The actual conference\/chats are handled by external services.<\/p><p>Login is required.<\/p><p>This call is <strong>experimental<\/strong> and will require further authorisation in the future.<\/p>",
+                "operationId": "Vv200GetMeetings",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "BANK_ID",
+                        "in": "path",
+                        "description": "The bank id"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/PhysicalCardsJSON"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "post": {
+                "summary": "Create Meeting (video conference\/call)",
+                "description": "<p>Create Meeting: Initiate a video conference\/call with the bank.<\/p><p>The Meetings resource contains meta data about video\/other conference sessions, not the video\/audio\/chat itself.<\/p><p>The actual conferencing is handled by external providers. Currently OBP supports tokbox video conferences (WIP).<\/p><p>This is not a recomendation of tokbox per se.<\/p><p>provider_id determines the provider of the meeting \/ video chat service. MUST be url friendly (no spaces).<\/p><p>purpose_id explains the ",
+                "operationId": "Vv200CreateMeeting",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "BANK_ID",
+                        "in": "path",
+                        "description": "The bank id"
+                    }
+                ],
+                "responses": {
+                    "201": {
+                        "description": "Success",
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/ViewsJSONV121"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "\/obp\/v2.0.0\/banks\/{BANK_ID}\/meetings\/MEETING_ID": {
+            "get": {
+                "summary": "Get Meeting",
+                "description": "<p>Get Meeting specified by BANK_ID \/ MEETING_ID Meetings contain meta data about, and are used to facilitate, video conferences \/ chats etc.<\/p><p>The actual conference\/chats are handled by external services.<\/p><p>Login is required.<\/p><p>This call is <strong>experimental<\/strong> and will require further authorisation in the future.<\/p>",
+                "operationId": "Vv200GetMeeting",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "BANK_ID",
+                        "in": "path",
+                        "description": "The bank id"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/PhysicalCardsJSON"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "\/obp\/v2.0.0\/banks\/{BANK_ID}\/user_customer_links": {
+            "post": {
+                "summary": "Create User Customer Link.",
+                "description": "<p>Link a User to a Customer<\/p><p>Authentication is Mandatory<\/p><p>CanCreateUserCustomerLink OR CanCreateUserCustomerLinkAtAnyBank entitlements are required.<\/p>",
+                "operationId": "Vv200CreateUserCustomerLinks",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "BANK_ID",
+                        "in": "path",
+                        "description": "The bank id"
+                    }
+                ],
+                "responses": {
+                    "201": {
+                        "description": "Success",
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/ViewsJSONV121"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "\/obp\/v2.0.0\/users": {
+            "post": {
+                "summary": "Create User.",
+                "description": "<p>Creates OBP user.  No authorisation (currently) required.<\/p><p>Mimics current webform to Register.<\/p><p>Requires username(email) and password.<\/p><p>Returns 409 error if username not unique.<\/p><p>May require validation of email address.<\/p>",
+                "operationId": "Vv200CreateUser",
+                "deprecated": 0,
+                "parameters": [],
+                "responses": {
+                    "201": {
+                        "description": "Success",
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/ViewsJSONV121"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "\/obp\/v2.0.0\/users\/{USER_ID}\/entitlement\/{ENTITLEMENT_ID}": {
+            "delete": {
+                "summary": "Delete Entitlement",
+                "description": "<p>Delete Entitlement specified by ENTITLEMENT_ID for an user specified by USER_ID<\/p><p>Authentication is required and the user needs to be a Super Admin. Super Admins are listed in the Props file.<\/p>",
+                "operationId": "Vv200DeleteEntitlement",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "ENTITLEMENT_ID",
+                        "in": "path",
+                        "description": "The entitblement id"
+                    },
+                    {
+                        "name": "USER_ID",
+                        "in": "path",
+                        "description": "The user id"
+                    }
+                ],
+                "responses": {
+                    "204": {
+                        "description": "Success",
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/EmptyClassJson"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "\/obp\/v2.0.0\/users\/{USER_ID}\/entitlements": {
+            "get": {
+                "summary": "Get Entitlements for User",
+                "description": "<p>Authentication is Mandatory<\/p>",
+                "operationId": "Vv200GetEntitlements",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "USER_ID",
+                        "in": "path",
+                        "description": "The user id"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/PhysicalCardsJSON"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "post": {
+                "summary": "Add Entitlement for a User.",
+                "description": "<p>Create Entitlement. Grant Role to User.<\/p><p>Entitlements are used to grant System or Bank level roles to Users. (For Account level privileges, see Views)<\/p><p>For a System level Role (.e.g CanGetAnyUser), set bank_id to an empty string i.e. \"bank_id\":\"\"<\/p><p>For a Bank level Role (e.g. CanCreateAccount), set bank_id to a valid value e.g. \"bank_id\":\"my-bank-id\"<\/p><p>Authentication is required and the user needs to be a Super Admin. Super Admins are listed in the Props file.<\/p>",
+                "operationId": "Vv200AddEntitlement",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "USER_ID",
+                        "in": "path",
+                        "description": "The user id"
+                    }
+                ],
+                "responses": {
+                    "201": {
+                        "description": "Success",
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/ViewsJSONV121"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "\/obp\/v2.1.0\/banks\/{BANK_ID}\/users\/{USER_ID}\/entitlements": {
+            "get": {
+                "summary": "Get Entitlements for User at Bank.",
+                "description": "<p>Get Entitlements specified by BANK_ID and USER_ID<\/p><p>Authentication is Mandatory<\/p>",
+                "operationId": "Vv210GetEntitlementsByBankAndUser",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "USER_ID",
+                        "in": "path",
+                        "description": "The user id"
+                    },
+                    {
+                        "name": "BANK_ID",
+                        "in": "path",
+                        "description": "The bank id"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/PhysicalCardsJSON"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "\/obp\/v3.0.0\/banks\/{BANK_ID}\/accounts\/{ACCOUNT_ID}\/permissions\/PROVIDER\/{PROVIDER_ID}": {
+            "get": {
+                "summary": "Get Account access for User.",
+                "description": "<p>Returns the list of the views at BANK_ID for account ACCOUNT_ID that a user identified by PROVIDER_ID at their provider PROVIDER has access to. All url parameters must be <a href=\"http:\/\/en.wikipedia.org\/wiki\/Percent-encoding\">%-encoded<\/a>, which is often especially relevant for USER_ID and PROVIDER.<\/p><p>Authentication is Mandatory<\/p><p>The user needs to have access to the owner view.<\/p>",
+                "operationId": "Vv300GetPermissionForUserForBankAccount",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "PROVIDER_ID",
+                        "in": "path",
+                        "description": "The provider id"
+                    },
+                    {
+                        "name": "ACCOUNT_ID",
+                        "in": "path",
+                        "description": "The account id"
+                    },
+                    {
+                        "name": "BANK_ID",
+                        "in": "path",
+                        "description": "The bank id"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/PhysicalCardsJSON"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "\/obp\/v3.0.0\/consumers\/{CONSUMER_ID}\/scope\/SCOPE_ID": {
+            "delete": {
+                "summary": "Delete Consumer Scope",
+                "description": "<p>Delete Consumer Scope specified by SCOPE_ID for an consumer specified by CONSUMER_ID<\/p><p>Authentication is required and the user needs to be a Super Admin. Super Admins are listed in the Props file.<\/p>",
+                "operationId": "Vv300DeleteScope",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "CONSUMER_ID",
+                        "in": "path",
+                        "description": "new consumer id"
+                    }
+                ],
+                "responses": {
+                    "204": {
+                        "description": "Success",
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/EmptyClassJson"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "\/obp\/v3.0.0\/consumers\/{CONSUMER_ID}\/scopes": {
+            "get": {
+                "summary": "Get Scopes for Consumer",
+                "description": "<p>Get all the scopes for an consumer specified by CONSUMER_ID<\/p><p>Authentication is Mandatory<\/p>",
+                "operationId": "Vv300GetScopes",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "CONSUMER_ID",
+                        "in": "path",
+                        "description": "new consumer id"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/PhysicalCardsJSON"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "post": {
+                "summary": "Add Scope for a Consumer.",
+                "description": "<p>Create Scope. Grant Role to Consumer.<\/p><p>Scopes are used to grant System or Bank level roles to the Consumer (App). (For Account level privileges, see Views)<\/p><p>For a System level Role (.e.g CanGetAnyUser), set bank_id to an empty string i.e. \"bank_id\":\"\"<\/p><p>For a Bank level Role (e.g. CanCreateAccount), set bank_id to a valid value e.g. \"bank_id\":\"my-bank-id\"<\/p>",
+                "operationId": "Vv300AddScope",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "CONSUMER_ID",
+                        "in": "path",
+                        "description": "new consumer id"
+                    }
+                ],
+                "responses": {
+                    "201": {
+                        "description": "Success",
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/ViewsJSONV121"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "\/obp\/v3.0.0\/entitlement-requests": {
+            "get": {
+                "summary": "Get all Entitlement Requests",
+                "description": "<p>Get all Entitlement Requests<\/p><p>Authentication is Mandatory<\/p>",
+                "operationId": "Vv300GetAllEntitlementRequests",
+                "deprecated": 0,
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/PhysicalCardsJSON"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "post": {
+                "summary": "Add Entitlement Request for a Logged User.",
+                "description": "<p>Create Entitlement Request.<\/p><p>Any logged in User can use this endpoint to request an Entitlement<\/p><p>Entitlements are used to grant System or Bank level roles to Users. (For Account level privileges, see Views)<\/p><p>For a System level Role (.e.g CanGetAnyUser), set bank_id to an empty string i.e. \"bank_id\":\"\"<\/p><p>For a Bank level Role (e.g. CanCreateAccount), set bank_id to a valid value e.g. \"bank_id\":\"my-bank-id\"<\/p><p>Authentication is Mandatory<\/p>",
+                "operationId": "Vv300AddEntitlementRequest",
+                "deprecated": 0,
+                "parameters": [],
+                "responses": {
+                    "201": {
+                        "description": "Success",
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/ViewsJSONV121"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "\/obp\/v3.0.0\/entitlement-requests\/ENTITLEMENT_REQUEST_ID": {
+            "delete": {
+                "summary": "Delete Entitlement Request",
+                "description": "<p>Delete the Entitlement Request specified by ENTITLEMENT_REQUEST_ID for a user specified by USER_ID<\/p><p>Authentication is Mandatory<\/p>",
+                "operationId": "Vv300DeleteEntitlementRequest",
+                "deprecated": 0,
+                "parameters": [],
+                "responses": {
+                    "204": {
+                        "description": "Success",
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/EmptyClassJson"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "\/obp\/v3.0.0\/my\/entitlement-requests": {
+            "get": {
+                "summary": "Get Entitlement Requests for the current User.",
+                "description": "<p>Get Entitlement Requests for the current User.<\/p><p>Authentication is Mandatory<\/p>",
+                "operationId": "Vv300GetEntitlementRequestsForCurrentUser",
+                "deprecated": 0,
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/PhysicalCardsJSON"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "\/obp\/v3.0.0\/my\/entitlements": {
+            "get": {
+                "summary": "Get Entitlements for the current User.",
+                "description": "<p>Get Entitlements for the current User.<\/p><p>Authentication is Mandatory<\/p>",
+                "operationId": "Vv300GetEntitlementsForCurrentUser",
+                "deprecated": 0,
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/PhysicalCardsJSON"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "\/obp\/v3.0.0\/users": {
+            "get": {
+                "summary": "Get all Users",
+                "description": "<p>Get all users<\/p><p>Authentication is Mandatory<\/p><p>CanGetAnyUser entitlement is required,<\/p>",
+                "operationId": "Vv300GetUsers",
+                "deprecated": 0,
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/PhysicalCardsJSON"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "\/obp\/v3.0.0\/users\/{USER_ID}\/entitlement-requests": {
+            "get": {
+                "summary": "Get Entitlement Requests for a User.",
+                "description": "<p>Get Entitlement Requests for a User.<\/p><p>Authentication is Mandatory<\/p>",
+                "operationId": "Vv300GetEntitlementRequests",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "USER_ID",
+                        "in": "path",
+                        "description": "The user id"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/PhysicalCardsJSON"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "\/obp\/v3.0.0\/users\/current": {
+            "get": {
+                "summary": "Get User (Current)",
+                "description": "<p>Get the logged in user<\/p><p>Authentication is Mandatory<\/p>",
+                "operationId": "Vv300GetCurrentUser",
+                "deprecated": 0,
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/PhysicalCardsJSON"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "\/obp\/v3.0.0\/users\/current\/customers": {
+            "get": {
+                "summary": "Get Customers for Current User",
+                "description": "<p>Gets all Customers that are linked to a User.<\/p><p>Authentication is Mandatory<\/p>",
+                "operationId": "Vv300GetCustomersForUser",
+                "deprecated": 0,
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/PhysicalCardsJSON"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "\/obp\/v3.0.0\/users\/email\/EMAIL\/terminator": {
+            "get": {
+                "summary": "Get Users by Email Address",
+                "description": "<p>Get users by email address<\/p><p>Authentication is Mandatory CanGetAnyUser entitlement is required,<\/p>",
+                "operationId": "Vv300GetUser",
+                "deprecated": 0,
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/PhysicalCardsJSON"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "\/obp\/v3.0.0\/users\/user_id\/{USER_ID}": {
+            "get": {
+                "summary": "Get User by USER_ID",
+                "description": "<p>Get user by USER_ID<\/p><p>Authentication is Mandatory CanGetAnyUser entitlement is required,<\/p>",
+                "operationId": "Vv300GetUserByUserId",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "USER_ID",
+                        "in": "path",
+                        "description": "The user id"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/PhysicalCardsJSON"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "\/obp\/v3.0.0\/users\/username\/USERNAME": {
+            "get": {
+                "summary": "Get User by USERNAME",
+                "description": "<p>Get user by USERNAME<\/p><p>Authentication is Mandatory<\/p><p>CanGetAnyUser entitlement is required,<\/p>",
+                "operationId": "Vv300GetUserByUsername",
+                "deprecated": 0,
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/PhysicalCardsJSON"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "components": {
+        "schemas": {
+            "ViewIdsJson": {
+                "type": "object",
+                "properties": {
+                    "views": {
+                        "description": "",
+                        "type": "array"
+                    }
+                }
+            },
+            "views": {
+                "type": "array"
+            },
+            "ViewsJSONV121": {
+                "type": "object",
+                "properties": {
+                    "views": {
+                        "description": "",
+                        "type": "array"
+                    }
+                }
+            },
+            "ViewJSONV121": {
+                "type": "object",
+                "properties": {
+                    "can_see_transaction_start_date": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "can_add_url": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "can_add_where_tag": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "can_see_transaction_this_bank_account": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "can_see_bank_account_owners": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "can_see_private_alias": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "can_edit_owner_comment": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "can_see_other_account_national_identifier": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "can_see_public_alias": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "can_see_physical_location": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "can_see_owner_comment": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "can_see_bank_account_iban": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "can_see_corporate_location": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "can_see_bank_account_number": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "can_see_other_account_bank_name": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "description": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "can_see_transaction_other_bank_account": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "can_delete_corporate_location": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "can_see_comments": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "can_see_bank_account_bank_name": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "can_add_more_info": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "can_see_other_account_number": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "can_see_other_account_swift_bic": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "can_add_open_corporates_url": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "can_see_other_account_kind": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "can_delete_physical_location": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "can_see_bank_account_label": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "can_see_transaction_currency": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "is_public": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "can_see_transaction_finish_date": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "can_add_tag": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "can_see_images": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "can_see_bank_account_currency": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "hide_metadata_if_alias_used": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "can_delete_where_tag": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "alias": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "can_add_image_url": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "can_add_comment": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "can_see_image_url": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "id": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "can_see_bank_account_national_identifier": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "can_see_tags": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "can_see_open_corporates_url": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "short_name": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "can_delete_tag": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "can_see_more_info": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "can_see_transaction_metadata": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "can_delete_comment": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "can_see_where_tag": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "can_add_private_alias": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "can_add_public_alias": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "can_see_bank_account_swift_bic": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "can_add_image": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "can_see_transaction_type": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "can_see_other_account_iban": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "can_add_physical_location": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "can_add_corporate_location": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "can_delete_image": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "can_see_url": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "can_see_bank_account_balance": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "can_see_transaction_balance": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "can_see_transaction_amount": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "can_see_other_account_metadata": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "can_see_bank_account_type": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "can_see_transaction_description": {
+                        "description": "",
+                        "type": "boolean"
+                    }
+                }
+            },
+            "ErrorUserNotLoggedIn": {
+                "type": "object",
+                "properties": {
+                    "message": {
+                        "description": "",
+                        "type": "string"
+                    }
+                }
+            },
+            "EmptyClassJson": {
+                "type": "object",
+                "properties": {
+                    "jsonString": {
+                        "description": "",
+                        "type": "string"
+                    }
+                }
+            },
+            "PhysicalCardsJSON": {
+                "type": "object",
+                "properties": {
+                    "cards": {
+                        "description": "",
+                        "type": "array"
+                    }
+                }
+            },
+            "cards": {
+                "type": "array"
+            },
+            "PhysicalCardJSON": {
+                "type": "object",
+                "properties": {
+                    "allows": {
+                        "description": "",
+                        "type": "array"
+                    },
+                    "expires_date": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "networks": {
+                        "description": "",
+                        "type": "array"
+                    },
+                    "issue_number": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "replacement": {
+                        "description": "",
+                        "type": ""
+                    },
+                    "enabled": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "collected": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "technology": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "cancelled": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "bank_id": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "pin_reset": {
+                        "description": "",
+                        "type": "array"
+                    },
+                    "serial_number": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "account": {
+                        "description": "",
+                        "type": ""
+                    },
+                    "valid_from_date": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "bank_card_number": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "name_on_card": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "posted": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "on_hot_list": {
+                        "description": "",
+                        "type": "boolean"
+                    }
+                }
+            },
+            "allows": {
+                "type": "array"
+            },
+            "networks": {
+                "type": "array"
+            },
+            "replacement": {
+                "type": "object"
+            },
+            "pin_reset": {
+                "type": "array"
+            },
+            "account": {
+                "type": "object"
+            },
+            "ReplacementJSON": {
+                "type": "object",
+                "properties": {
+                    "reason_requested": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "requested_date": {
+                        "description": "",
+                        "type": "string"
+                    }
+                }
+            },
+            "PinResetJSON": {
+                "type": "object",
+                "properties": {
+                    "reason_requested": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "requested_date": {
+                        "description": "",
+                        "type": "string"
+                    }
+                }
+            },
+            "AccountJSON": {
+                "type": "object",
+                "properties": {
+                    "bank_id": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "views_available": {
+                        "description": "",
+                        "type": "array"
+                    },
+                    "label": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "id": {
+                        "description": "",
+                        "type": "string"
+                    }
+                }
+            },
+            "views_available": {
+                "type": "array"
+            },
+            "PermissionsJSON": {
+                "type": "object",
+                "properties": {
+                    "permissions": {
+                        "description": "",
+                        "type": "array"
+                    }
+                }
+            },
+            "permissions": {
+                "type": "array"
+            },
+            "PermissionJSON": {
+                "type": "object",
+                "properties": {
+                    "views": {
+                        "description": "",
+                        "type": "array"
+                    },
+                    "user": {
+                        "description": "",
+                        "type": ""
+                    }
+                }
+            },
+            "user": {
+                "type": "object"
+            },
+            "UserJSONV121": {
+                "type": "object",
+                "properties": {
+                    "display_name": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "provider": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "id": {
+                        "description": "",
+                        "type": "string"
+                    }
+                }
+            },
+            "MeetingsJson": {
+                "type": "object",
+                "properties": {
+                    "meetings": {
+                        "description": "",
+                        "type": "array"
+                    }
+                }
+            },
+            "meetings": {
+                "type": "array"
+            },
+            "MeetingJson": {
+                "type": "object",
+                "properties": {
+                    "present": {
+                        "description": "",
+                        "type": ""
+                    },
+                    "provider_id": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "bank_id": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "purpose_id": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "when": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "meeting_id": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "keys": {
+                        "description": "",
+                        "type": ""
+                    }
+                }
+            },
+            "present": {
+                "type": "object"
+            },
+            "keys": {
+                "type": "object"
+            },
+            "MeetingPresentJson": {
+                "type": "object",
+                "properties": {
+                    "customer_user_id": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "staff_user_id": {
+                        "description": "",
+                        "type": "string"
+                    }
+                }
+            },
+            "MeetingKeysJson": {
+                "type": "object",
+                "properties": {
+                    "customer_token": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "staff_token": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "session_id": {
+                        "description": "",
+                        "type": "string"
+                    }
+                }
+            },
+            "CreateMeetingJson": {
+                "type": "object",
+                "properties": {
+                    "purpose_id": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "provider_id": {
+                        "description": "",
+                        "type": "string"
+                    }
+                }
+            },
+            "CreateUserCustomerLinkJson": {
+                "type": "object",
+                "properties": {
+                    "customer_id": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "user_id": {
+                        "description": "",
+                        "type": "string"
+                    }
+                }
+            },
+            "UserCustomerLinkJson": {
+                "type": "object",
+                "properties": {
+                    "is_active": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "customer_id": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "user_id": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "date_inserted": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "user_customer_link_id": {
+                        "description": "",
+                        "type": "string"
+                    }
+                }
+            },
+            "CreateUserJson": {
+                "type": "object",
+                "properties": {
+                    "first_name": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "email": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "username": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "last_name": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "password": {
+                        "description": "",
+                        "type": "string"
+                    }
+                }
+            },
+            "UserJsonV200": {
+                "type": "object",
+                "properties": {
+                    "provider": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "email": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "username": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "provider_id": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "user_id": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "entitlements": {
+                        "description": "",
+                        "type": ""
+                    }
+                }
+            },
+            "entitlements": {
+                "type": "object"
+            },
+            "EntitlementJSONs": {
+                "type": "object",
+                "properties": {
+                    "list": {
+                        "description": "",
+                        "type": "array"
+                    }
+                }
+            },
+            "list": {
+                "type": "array"
+            },
+            "EntitlementJSON": {
+                "type": "object",
+                "properties": {
+                    "bank_id": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "role_name": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "entitlement_id": {
+                        "description": "",
+                        "type": "string"
+                    }
+                }
+            },
+            "CreateEntitlementJSON": {
+                "type": "object",
+                "properties": {
+                    "role_name": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "bank_id": {
+                        "description": "",
+                        "type": "string"
+                    }
+                }
+            },
+            "ViewsJsonV300": {
+                "type": "object",
+                "properties": {
+                    "views": {
+                        "description": "",
+                        "type": "array"
+                    }
+                }
+            },
+            "ViewJsonV300": {
+                "type": "object",
+                "properties": {
+                    "can_see_transaction_start_date": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "can_add_url": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "can_add_where_tag": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "can_see_transaction_this_bank_account": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "can_see_bank_account_owners": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "can_see_bank_routing_address": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "can_see_private_alias": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "can_edit_owner_comment": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "can_see_other_account_national_identifier": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "can_see_bank_routing_scheme": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "can_see_public_alias": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "can_see_physical_location": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "can_see_owner_comment": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "can_see_bank_account_iban": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "can_see_corporate_location": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "can_see_bank_account_number": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "can_see_other_account_bank_name": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "description": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "can_see_bank_account_routing_scheme": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "can_see_transaction_other_bank_account": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "can_delete_corporate_location": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "can_see_comments": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "can_see_bank_account_bank_name": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "can_add_more_info": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "can_see_other_account_number": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "can_see_other_account_swift_bic": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "can_add_open_corporates_url": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "can_see_other_account_kind": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "can_add_transaction_request_to_own_account": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "can_delete_physical_location": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "can_see_bank_account_label": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "can_see_transaction_currency": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "is_public": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "can_see_transaction_finish_date": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "can_see_bank_account_routing_address": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "can_add_tag": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "can_see_images": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "can_see_bank_account_credit_limit": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "can_see_bank_account_currency": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "hide_metadata_if_alias_used": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "can_delete_where_tag": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "alias": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "can_add_image_url": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "can_add_comment": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "can_see_image_url": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "id": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "can_see_bank_account_national_identifier": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "can_add_counterparty": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "can_add_transaction_request_to_any_account": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "can_see_tags": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "can_see_open_corporates_url": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "short_name": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "can_delete_tag": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "can_see_other_account_routing_scheme": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "can_see_more_info": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "can_see_transaction_metadata": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "can_delete_comment": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "can_see_where_tag": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "can_add_private_alias": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "can_add_public_alias": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "can_see_bank_account_swift_bic": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "can_add_image": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "can_see_transaction_type": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "can_see_other_account_routing_address": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "can_see_other_account_iban": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "can_add_physical_location": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "can_add_corporate_location": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "can_delete_image": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "can_see_url": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "can_see_bank_account_balance": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "can_see_other_bank_routing_address": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "can_see_transaction_balance": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "metadata_view": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "can_see_transaction_amount": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "can_see_other_account_metadata": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "can_see_bank_account_type": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "can_see_other_bank_routing_scheme": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "can_see_transaction_description": {
+                        "description": "",
+                        "type": "boolean"
+                    }
+                }
+            },
+            "ScopeJsons": {
+                "type": "object",
+                "properties": {
+                    "list": {
+                        "description": "",
+                        "type": "array"
+                    }
+                }
+            },
+            "ScopeJson": {
+                "type": "object",
+                "properties": {
+                    "bank_id": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "role_name": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "scope_id": {
+                        "description": "",
+                        "type": "string"
+                    }
+                }
+            },
+            "CreateScopeJson": {
+                "type": "object",
+                "properties": {
+                    "role_name": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "bank_id": {
+                        "description": "",
+                        "type": "string"
+                    }
+                }
+            },
+            "EntitlementRequestsJSON": {
+                "type": "object",
+                "properties": {
+                    "entitlement_requests": {
+                        "description": "",
+                        "type": "array"
+                    }
+                }
+            },
+            "entitlement_requests": {
+                "type": "array"
+            },
+            "EntitlementRequestJSON": {
+                "type": "object",
+                "properties": {
+                    "entitlement_request_id": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "role_name": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "bank_id": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "UserJsonV200": {
+                        "description": "",
+                        "type": "object"
+                    },
+                    "user": {
+                        "description": "",
+                        "type": ""
+                    },
+                    "created": {
+                        "description": "",
+                        "type": "string"
+                    }
+                }
+            },
+            "UsersJsonV200": {
+                "type": "object",
+                "properties": {
+                    "users": {
+                        "description": "",
+                        "type": "array"
+                    }
+                }
+            },
+            "users": {
+                "type": "array"
+            },
+            "CustomerJsonV210": {
+                "type": "object",
+                "properties": {
+                    "customer_id": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "email": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "mobile_phone_number": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "customer_number": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "highest_education_attained": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "dob_of_dependants": {
+                        "description": "",
+                        "type": "array"
+                    },
+                    "bank_id": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "date_of_birth": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "credit_rating": {
+                        "description": "",
+                        "type": ""
+                    },
+                    "last_ok_date": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "employment_status": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "legal_name": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "credit_limit": {
+                        "description": "",
+                        "type": ""
+                    },
+                    "face_image": {
+                        "description": "",
+                        "type": ""
+                    },
+                    "dependants": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "relationship_status": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "kyc_status": {
+                        "description": "",
+                        "type": "boolean"
+                    }
+                }
+            },
+            "dob_of_dependants": {
+                "type": "array"
+            },
+            "credit_rating": {
+                "type": "object"
+            },
+            "credit_limit": {
+                "type": "object"
+            },
+            "face_image": {
+                "type": "object"
+            },
+            "CustomerCreditRatingJSON": {
+                "type": "object",
+                "properties": {
+                    "source": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "rating": {
+                        "description": "",
+                        "type": "string"
+                    }
+                }
+            },
+            "AmountOfMoneyJsonV121": {
+                "type": "object",
+                "properties": {
+                    "amount": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "currency": {
+                        "description": "",
+                        "type": "string"
+                    }
+                }
+            },
+            "CustomerFaceImageJson": {
+                "type": "object",
+                "properties": {
+                    "date": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "url": {
+                        "description": "",
+                        "type": "string"
+                    }
+                }
+            }
+        }
+    }
+}
