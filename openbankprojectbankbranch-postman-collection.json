@@ -1,0 +1,151 @@
+{
+    "id": "0e2c5ac8e098666d89fd437d664aecae",
+    "name": "OpenBankProject-Bank-Branch",
+    "description": null,
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [
+        {
+            "id": "6316eae22d1856344fedc84ec14b30b0",
+            "name": "Update Branch",
+            "url": "http:\/\/api.openbankproject.com\/obp-bank-branch\/obp\/v2.1.0\/banks\/{BANK_ID}\/branches\/{BRANCH_ID}",
+            "description": "<p>Update an existing branch for a bank account (Authenticated access). Authentication is Mandatory<\/p>",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "put",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "BRANCH_ID",
+                    "description": "The branch id",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "BANK_ID",
+                    "description": "The bank id",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "0e2c5ac8e098666d89fd437d664aecae",
+            "rawModeData": ""
+        },
+        {
+            "id": "b7fc3d94d8261fcc3cbca47dc6ef0d95",
+            "name": "Get Branches for a Bank",
+            "url": "http:\/\/api.openbankproject.com\/obp-bank-branch\/obp\/v3.0.0\/banks\/{BANK_ID}\/branches",
+            "description": "<p>Returns information about branches for a single bank specified by BANK_ID including:<\/p><ul>  <li>Name<\/li>  <li>Address<\/li>  <li>Geo Location<\/li>  <li>License the data under this endpoint is released under<\/li>  <li>Structured opening hours<\/li>  <li>Accessible flag<\/li>  <li>Branch Type<\/li>  <li>More Info<\/li><\/ul><p>Pagination:<\/p><p>By default, 50 records are returned.<\/p><p>You can use the url query parameters <em>limit<\/em> and <em>offset<\/em> for pagination<\/p><p>Authentication is O",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "BANK_ID",
+                    "description": "The bank id",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "0e2c5ac8e098666d89fd437d664aecae",
+            "rawModeData": ""
+        },
+        {
+            "id": "0b673a69bc0752c10b8836b65edeaab2",
+            "name": "Create Branch",
+            "url": "http:\/\/api.openbankproject.com\/obp-bank-branch\/obp\/v3.0.0\/banks\/{BANK_ID}\/branches",
+            "description": "<p>Create Branch for the Bank.<\/p><p>Authentication is Mandatory<\/p><p>OBP-20006: User is missing one or more roles: CanCreateBranch entitlements are required OR CanCreateBranchAtAnyBank<\/p>",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "post",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "BANK_ID",
+                    "description": "The bank id",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "0e2c5ac8e098666d89fd437d664aecae",
+            "rawModeData": ""
+        },
+        {
+            "id": "252b53341ceb54a0ffcb3e475299e05b",
+            "name": "Get Branch",
+            "url": "http:\/\/api.openbankproject.com\/obp-bank-branch\/obp\/v3.0.0\/banks\/{BANK_ID}\/branches\/{BRANCH_ID}",
+            "description": "<p>Returns information about a single Branch specified by BANK_ID and BRANCH_ID including:<\/p><ul>  <li>Name<\/li>  <li>Address<\/li>  <li>Geo Location<\/li>  <li>License the data under this endpoint is released under.<\/li><\/ul><p>Authentication is Optional<\/p>",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "BRANCH_ID",
+                    "description": "The branch id",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "BANK_ID",
+                    "description": "The bank id",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "0e2c5ac8e098666d89fd437d664aecae",
+            "rawModeData": ""
+        }
+    ]
+}
