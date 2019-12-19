@@ -1,0 +1,98 @@
+{
+    "id": "d0b0034f46c56f36c8770bd1be4d7fea",
+    "name": "OpenBankProject-Card",
+    "description": null,
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [
+        {
+            "id": "3b7b6ee5f856012ec2a6be98f128c458",
+            "name": "Get cards for the specified bank",
+            "url": "http:\/\/api.openbankproject.com\/obp-card\/obp\/v1.3.0\/banks\/{BANK_ID}\/cards",
+            "description": "",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "BANK_ID",
+                    "description": "The bank id",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "d0b0034f46c56f36c8770bd1be4d7fea",
+            "rawModeData": ""
+        },
+        {
+            "id": "5d740b912126ccd1bb9115fbf65aa11f",
+            "name": "Get cards for the current user",
+            "url": "http:\/\/api.openbankproject.com\/obp-card\/obp\/v1.3.0\/cards",
+            "description": "<p>Returns data about all the physical cards a user has been issued. These could be debit cards, credit cards, etc.<\/p>",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "d0b0034f46c56f36c8770bd1be4d7fea",
+            "rawModeData": ""
+        },
+        {
+            "id": "79c9619a9c6396b66a927d6f75d248c7",
+            "name": "Create Card",
+            "url": "http:\/\/api.openbankproject.com\/obp-card\/obp\/v2.1.0\/banks\/{BANK_ID}\/cards",
+            "description": "<p>Create Card at bank specified by BANK_ID .<\/p><p>Authentication is Mandatory<\/p>",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "post",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "BANK_ID",
+                    "description": "The bank id",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "d0b0034f46c56f36c8770bd1be4d7fea",
+            "rawModeData": ""
+        }
+    ]
+}
