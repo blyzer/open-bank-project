@@ -1,5 +1,5 @@
 {
-    "id": "818af6c974e3b93c3a482750bb4139a5",
+    "id": "a783c07fd53c81a0f9c065d09958f4bc",
     "name": "API URI: \/banks\/{BANK_ID}\/accounts\/{ACCOUNT_ID}\/{VIEW_ID}\/transaction-request-types\/FREE_FORM\/transaction-requests",
     "description": null,
     "auth": null,
@@ -10,7 +10,7 @@
     "folders": [],
     "requests": [
         {
-            "id": "cacbd08c5d7045bc7aea30cb65c09d15",
+            "id": "af96a0d1f9724798c5d271a1222cefec",
             "name": "Create Transaction Request (FREE_FORM).",
             "url": "http:\/\/apisandbox.openbankproject.com\/obp\/v3_0_0\/banks\/{BANK_ID}\/accounts\/{ACCOUNT_ID}\/{VIEW_ID}\/transaction-request-types\/FREE_FORM\/transaction-requests",
             "description": "<p>Initiate a Payment via creating a Transaction Request.<\/p><p>In OBP, a <code>transaction request<\/code> may or may not result in a <code>transaction<\/code>. However, a <code>transaction<\/code> only has one possible state: completed.<\/p><p>A <code>Transaction Request<\/code> can have one of several states.<\/p><p><code>Transactions<\/code> are modeled on items in a bank statement that represent the movement of money.<\/p><p><code>Transaction Requests<\/code> are requests to move money which may or ",
@@ -51,7 +51,7 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "818af6c974e3b93c3a482750bb4139a5",
+            "collectionId": "a783c07fd53c81a0f9c065d09958f4bc",
             "rawModeData": ""
         }
     ]
