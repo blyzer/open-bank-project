@@ -1,5 +1,5 @@
 {
-    "id": "d0b0034f46c56f36c8770bd1be4d7fea",
+    "id": "adbb42deda86b372627134e4f9859895",
     "name": "OpenBankProject-Card",
     "description": null,
     "auth": null,
@@ -10,7 +10,7 @@
     "folders": [],
     "requests": [
         {
-            "id": "3b7b6ee5f856012ec2a6be98f128c458",
+            "id": "c9aacb2ad0551c0376155787cb616e60",
             "name": "Get cards for the specified bank",
             "url": "http:\/\/api.openbankproject.com\/obp-card\/obp\/v1.3.0\/banks\/{BANK_ID}\/cards",
             "description": "",
@@ -37,11 +37,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "d0b0034f46c56f36c8770bd1be4d7fea",
+            "collectionId": "adbb42deda86b372627134e4f9859895",
             "rawModeData": ""
         },
         {
-            "id": "5d740b912126ccd1bb9115fbf65aa11f",
+            "id": "1ae346c8483b8849bbdb95cc3d29a00d",
             "name": "Get cards for the current user",
             "url": "http:\/\/api.openbankproject.com\/obp-card\/obp\/v1.3.0\/cards",
             "description": "<p>Returns data about all the physical cards a user has been issued. These could be debit cards, credit cards, etc.<\/p>",
@@ -60,11 +60,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "d0b0034f46c56f36c8770bd1be4d7fea",
+            "collectionId": "adbb42deda86b372627134e4f9859895",
             "rawModeData": ""
         },
         {
-            "id": "79c9619a9c6396b66a927d6f75d248c7",
+            "id": "81052f467d2133ad3264325cfa7375db",
             "name": "Create Card",
             "url": "http:\/\/api.openbankproject.com\/obp-card\/obp\/v2.1.0\/banks\/{BANK_ID}\/cards",
             "description": "<p>Create Card at bank specified by BANK_ID .<\/p><p>Authentication is Mandatory<\/p>",
@@ -91,7 +91,7 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "d0b0034f46c56f36c8770bd1be4d7fea",
+            "collectionId": "adbb42deda86b372627134e4f9859895",
             "rawModeData": ""
         }
     ]
