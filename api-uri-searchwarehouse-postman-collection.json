@@ -1,5 +1,5 @@
 {
-    "id": "05b4506ae3d91bbf757378185283ec94",
+    "id": "318bd67fa8c4825ea3253405a7cbc1f7",
     "name": "API URI: \/search\/warehouse",
     "description": null,
     "auth": null,
@@ -10,7 +10,7 @@
     "folders": [],
     "requests": [
         {
-            "id": "1d4d73decdfafc544bf564112a55a7b2",
+            "id": "f2342ed1a8f27bccdb09ee313e0e6af6",
             "name": "Search Warehouse Data Via Elasticsearch",
             "url": "http:\/\/apisandbox.openbankproject.com\/obp\/v3_0_0\/search\/warehouse",
             "description": "<p>Search warehouse data via Elastic Search.<\/p><p>Login is required.<\/p><p>CanSearchWarehouse entitlement is required to search warehouse data!<\/p><p>Send your email, name, project name and user_id to the admins to get access.<\/p><p>Elastic (search) is used in the background. See links below for syntax.<\/p><p>This version differs from v2.0.0<\/p><p>Example of usage:<\/p><p>POST \/search\/warehouse<\/p><p>{  \"es_uri_part\": \"\/THE_INDEX_YOU_WANT_TO_USE\/_search?pretty=true\",  \"es_body_part\": {  \"query\":",
@@ -29,7 +29,7 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "05b4506ae3d91bbf757378185283ec94",
+            "collectionId": "318bd67fa8c4825ea3253405a7cbc1f7",
             "rawModeData": ""
         }
     ]
