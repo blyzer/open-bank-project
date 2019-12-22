@@ -1,5 +1,5 @@
 {
-    "id": "69df498ee1813bf144431da9fd2aee16",
+    "id": "6817ea4646b6c4ac673696ac0f6b09ad",
     "name": "API URI: \/banks\/{BANK_ID}\/accounts\/{ACCOUNT_ID}\/{VIEW_ID}\/transaction-request-types\/COUNTERPARTY\/transaction-requests",
     "description": null,
     "auth": null,
@@ -10,7 +10,7 @@
     "folders": [],
     "requests": [
         {
-            "id": "584898eec7a71ae22d995d1968b95302",
+            "id": "a1924b608152a48e89b184b1b4007662",
             "name": "Create Transaction Request (COUNTERPARTY)",
             "url": "http:\/\/apisandbox.openbankproject.com\/obp\/v3_0_0\/banks\/{BANK_ID}\/accounts\/{ACCOUNT_ID}\/{VIEW_ID}\/transaction-request-types\/COUNTERPARTY\/transaction-requests",
             "description": "<p>Special instructions for COUNTERPARTY:<\/p><p>When using a COUNTERPARTY to create a Transaction Request, specificy the counterparty_id in the body of the request. The routing details of the counterparty will be forwarded for the transfer.<\/p><p>Initiate a Payment via creating a Transaction Request.<\/p><p>In OBP, a <code>transaction request<\/code> may or may not result in a <code>transaction<\/code>. However, a <code>transaction<\/code> only has one possible state: completed.<\/p><p>A <code>Transa",
@@ -51,7 +51,7 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "69df498ee1813bf144431da9fd2aee16",
+            "collectionId": "6817ea4646b6c4ac673696ac0f6b09ad",
             "rawModeData": ""
         }
     ]
