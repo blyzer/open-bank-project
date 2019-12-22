@@ -1,5 +1,5 @@
 {
-    "id": "a0db2753a027606e11bf1cacd37300e0",
+    "id": "0b4a2db3bb76333846838393d2bf765c",
     "name": "API URI: \/banks\/{BANK_ID}\/cards",
     "description": null,
     "auth": null,
@@ -10,7 +10,7 @@
     "folders": [],
     "requests": [
         {
-            "id": "55896fc605d713e69644d2c6891f17b2",
+            "id": "297c64701dd9465631491f65ce73c32a",
             "name": "Get cards for the specified bank",
             "url": "http:\/\/apisandbox.openbankproject.com\/obp\/v3_0_0\/banks\/{BANK_ID}\/cards",
             "description": "",
@@ -37,11 +37,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "a0db2753a027606e11bf1cacd37300e0",
+            "collectionId": "0b4a2db3bb76333846838393d2bf765c",
             "rawModeData": ""
         },
         {
-            "id": "7030602efc55471ad0a2a1dc210f42bd",
+            "id": "48eb2eb2a01ee0cf4e0e4d38ffc053d7",
             "name": "Create Card",
             "url": "http:\/\/apisandbox.openbankproject.com\/obp\/v3_0_0\/banks\/{BANK_ID}\/cards",
             "description": "<p>Create Card at bank specified by BANK_ID .<\/p><p>Authentication is Mandatory<\/p>",
@@ -68,7 +68,7 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "a0db2753a027606e11bf1cacd37300e0",
+            "collectionId": "0b4a2db3bb76333846838393d2bf765c",
             "rawModeData": ""
         }
     ]
