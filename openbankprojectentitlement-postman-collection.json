@@ -1,5 +1,5 @@
 {
-    "id": "ae63d19c50a63c9acfceffd3a5736881",
+    "id": "1e3d7710940cc87248173275ac99a538",
     "name": "OpenBankProject-Entitlement",
     "description": null,
     "auth": null,
@@ -10,7 +10,7 @@
     "folders": [],
     "requests": [
         {
-            "id": "400747a074cdd299a32a8648e9c66611",
+            "id": "cd84e399ad0bc22e184b166a4da9cd9b",
             "name": "Revoke access to one View.",
             "url": "http:\/\/api.openbankproject.com\/obp-entitlement\/obp\/v1.2.1\/banks\/{BANK_ID}\/accounts\/{ACCOUNT_ID}\/permissions\/{PROVIDER_ID}\/{USER_ID}\/views\/{VIEW_ID}",
             "description": "<p>Revokes the user identified by PROVIDER_ID at their provider PROVIDER access to the view VIEW_ID at BANK_ID for account ACCOUNT_ID.<\/p><p>Revoking a user access to a public view will return an error message.<\/p><p>Authentication is Mandatory and the user needs to have access to the owner view.<\/p>",
@@ -65,11 +65,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "ae63d19c50a63c9acfceffd3a5736881",
+            "collectionId": "1e3d7710940cc87248173275ac99a538",
             "rawModeData": ""
         },
         {
-            "id": "8ddf750c567a88ec3c703ab27d15ed30",
+            "id": "dd312b08e07c801c20bb3cd22f7263c1",
             "name": "Get access.",
             "url": "http:\/\/api.openbankproject.com\/obp-entitlement\/obp\/v2.0.0\/banks\/{BANK_ID}\/accounts\/{ACCOUNT_ID}\/permissions",
             "description": "<p>Returns the list of the permissions at BANK_ID for account ACCOUNT_ID, with each time a pair composed of the user and the views that he has access to.<\/p><p>Authentication is Mandatory and the user needs to have access to the owner view.<\/p>",
@@ -103,11 +103,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "ae63d19c50a63c9acfceffd3a5736881",
+            "collectionId": "1e3d7710940cc87248173275ac99a538",
             "rawModeData": ""
         },
         {
-            "id": "6afd7d61ea0b9861e6b276c3dc8210c9",
+            "id": "d42d7a29f4542d5bb1c6ea344ae634fa",
             "name": "Get all Entitlements",
             "url": "http:\/\/api.openbankproject.com\/obp-entitlement\/obp\/v2.0.0\/entitlements",
             "description": "<p>Login is required.<\/p>",
@@ -126,11 +126,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "ae63d19c50a63c9acfceffd3a5736881",
+            "collectionId": "1e3d7710940cc87248173275ac99a538",
             "rawModeData": ""
         },
         {
-            "id": "86eff138e93dcbd29c16e6462aa748a0",
+            "id": "505de2b7ea6d9cbc08d921a6dadd24ab",
             "name": "Delete Entitlement",
             "url": "http:\/\/api.openbankproject.com\/obp-entitlement\/obp\/v2.0.0\/users\/{USER_ID}\/entitlement\/{ENTITLEMENT_ID}",
             "description": "<p>Delete Entitlement specified by ENTITLEMENT_ID for an user specified by USER_ID<\/p><p>Authentication is required and the user needs to be a Super Admin. Super Admins are listed in the Props file.<\/p>",
@@ -164,11 +164,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "ae63d19c50a63c9acfceffd3a5736881",
+            "collectionId": "1e3d7710940cc87248173275ac99a538",
             "rawModeData": ""
         },
         {
-            "id": "2be47f3ca09dbc2f0060d176734f714e",
+            "id": "d6def92f03e8633748a96d88113ddc89",
             "name": "Get Entitlements for User",
             "url": "http:\/\/api.openbankproject.com\/obp-entitlement\/obp\/v2.0.0\/users\/{USER_ID}\/entitlements",
             "description": "<p>Authentication is Mandatory<\/p>",
@@ -195,11 +195,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "ae63d19c50a63c9acfceffd3a5736881",
+            "collectionId": "1e3d7710940cc87248173275ac99a538",
             "rawModeData": ""
         },
         {
-            "id": "ef67e8ff1787c538f13e0c276a0bfc4a",
+            "id": "1a04f441afd5ece1548d62b36c3036d9",
             "name": "Add Entitlement for a User.",
             "url": "http:\/\/api.openbankproject.com\/obp-entitlement\/obp\/v2.0.0\/users\/{USER_ID}\/entitlements",
             "description": "<p>Create Entitlement. Grant Role to User.<\/p><p>Entitlements are used to grant System or Bank level roles to Users. (For Account level privileges, see Views)<\/p><p>For a System level Role (.e.g CanGetAnyUser), set bank_id to an empty string i.e. \"bank_id\":\"\"<\/p><p>For a Bank level Role (e.g. CanCreateAccount), set bank_id to a valid value e.g. \"bank_id\":\"my-bank-id\"<\/p><p>Authentication is required and the user needs to be a Super Admin. Super Admins are listed in the Props file.<\/p>",
@@ -226,11 +226,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "ae63d19c50a63c9acfceffd3a5736881",
+            "collectionId": "1e3d7710940cc87248173275ac99a538",
             "rawModeData": ""
         },
         {
-            "id": "ded15acf84f595f41e60e9eff68e35e6",
+            "id": "a0d10cef8d33c377ae93db4a141a1eae",
             "name": "Get Entitlements for User at Bank.",
             "url": "http:\/\/api.openbankproject.com\/obp-entitlement\/obp\/v2.1.0\/banks\/{BANK_ID}\/users\/{USER_ID}\/entitlements",
             "description": "<p>Get Entitlements specified by BANK_ID and USER_ID<\/p><p>Authentication is Mandatory<\/p>",
@@ -264,11 +264,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "ae63d19c50a63c9acfceffd3a5736881",
+            "collectionId": "1e3d7710940cc87248173275ac99a538",
             "rawModeData": ""
         },
         {
-            "id": "4a56c3ae13ce4f1d774ff499486744b0",
+            "id": "d98d14747cda49b3ef62c55649d2cd97",
             "name": "Delete Consumer Scope",
             "url": "http:\/\/api.openbankproject.com\/obp-entitlement\/obp\/v3.0.0\/consumers\/{CONSUMER_ID}\/scope\/SCOPE_ID",
             "description": "<p>Delete Consumer Scope specified by SCOPE_ID for an consumer specified by CONSUMER_ID<\/p><p>Authentication is required and the user needs to be a Super Admin. Super Admins are listed in the Props file.<\/p>",
@@ -295,11 +295,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "ae63d19c50a63c9acfceffd3a5736881",
+            "collectionId": "1e3d7710940cc87248173275ac99a538",
             "rawModeData": ""
         },
         {
-            "id": "1587e6c64c80251edeb888789b041985",
+            "id": "a8b6e6b7e69ad7a3db8f2ed35a235cee",
             "name": "Get Scopes for Consumer",
             "url": "http:\/\/api.openbankproject.com\/obp-entitlement\/obp\/v3.0.0\/consumers\/{CONSUMER_ID}\/scopes",
             "description": "<p>Get all the scopes for an consumer specified by CONSUMER_ID<\/p><p>Authentication is Mandatory<\/p>",
@@ -326,11 +326,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "ae63d19c50a63c9acfceffd3a5736881",
+            "collectionId": "1e3d7710940cc87248173275ac99a538",
             "rawModeData": ""
         },
         {
-            "id": "d7ae669cc5e8e51f8bf2ad99a7933c90",
+            "id": "5a033ed5f40b380e2ea46927757a7c41",
             "name": "Add Scope for a Consumer.",
             "url": "http:\/\/api.openbankproject.com\/obp-entitlement\/obp\/v3.0.0\/consumers\/{CONSUMER_ID}\/scopes",
             "description": "<p>Create Scope. Grant Role to Consumer.<\/p><p>Scopes are used to grant System or Bank level roles to the Consumer (App). (For Account level privileges, see Views)<\/p><p>For a System level Role (.e.g CanGetAnyUser), set bank_id to an empty string i.e. \"bank_id\":\"\"<\/p><p>For a Bank level Role (e.g. CanCreateAccount), set bank_id to a valid value e.g. \"bank_id\":\"my-bank-id\"<\/p>",
@@ -357,11 +357,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "ae63d19c50a63c9acfceffd3a5736881",
+            "collectionId": "1e3d7710940cc87248173275ac99a538",
             "rawModeData": ""
         },
         {
-            "id": "e78886aaa1459e08970d16494816d202",
+            "id": "c611b6a25f120ebae8ec560ea52af5d6",
             "name": "Get all Entitlement Requests",
             "url": "http:\/\/api.openbankproject.com\/obp-entitlement\/obp\/v3.0.0\/entitlement-requests",
             "description": "<p>Get all Entitlement Requests<\/p><p>Authentication is Mandatory<\/p>",
@@ -380,11 +380,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "ae63d19c50a63c9acfceffd3a5736881",
+            "collectionId": "1e3d7710940cc87248173275ac99a538",
             "rawModeData": ""
         },
         {
-            "id": "88bed4357a8b6cd36674678f32e4523a",
+            "id": "da9b5e626d09274c2e4cfd87f48076ba",
             "name": "Add Entitlement Request for a Logged User.",
             "url": "http:\/\/api.openbankproject.com\/obp-entitlement\/obp\/v3.0.0\/entitlement-requests",
             "description": "<p>Create Entitlement Request.<\/p><p>Any logged in User can use this endpoint to request an Entitlement<\/p><p>Entitlements are used to grant System or Bank level roles to Users. (For Account level privileges, see Views)<\/p><p>For a System level Role (.e.g CanGetAnyUser), set bank_id to an empty string i.e. \"bank_id\":\"\"<\/p><p>For a Bank level Role (e.g. CanCreateAccount), set bank_id to a valid value e.g. \"bank_id\":\"my-bank-id\"<\/p><p>Authentication is Mandatory<\/p>",
@@ -403,11 +403,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "ae63d19c50a63c9acfceffd3a5736881",
+            "collectionId": "1e3d7710940cc87248173275ac99a538",
             "rawModeData": ""
         },
         {
-            "id": "677a81dc934749e333590b3a7fffc1ea",
+            "id": "644669a57d6626cf7d3dd25875311655",
             "name": "Delete Entitlement Request",
             "url": "http:\/\/api.openbankproject.com\/obp-entitlement\/obp\/v3.0.0\/entitlement-requests\/ENTITLEMENT_REQUEST_ID",
             "description": "<p>Delete the Entitlement Request specified by ENTITLEMENT_REQUEST_ID for a user specified by USER_ID<\/p><p>Authentication is Mandatory<\/p>",
@@ -426,11 +426,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "ae63d19c50a63c9acfceffd3a5736881",
+            "collectionId": "1e3d7710940cc87248173275ac99a538",
             "rawModeData": ""
         },
         {
-            "id": "97d7828bd39c786cca3fd17b6b6a7890",
+            "id": "ab537e77e95699bc22e43d10da8fcda8",
             "name": "Get Entitlement Requests for the current User.",
             "url": "http:\/\/api.openbankproject.com\/obp-entitlement\/obp\/v3.0.0\/my\/entitlement-requests",
             "description": "<p>Get Entitlement Requests for the current User.<\/p><p>Authentication is Mandatory<\/p>",
@@ -449,11 +449,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "ae63d19c50a63c9acfceffd3a5736881",
+            "collectionId": "1e3d7710940cc87248173275ac99a538",
             "rawModeData": ""
         },
         {
-            "id": "e697f56a0da9b7b356bb8570364d11f2",
+            "id": "b8ecc9223f681df40ecd217e5135f76b",
             "name": "Get Entitlements for the current User.",
             "url": "http:\/\/api.openbankproject.com\/obp-entitlement\/obp\/v3.0.0\/my\/entitlements",
             "description": "<p>Get Entitlements for the current User.<\/p><p>Authentication is Mandatory<\/p>",
@@ -472,11 +472,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "ae63d19c50a63c9acfceffd3a5736881",
+            "collectionId": "1e3d7710940cc87248173275ac99a538",
             "rawModeData": ""
         },
         {
-            "id": "4c63fdb976ee4504fcbef0b1cf343ef7",
+            "id": "71b03434f20bf5a185720a341c1630df",
             "name": "Get Entitlement Requests for a User.",
             "url": "http:\/\/api.openbankproject.com\/obp-entitlement\/obp\/v3.0.0\/users\/{USER_ID}\/entitlement-requests",
             "description": "<p>Get Entitlement Requests for a User.<\/p><p>Authentication is Mandatory<\/p>",
@@ -503,7 +503,7 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "ae63d19c50a63c9acfceffd3a5736881",
+            "collectionId": "1e3d7710940cc87248173275ac99a538",
             "rawModeData": ""
         }
     ]
