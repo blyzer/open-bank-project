@@ -7,8 +7,8 @@
         "have api",
         "have swagger"
     ],
-    "created": "2019-12-19",
-    "modified": "2019-12-19",
+    "created": "2019-12-21",
+    "modified": "2019-12-21",
     "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/open-bank-project\/master\/apis.json",
     "specificationVersion": "0.14",
     "apis": [
@@ -26,11 +26,7 @@
                 },
                 {
                     "type": "x-openapi",
-                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/1forge\/master\/openbankprojectapimetric-openapi.json"
-                },
-                {
-                    "type": "x-postman-collecction",
-                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/1forge\/master\/openbankprojectapimetric-postman-collection.json"
+                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/open-bank-project\/master\/openbankprojectapimetric-openapi.json"
                 }
             ]
         },
@@ -48,11 +44,7 @@
                 },
                 {
                     "type": "x-openapi",
-                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/1forge\/master\/openbankprojectbank-openapi.json"
-                },
-                {
-                    "type": "x-postman-collecction",
-                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/1forge\/master\/openbankprojectbank-postman-collection.json"
+                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/open-bank-project\/master\/openbankprojectbank-openapi.json"
                 }
             ]
         },
@@ -70,11 +62,7 @@
                 },
                 {
                     "type": "x-openapi",
-                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/1forge\/master\/api-uri-searchwarehouse-openapi.json"
-                },
-                {
-                    "type": "x-postman-collecction",
-                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/1forge\/master\/api-uri-searchwarehouse-postman-collection.json"
+                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/open-bank-project\/master\/api-uri-searchwarehouse-openapi.json"
                 }
             ]
         },
@@ -92,11 +80,7 @@
                 },
                 {
                     "type": "x-openapi",
-                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/1forge\/master\/api-uri-banksbank-idaccountsaccount-idview-idtransactions-openapi.json"
-                },
-                {
-                    "type": "x-postman-collecction",
-                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/1forge\/master\/api-uri-banksbank-idaccountsaccount-idview-idtransactions-postman-collection.json"
+                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/open-bank-project\/master\/api-uri-banksbank-idaccountsaccount-idview-idtransactions-openapi.json"
                 }
             ]
         },
@@ -114,11 +98,7 @@
                 },
                 {
                     "type": "x-openapi",
-                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/1forge\/master\/api-uri-banksbank-idaccountsaccount-idview-idtransactionstransaction-idtransaction-openapi.json"
-                },
-                {
-                    "type": "x-postman-collecction",
-                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/1forge\/master\/api-uri-banksbank-idaccountsaccount-idview-idtransactionstransaction-idtransaction-postman-collection.json"
+                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/open-bank-project\/master\/api-uri-banksbank-idaccountsaccount-idview-idtransactionstransaction-idtransaction-openapi.json"
                 }
             ]
         },
@@ -136,11 +116,7 @@
                 },
                 {
                     "type": "x-openapi",
-                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/1forge\/master\/openbankprojectcard-openapi.json"
-                },
-                {
-                    "type": "x-postman-collecction",
-                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/1forge\/master\/openbankprojectcard-postman-collection.json"
+                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/open-bank-project\/master\/openbankprojectcard-openapi.json"
                 }
             ]
         },
@@ -158,11 +134,7 @@
                 },
                 {
                     "type": "x-openapi",
-                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/1forge\/master\/openbankprojectownerviewrequired-openapi.json"
-                },
-                {
-                    "type": "x-postman-collecction",
-                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/1forge\/master\/openbankprojectownerviewrequired-postman-collection.json"
+                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/open-bank-project\/master\/openbankprojectownerviewrequired-openapi.json"
                 }
             ]
         },
@@ -180,11 +152,7 @@
                 },
                 {
                     "type": "x-openapi",
-                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/1forge\/master\/api-uri-banksbank-idaccountsaccount-idviews-openapi.json"
-                },
-                {
-                    "type": "x-postman-collecction",
-                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/1forge\/master\/api-uri-banksbank-idaccountsaccount-idviews-postman-collection.json"
+                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/open-bank-project\/master\/api-uri-banksbank-idaccountsaccount-idviews-openapi.json"
                 }
             ]
         },
@@ -202,11 +170,7 @@
                 },
                 {
                     "type": "x-openapi",
-                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/1forge\/master\/api-uri-banksbank-idcards-openapi.json"
-                },
-                {
-                    "type": "x-postman-collecction",
-                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/1forge\/master\/api-uri-banksbank-idcards-postman-collection.json"
+                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/open-bank-project\/master\/api-uri-banksbank-idcards-openapi.json"
                 }
             ]
         },
@@ -224,11 +188,7 @@
                 },
                 {
                     "type": "x-openapi",
-                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/1forge\/master\/openbankprojectcounterpartymetadata-openapi.json"
-                },
-                {
-                    "type": "x-postman-collecction",
-                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/1forge\/master\/openbankprojectcounterpartymetadata-postman-collection.json"
+                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/open-bank-project\/master\/openbankprojectcounterpartymetadata-openapi.json"
                 }
             ]
         },
@@ -246,11 +206,7 @@
                 },
                 {
                     "type": "x-openapi",
-                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/1forge\/master\/openbankprojectaccountfirehose-openapi.json"
-                },
-                {
-                    "type": "x-postman-collecction",
-                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/1forge\/master\/openbankprojectaccountfirehose-postman-collection.json"
+                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/open-bank-project\/master\/openbankprojectaccountfirehose-openapi.json"
                 }
             ]
         },
@@ -268,11 +224,7 @@
                 },
                 {
                     "type": "x-openapi",
-                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/1forge\/master\/openbankprojectfirehosedata-openapi.json"
-                },
-                {
-                    "type": "x-postman-collecction",
-                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/1forge\/master\/openbankprojectfirehosedata-postman-collection.json"
+                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/open-bank-project\/master\/openbankprojectfirehosedata-openapi.json"
                 }
             ]
         },
@@ -290,11 +242,7 @@
                 },
                 {
                     "type": "x-openapi",
-                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/1forge\/master\/openbankprojectaccountview-openapi.json"
-                },
-                {
-                    "type": "x-postman-collecction",
-                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/1forge\/master\/openbankprojectaccountview-postman-collection.json"
+                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/open-bank-project\/master\/openbankprojectaccountview-openapi.json"
                 }
             ]
         },
@@ -312,11 +260,7 @@
                 },
                 {
                     "type": "x-openapi",
-                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/1forge\/master\/openbankprojectcounterparty-openapi.json"
-                },
-                {
-                    "type": "x-postman-collecction",
-                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/1forge\/master\/openbankprojectcounterparty-postman-collection.json"
+                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/open-bank-project\/master\/openbankprojectcounterparty-openapi.json"
                 }
             ]
         },
@@ -334,11 +278,7 @@
                 },
                 {
                     "type": "x-openapi",
-                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/1forge\/master\/openbankprojectentitlement-openapi.json"
-                },
-                {
-                    "type": "x-postman-collecction",
-                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/1forge\/master\/openbankprojectentitlement-postman-collection.json"
+                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/open-bank-project\/master\/openbankprojectentitlement-openapi.json"
                 }
             ]
         },
@@ -352,15 +292,11 @@
             "properties": [
                 {
                     "type": "x-openapi",
-                    "url": "http:\/\/kinlane-productions.s3.amazonaws.com\/api-evangelist-site\/company\/openapis\/api-uri-banksbank-idproductsproduct-code.json"
+                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/open-bank-project\/master\/api-uri-banksbank-idproductsproduct-code-openapi.json"
                 },
                 {
                     "type": "x-openapi",
-                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/1forge\/master\/api-uri-banksbank-idproductsproduct-code-openapi.json"
-                },
-                {
-                    "type": "x-postman-collecction",
-                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/1forge\/master\/api-uri-banksbank-idproductsproduct-code-postman-collection.json"
+                    "url": "http:\/\/kinlane-productions.s3.amazonaws.com\/api-evangelist-site\/company\/openapis\/api-uri-banksbank-idproductsproduct-code.json"
                 }
             ]
         },
@@ -374,15 +310,11 @@
             "properties": [
                 {
                     "type": "x-openapi",
-                    "url": "http:\/\/kinlane-productions.s3.amazonaws.com\/api-evangelist-site\/company\/openapis\/openbankprojectuser.json"
+                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/open-bank-project\/master\/openbankprojectuser-openapi.json"
                 },
                 {
                     "type": "x-openapi",
-                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/1forge\/master\/openbankprojectuser-openapi.json"
-                },
-                {
-                    "type": "x-postman-collecction",
-                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/1forge\/master\/openbankprojectuser-postman-collection.json"
+                    "url": "http:\/\/kinlane-productions.s3.amazonaws.com\/api-evangelist-site\/company\/openapis\/openbankprojectuser.json"
                 }
             ]
         },
@@ -396,15 +328,11 @@
             "properties": [
                 {
                     "type": "x-openapi",
-                    "url": "http:\/\/kinlane-productions.s3.amazonaws.com\/api-evangelist-site\/company\/openapis\/openbankprojectapisandbox.json"
+                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/open-bank-project\/master\/openbankprojectapisandbox-openapi.json"
                 },
                 {
                     "type": "x-openapi",
-                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/1forge\/master\/openbankprojectapisandbox-openapi.json"
-                },
-                {
-                    "type": "x-postman-collecction",
-                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/1forge\/master\/openbankprojectapisandbox-postman-collection.json"
+                    "url": "http:\/\/kinlane-productions.s3.amazonaws.com\/api-evangelist-site\/company\/openapis\/openbankprojectapisandbox.json"
                 }
             ]
         },
@@ -418,15 +346,11 @@
             "properties": [
                 {
                     "type": "x-openapi",
-                    "url": "http:\/\/kinlane-productions.s3.amazonaws.com\/api-evangelist-site\/company\/openapis\/api-uri-banksbank-idatms.json"
+                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/open-bank-project\/master\/api-uri-banksbank-idatms-openapi.json"
                 },
                 {
                     "type": "x-openapi",
-                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/1forge\/master\/api-uri-banksbank-idatms-openapi.json"
-                },
-                {
-                    "type": "x-postman-collecction",
-                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/1forge\/master\/api-uri-banksbank-idatms-postman-collection.json"
+                    "url": "http:\/\/kinlane-productions.s3.amazonaws.com\/api-evangelist-site\/company\/openapis\/api-uri-banksbank-idatms.json"
                 }
             ]
         },
@@ -440,15 +364,11 @@
             "properties": [
                 {
                     "type": "x-openapi",
-                    "url": "http:\/\/kinlane-productions.s3.amazonaws.com\/api-evangelist-site\/company\/openapis\/api-uri-banksbank-idbranchesbranch-id.json"
+                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/open-bank-project\/master\/api-uri-banksbank-idbranchesbranch-id-openapi.json"
                 },
                 {
                     "type": "x-openapi",
-                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/1forge\/master\/api-uri-banksbank-idbranchesbranch-id-openapi.json"
-                },
-                {
-                    "type": "x-postman-collecction",
-                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/1forge\/master\/api-uri-banksbank-idbranchesbranch-id-postman-collection.json"
+                    "url": "http:\/\/kinlane-productions.s3.amazonaws.com\/api-evangelist-site\/company\/openapis\/api-uri-banksbank-idbranchesbranch-id.json"
                 }
             ]
         },
@@ -462,15 +382,11 @@
             "properties": [
                 {
                     "type": "x-openapi",
-                    "url": "http:\/\/kinlane-productions.s3.amazonaws.com\/api-evangelist-site\/company\/openapis\/openbankprojectbankbranch.json"
+                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/open-bank-project\/master\/openbankprojectbankbranch-openapi.json"
                 },
                 {
                     "type": "x-openapi",
-                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/1forge\/master\/openbankprojectbankbranch-openapi.json"
-                },
-                {
-                    "type": "x-postman-collecction",
-                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/1forge\/master\/openbankprojectbankbranch-postman-collection.json"
+                    "url": "http:\/\/kinlane-productions.s3.amazonaws.com\/api-evangelist-site\/company\/openapis\/openbankprojectbankbranch.json"
                 }
             ]
         },
@@ -484,15 +400,11 @@
             "properties": [
                 {
                     "type": "x-openapi",
-                    "url": "http:\/\/kinlane-productions.s3.amazonaws.com\/api-evangelist-site\/company\/openapis\/api-uri-messagedocsmar2017.json"
+                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/open-bank-project\/master\/api-uri-messagedocsmar2017-openapi.json"
                 },
                 {
                     "type": "x-openapi",
-                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/1forge\/master\/api-uri-messagedocsmar2017-openapi.json"
-                },
-                {
-                    "type": "x-postman-collecction",
-                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/1forge\/master\/api-uri-messagedocsmar2017-postman-collection.json"
+                    "url": "http:\/\/kinlane-productions.s3.amazonaws.com\/api-evangelist-site\/company\/openapis\/api-uri-messagedocsmar2017.json"
                 }
             ]
         },
@@ -506,15 +418,11 @@
             "properties": [
                 {
                     "type": "x-openapi",
-                    "url": "http:\/\/kinlane-productions.s3.amazonaws.com\/api-evangelist-site\/company\/openapis\/openbankprojectbankfx.json"
+                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/open-bank-project\/master\/openbankprojectbankfx-openapi.json"
                 },
                 {
                     "type": "x-openapi",
-                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/1forge\/master\/openbankprojectbankfx-openapi.json"
-                },
-                {
-                    "type": "x-postman-collecction",
-                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/1forge\/master\/openbankprojectbankfx-postman-collection.json"
+                    "url": "http:\/\/kinlane-productions.s3.amazonaws.com\/api-evangelist-site\/company\/openapis\/openbankprojectbankfx.json"
                 }
             ]
         },
@@ -528,15 +436,11 @@
             "properties": [
                 {
                     "type": "x-openapi",
-                    "url": "http:\/\/kinlane-productions.s3.amazonaws.com\/api-evangelist-site\/company\/openapis\/api-uri-banksbank-idaccountsaccount-idview-idtransactionrequesttypescounterpartytransactionrequests.json"
+                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/open-bank-project\/master\/api-uri-banksbank-idaccountsaccount-idview-idtransactionrequesttypescounterpartytransactionrequests-openapi.json"
                 },
                 {
                     "type": "x-openapi",
-                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/1forge\/master\/api-uri-banksbank-idaccountsaccount-idview-idtransactionrequesttypescounterpartytransactionrequests-openapi.json"
-                },
-                {
-                    "type": "x-postman-collecction",
-                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/1forge\/master\/api-uri-banksbank-idaccountsaccount-idview-idtransactionrequesttypescounterpartytransactionrequests-postman-collection.json"
+                    "url": "http:\/\/kinlane-productions.s3.amazonaws.com\/api-evangelist-site\/company\/openapis\/api-uri-banksbank-idaccountsaccount-idview-idtransactionrequesttypescounterpartytransactionrequests.json"
                 }
             ]
         },
@@ -550,15 +454,11 @@
             "properties": [
                 {
                     "type": "x-openapi",
-                    "url": "http:\/\/kinlane-productions.s3.amazonaws.com\/api-evangelist-site\/company\/openapis\/api-uri-banksbank-idaccountsaccount-idview-idtransactionrequesttypesfree-formtransactionrequests.json"
+                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/open-bank-project\/master\/api-uri-banksbank-idaccountsaccount-idview-idtransactionrequesttypesfree-formtransactionrequests-openapi.json"
                 },
                 {
                     "type": "x-openapi",
-                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/1forge\/master\/api-uri-banksbank-idaccountsaccount-idview-idtransactionrequesttypesfree-formtransactionrequests-openapi.json"
-                },
-                {
-                    "type": "x-postman-collecction",
-                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/1forge\/master\/api-uri-banksbank-idaccountsaccount-idview-idtransactionrequesttypesfree-formtransactionrequests-postman-collection.json"
+                    "url": "http:\/\/kinlane-productions.s3.amazonaws.com\/api-evangelist-site\/company\/openapis\/api-uri-banksbank-idaccountsaccount-idview-idtransactionrequesttypesfree-formtransactionrequests.json"
                 }
             ]
         },
@@ -572,15 +472,11 @@
             "properties": [
                 {
                     "type": "x-openapi",
-                    "url": "http:\/\/kinlane-productions.s3.amazonaws.com\/api-evangelist-site\/company\/openapis\/api-uri-banksbank-idaccountsaccount-idview-idtransactionrequesttypessandbox-tantransactionrequests.json"
+                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/open-bank-project\/master\/api-uri-banksbank-idaccountsaccount-idview-idtransactionrequesttypessandbox-tantransactionrequests-openapi.json"
                 },
                 {
                     "type": "x-openapi",
-                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/1forge\/master\/api-uri-banksbank-idaccountsaccount-idview-idtransactionrequesttypessandbox-tantransactionrequests-openapi.json"
-                },
-                {
-                    "type": "x-postman-collecction",
-                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/1forge\/master\/api-uri-banksbank-idaccountsaccount-idview-idtransactionrequesttypessandbox-tantransactionrequests-postman-collection.json"
+                    "url": "http:\/\/kinlane-productions.s3.amazonaws.com\/api-evangelist-site\/company\/openapis\/api-uri-banksbank-idaccountsaccount-idview-idtransactionrequesttypessandbox-tantransactionrequests.json"
                 }
             ]
         },
@@ -594,21 +490,21 @@
             "properties": [
                 {
                     "type": "x-openapi",
-                    "url": "http:\/\/kinlane-productions.s3.amazonaws.com\/api-evangelist-site\/company\/openapis\/api-uri-banksbank-idaccountsaccount-idview-idtransactionrequesttypessepatransactionrequests.json"
+                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/open-bank-project\/master\/api-uri-banksbank-idaccountsaccount-idview-idtransactionrequesttypessepatransactionrequests-openapi.json"
                 },
                 {
                     "type": "x-openapi",
-                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/1forge\/master\/api-uri-banksbank-idaccountsaccount-idview-idtransactionrequesttypessepatransactionrequests-openapi.json"
-                },
-                {
-                    "type": "x-postman-collecction",
-                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/1forge\/master\/api-uri-banksbank-idaccountsaccount-idview-idtransactionrequesttypessepatransactionrequests-postman-collection.json"
+                    "url": "http:\/\/kinlane-productions.s3.amazonaws.com\/api-evangelist-site\/company\/openapis\/api-uri-banksbank-idaccountsaccount-idview-idtransactionrequesttypessepatransactionrequests.json"
                 }
             ]
         }
     ],
     "include": [],
     "x-common": [
+        {
+            "type": "APIs.json",
+            "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/1forge\/master\/apis.json"
+        },
         {
             "type": "Github",
             "url": "https:\/\/github.com\/OpenBankProject"
