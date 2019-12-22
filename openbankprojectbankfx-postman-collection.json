@@ -1,5 +1,5 @@
 {
-    "id": "bfb598b8596888b495fbc02c24523385",
+    "id": "087d4311d082c5637335e2e65ccc9b96",
     "name": "OpenBankProject-Bank-FX",
     "description": null,
     "auth": null,
@@ -10,7 +10,7 @@
     "folders": [],
     "requests": [
         {
-            "id": "49365949a0b547cf03888bed553be392",
+            "id": "ee4f43ab11bca785cb3fe4f2a8ca3f8f",
             "name": "Create Fx",
             "url": "http:\/\/api.openbankproject.com\/obp-bank-fx\/obp\/v2.2.0\/banks\/{BANK_ID}\/fx",
             "description": "<p>Create or Update Fx for the Bank.<\/p><p>Authentication is Mandatory<\/p><p>OBP-20006: User is missing one or more roles: CanCreateFxRate OR CanCreateFxRateAtAnyBank<\/p>",
@@ -37,11 +37,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "bfb598b8596888b495fbc02c24523385",
+            "collectionId": "087d4311d082c5637335e2e65ccc9b96",
             "rawModeData": ""
         },
         {
-            "id": "0928e913e2f6a35a2c43a5c770150eae",
+            "id": "803caaef77c8c263d152d281a07ea450",
             "name": "Get Current FxRate",
             "url": "http:\/\/api.openbankproject.com\/obp-bank-fx\/obp\/v2.2.0\/banks\/{BANK_ID}\/fx\/{FROM_CURRENCY_CODE}\/{TO_CURRENCY_CODE}",
             "description": "<p>Get the latest FXRate specified by BANK_ID, FROM_CURRENCY_CODE and TO_CURRENCY_CODE <\/p>",
@@ -82,7 +82,7 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "bfb598b8596888b495fbc02c24523385",
+            "collectionId": "087d4311d082c5637335e2e65ccc9b96",
             "rawModeData": ""
         }
     ]
