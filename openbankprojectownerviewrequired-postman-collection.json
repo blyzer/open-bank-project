@@ -1,5 +1,5 @@
 {
-    "id": "81c3794ad82dfe0fa8307aa44a729af2",
+    "id": "4ffccf74f0068f2f09fbef2f4d3e87ae",
     "name": "OpenBankProject-OwnerViewRequired",
     "description": null,
     "auth": null,
@@ -10,7 +10,7 @@
     "folders": [],
     "requests": [
         {
-            "id": "ec0a783995ab0ab1495f6db63d938155",
+            "id": "537070363a3f8657416323b67ef4b135",
             "name": "Grant User access to a list of views.",
             "url": "http:\/\/api.openbankproject.com\/obp-ownerviewrequired\/obp\/v1.2.1\/banks\/{BANK_ID}\/accounts\/{ACCOUNT_ID}\/permissions\/PROVIDER\/{PROVIDER_ID}\/views",
             "description": "<p>Grants the user identified by PROVIDER_ID at their provider PROVIDER access to a list of views at BANK_ID for account ACCOUNT_ID.<\/p><p>All url parameters must be <a href=\"http:\/\/en.wikipedia.org\/wiki\/Percent-encoding\">%-encoded<\/a>, which is often especially relevant for PROVIDER_ID and PROVIDER.<\/p><p>Authentication is Mandatory<\/p><p>The User needs to have access to the owner view.<\/p>",
@@ -51,11 +51,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "81c3794ad82dfe0fa8307aa44a729af2",
+            "collectionId": "4ffccf74f0068f2f09fbef2f4d3e87ae",
             "rawModeData": ""
         },
         {
-            "id": "e648f7c7053ffd889d3ca6f7d82f7704",
+            "id": "87edf716285b8a3664b03db1191164d4",
             "name": "Grant User access to View.",
             "url": "http:\/\/api.openbankproject.com\/obp-ownerviewrequired\/obp\/v1.2.1\/banks\/{BANK_ID}\/accounts\/{ACCOUNT_ID}\/permissions\/PROVIDER\/{PROVIDER_ID}\/views\/{VIEW_ID}",
             "description": "<p>Grants the User identified by PROVIDER_ID at PROVIDER access to the view VIEW_ID at BANK_ID for account ACCOUNT_ID.<\/p><p>All url parameters must be <a href=\"http:\/\/en.wikipedia.org\/wiki\/Percent-encoding\">%-encoded<\/a>, which is often especially relevant for PROVIDER and PROVIDER_ID.<\/p><p>Authentication is Mandatory and the user needs to have access to the owner view.<\/p><p>Granting access to a public view will return an error message, as the user already has access.<\/p>",
@@ -103,11 +103,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "81c3794ad82dfe0fa8307aa44a729af2",
+            "collectionId": "4ffccf74f0068f2f09fbef2f4d3e87ae",
             "rawModeData": ""
         },
         {
-            "id": "65c456dcec0cedec46774998408a22be",
+            "id": "d6e21c4f340475e08a168efea368eaba",
             "name": "Revoke access to all Views on Account",
             "url": "http:\/\/api.openbankproject.com\/obp-ownerviewrequired\/obp\/v1.2.1\/banks\/{BANK_ID}\/accounts\/{ACCOUNT_ID}\/permissions\/{PROVIDER_ID}\/{USER_ID}\/views",
             "description": "<p>Revokes the user identified by PROVIDER_ID at their provider PROVIDER access to all the views at BANK_ID for account ACCOUNT_ID.<\/p><p>Authentication is Mandatory and the user needs to have access to the owner view.<\/p>",
@@ -155,11 +155,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "81c3794ad82dfe0fa8307aa44a729af2",
+            "collectionId": "4ffccf74f0068f2f09fbef2f4d3e87ae",
             "rawModeData": ""
         },
         {
-            "id": "b2a5fc0a0d1dfca40bbea076312e0f0b",
+            "id": "7b6aae6641ffe566a53663eaad600323",
             "name": "Revoke access to one View.",
             "url": "http:\/\/api.openbankproject.com\/obp-ownerviewrequired\/obp\/v1.2.1\/banks\/{BANK_ID}\/accounts\/{ACCOUNT_ID}\/permissions\/{PROVIDER_ID}\/{USER_ID}\/views\/{VIEW_ID}",
             "description": "<p>Revokes the user identified by PROVIDER_ID at their provider PROVIDER access to the view VIEW_ID at BANK_ID for account ACCOUNT_ID.<\/p><p>Revoking a user access to a public view will return an error message.<\/p><p>Authentication is Mandatory and the user needs to have access to the owner view.<\/p>",
@@ -214,7 +214,7 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "81c3794ad82dfe0fa8307aa44a729af2",
+            "collectionId": "4ffccf74f0068f2f09fbef2f4d3e87ae",
             "rawModeData": ""
         }
     ]
