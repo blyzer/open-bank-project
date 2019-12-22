@@ -1,5 +1,5 @@
 {
-    "id": "0e2c5ac8e098666d89fd437d664aecae",
+    "id": "54b0501d84210b204d10fc3282dfb2a2",
     "name": "OpenBankProject-Bank-Branch",
     "description": null,
     "auth": null,
@@ -10,7 +10,7 @@
     "folders": [],
     "requests": [
         {
-            "id": "6316eae22d1856344fedc84ec14b30b0",
+            "id": "2ef0c729b093c2cd52923304eb30f0bf",
             "name": "Update Branch",
             "url": "http:\/\/api.openbankproject.com\/obp-bank-branch\/obp\/v2.1.0\/banks\/{BANK_ID}\/branches\/{BRANCH_ID}",
             "description": "<p>Update an existing branch for a bank account (Authenticated access). Authentication is Mandatory<\/p>",
@@ -44,11 +44,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "0e2c5ac8e098666d89fd437d664aecae",
+            "collectionId": "54b0501d84210b204d10fc3282dfb2a2",
             "rawModeData": ""
         },
         {
-            "id": "b7fc3d94d8261fcc3cbca47dc6ef0d95",
+            "id": "8ce228c35f8cbdea5fe18de79ffc60c8",
             "name": "Get Branches for a Bank",
             "url": "http:\/\/api.openbankproject.com\/obp-bank-branch\/obp\/v3.0.0\/banks\/{BANK_ID}\/branches",
             "description": "<p>Returns information about branches for a single bank specified by BANK_ID including:<\/p><ul>  <li>Name<\/li>  <li>Address<\/li>  <li>Geo Location<\/li>  <li>License the data under this endpoint is released under<\/li>  <li>Structured opening hours<\/li>  <li>Accessible flag<\/li>  <li>Branch Type<\/li>  <li>More Info<\/li><\/ul><p>Pagination:<\/p><p>By default, 50 records are returned.<\/p><p>You can use the url query parameters <em>limit<\/em> and <em>offset<\/em> for pagination<\/p><p>Authentication is O",
@@ -75,11 +75,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "0e2c5ac8e098666d89fd437d664aecae",
+            "collectionId": "54b0501d84210b204d10fc3282dfb2a2",
             "rawModeData": ""
         },
         {
-            "id": "0b673a69bc0752c10b8836b65edeaab2",
+            "id": "742bdbf0e03c4e05d4586527ccce5644",
             "name": "Create Branch",
             "url": "http:\/\/api.openbankproject.com\/obp-bank-branch\/obp\/v3.0.0\/banks\/{BANK_ID}\/branches",
             "description": "<p>Create Branch for the Bank.<\/p><p>Authentication is Mandatory<\/p><p>OBP-20006: User is missing one or more roles: CanCreateBranch entitlements are required OR CanCreateBranchAtAnyBank<\/p>",
@@ -106,11 +106,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "0e2c5ac8e098666d89fd437d664aecae",
+            "collectionId": "54b0501d84210b204d10fc3282dfb2a2",
             "rawModeData": ""
         },
         {
-            "id": "252b53341ceb54a0ffcb3e475299e05b",
+            "id": "fe62271793c58cdca180812ac9729f52",
             "name": "Get Branch",
             "url": "http:\/\/api.openbankproject.com\/obp-bank-branch\/obp\/v3.0.0\/banks\/{BANK_ID}\/branches\/{BRANCH_ID}",
             "description": "<p>Returns information about a single Branch specified by BANK_ID and BRANCH_ID including:<\/p><ul>  <li>Name<\/li>  <li>Address<\/li>  <li>Geo Location<\/li>  <li>License the data under this endpoint is released under.<\/li><\/ul><p>Authentication is Optional<\/p>",
@@ -144,7 +144,7 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "0e2c5ac8e098666d89fd437d664aecae",
+            "collectionId": "54b0501d84210b204d10fc3282dfb2a2",
             "rawModeData": ""
         }
     ]
