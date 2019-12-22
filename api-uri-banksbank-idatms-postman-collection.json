@@ -1,5 +1,5 @@
 {
-    "id": "7c099e17007a2c6b611a1cb311557884",
+    "id": "8bde5fb2f1fbd435f2a9a95f800f929d",
     "name": "API URI: \/banks\/{BANK_ID}\/atms",
     "description": null,
     "auth": null,
@@ -10,7 +10,7 @@
     "folders": [],
     "requests": [
         {
-            "id": "2d47a1d61c2675f1562cb1d345405480",
+            "id": "ed3f7f19e21606ca0984b70315a41e78",
             "name": "Get Bank ATMS",
             "url": "http:\/\/apisandbox.openbankproject.com\/obp\/v3_0_0\/banks\/{BANK_ID}\/atms",
             "description": "<p>Returns information about ATMs for a single bank specified by BANK_ID including:<\/p><ul>  <li>Address<\/li>  <li>Geo Location<\/li>  <li>License the data under this endpoint is released under<\/li><\/ul><p>Pagination:| By default, 100 records are returned.<\/p><p>You can use the url query parameters <em>limit<\/em> and <em>offset<\/em> for pagination<\/p><p>Authentication is Optional<\/p>",
@@ -37,11 +37,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "7c099e17007a2c6b611a1cb311557884",
+            "collectionId": "8bde5fb2f1fbd435f2a9a95f800f929d",
             "rawModeData": ""
         },
         {
-            "id": "3c26b3e3e4b59b4c9eda3d801b34b758",
+            "id": "791cc26d94f6424d816f0e2b503f8eb1",
             "name": "Create ATM",
             "url": "http:\/\/apisandbox.openbankproject.com\/obp\/v3_0_0\/banks\/{BANK_ID}\/atms",
             "description": "<p>Create ATM for the Bank.<\/p><p>Authentication is Mandatory<\/p><p>OBP-20006: User is missing one or more roles: CanCreateAtm OR CanCreateAtmAtAnyBank<\/p>",
@@ -68,7 +68,7 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "7c099e17007a2c6b611a1cb311557884",
+            "collectionId": "8bde5fb2f1fbd435f2a9a95f800f929d",
             "rawModeData": ""
         }
     ]
