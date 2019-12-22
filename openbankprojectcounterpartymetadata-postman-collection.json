@@ -1,5 +1,5 @@
 {
-    "id": "4a55bb31b7a41111626d9fc391129279",
+    "id": "bc67719de9f63486cc4cfd5932a3825b",
     "name": "OpenBankProject-Counterparty-Metadata",
     "description": null,
     "auth": null,
@@ -10,7 +10,7 @@
     "folders": [],
     "requests": [
         {
-            "id": "cd268e6ac84ecc333ee8ea1a2afb9fc9",
+            "id": "9e76d38d39a42fe16c51c0b347043cb5",
             "name": "Get Other Account Metadata.",
             "url": "http:\/\/api.openbankproject.com\/obp-counterparty-metadata\/obp\/v1.2.1\/banks\/{BANK_ID}\/accounts\/{ACCOUNT_ID}\/{VIEW_ID}\/other_accounts\/{OTHER_ACCOUNT_ID}\/metadata",
             "description": "<p>Get metadata of one other account. Returns only the metadata about one other bank account (OTHER_ACCOUNT_ID) that had shared at least one transaction with ACCOUNT_ID at BANK_ID.<\/p><p>Authentication via OAuth is required if the view is not public.<\/p>",
@@ -58,11 +58,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "4a55bb31b7a41111626d9fc391129279",
+            "collectionId": "bc67719de9f63486cc4cfd5932a3825b",
             "rawModeData": ""
         },
         {
-            "id": "bfad48c854be0c2107893dead70699b1",
+            "id": "d0a54070806439f0d1fed54bf2a28b14",
             "name": "Delete Counterparty Corporate Location.",
             "url": "http:\/\/api.openbankproject.com\/obp-counterparty-metadata\/obp\/v1.2.1\/banks\/{BANK_ID}\/accounts\/{ACCOUNT_ID}\/{VIEW_ID}\/other_accounts\/{OTHER_ACCOUNT_ID}\/metadata\/corporate_location",
             "description": "<p>Delete corporate location of other bank account. Delete the geolocation of the counterparty's registered address<\/p>",
@@ -110,11 +110,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "4a55bb31b7a41111626d9fc391129279",
+            "collectionId": "bc67719de9f63486cc4cfd5932a3825b",
             "rawModeData": ""
         },
         {
-            "id": "4a855fdfaf99f1069b7e1e3162c1da4a",
+            "id": "23dfe35119d8f4f340cf2798a492ca12",
             "name": "Add Corporate Location to Counterparty",
             "url": "http:\/\/api.openbankproject.com\/obp-counterparty-metadata\/obp\/v1.2.1\/banks\/{BANK_ID}\/accounts\/{ACCOUNT_ID}\/{VIEW_ID}\/other_accounts\/{OTHER_ACCOUNT_ID}\/metadata\/corporate_location",
             "description": "<p>Add the geolocation of the counterparty's registered address<\/p>",
@@ -162,11 +162,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "4a55bb31b7a41111626d9fc391129279",
+            "collectionId": "bc67719de9f63486cc4cfd5932a3825b",
             "rawModeData": ""
         },
         {
-            "id": "5e600b918fcee06ea380df7a23d7a4cf",
+            "id": "b11287ac2d6b74339b25a4dc74314ea3",
             "name": "Update Counterparty Corporate Location",
             "url": "http:\/\/api.openbankproject.com\/obp-counterparty-metadata\/obp\/v1.2.1\/banks\/{BANK_ID}\/accounts\/{ACCOUNT_ID}\/{VIEW_ID}\/other_accounts\/{OTHER_ACCOUNT_ID}\/metadata\/corporate_location",
             "description": "<p>Update the geolocation of the counterparty's registered address<\/p>",
@@ -214,11 +214,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "4a55bb31b7a41111626d9fc391129279",
+            "collectionId": "bc67719de9f63486cc4cfd5932a3825b",
             "rawModeData": ""
         },
         {
-            "id": "f225eb69f88d88b240e9df1f1d06ced2",
+            "id": "a021e88ef5c7f82c02012401941f0117",
             "name": "Delete Counterparty Image URL",
             "url": "http:\/\/api.openbankproject.com\/obp-counterparty-metadata\/obp\/v1.2.1\/banks\/{BANK_ID}\/accounts\/{ACCOUNT_ID}\/{VIEW_ID}\/other_accounts\/{OTHER_ACCOUNT_ID}\/metadata\/image_url",
             "description": "<p>Delete image url of other bank account.<\/p>",
@@ -266,11 +266,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "4a55bb31b7a41111626d9fc391129279",
+            "collectionId": "bc67719de9f63486cc4cfd5932a3825b",
             "rawModeData": ""
         },
         {
-            "id": "b622812df8075941ecff04d66da083b9",
+            "id": "86f3a1268208f3b37cc2ca20fae0cd7b",
             "name": "Add image url to other bank account.",
             "url": "http:\/\/api.openbankproject.com\/obp-counterparty-metadata\/obp\/v1.2.1\/banks\/{BANK_ID}\/accounts\/{ACCOUNT_ID}\/{VIEW_ID}\/other_accounts\/{OTHER_ACCOUNT_ID}\/metadata\/image_url",
             "description": "<p>Add a url that points to the logo of the counterparty<\/p>",
@@ -318,11 +318,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "4a55bb31b7a41111626d9fc391129279",
+            "collectionId": "bc67719de9f63486cc4cfd5932a3825b",
             "rawModeData": ""
         },
         {
-            "id": "f40cdcd16a7af9b7e5e6032c4180425d",
+            "id": "6bd0c2ae146a0a477675b638bca6dc22",
             "name": "Update Counterparty Image Url",
             "url": "http:\/\/api.openbankproject.com\/obp-counterparty-metadata\/obp\/v1.2.1\/banks\/{BANK_ID}\/accounts\/{ACCOUNT_ID}\/{VIEW_ID}\/other_accounts\/{OTHER_ACCOUNT_ID}\/metadata\/image_url",
             "description": "<p>Update the url that points to the logo of the counterparty<\/p>",
@@ -370,11 +370,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "4a55bb31b7a41111626d9fc391129279",
+            "collectionId": "bc67719de9f63486cc4cfd5932a3825b",
             "rawModeData": ""
         },
         {
-            "id": "6d5df00472041a0950d91cacde2810c4",
+            "id": "4056c82e4a92febb0fd4906eab13a294",
             "name": "Delete more info of other bank account.",
             "url": "http:\/\/api.openbankproject.com\/obp-counterparty-metadata\/obp\/v1.2.1\/banks\/{BANK_ID}\/accounts\/{ACCOUNT_ID}\/{VIEW_ID}\/other_accounts\/{OTHER_ACCOUNT_ID}\/metadata\/more_info",
             "description": "",
@@ -422,11 +422,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "4a55bb31b7a41111626d9fc391129279",
+            "collectionId": "bc67719de9f63486cc4cfd5932a3825b",
             "rawModeData": ""
         },
         {
-            "id": "d6168127682aa3523b7cd2e0bd90e61b",
+            "id": "8ec1816519cc732f6689ede20ed60808",
             "name": "Add Counterparty More Info",
             "url": "http:\/\/api.openbankproject.com\/obp-counterparty-metadata\/obp\/v1.2.1\/banks\/{BANK_ID}\/accounts\/{ACCOUNT_ID}\/{VIEW_ID}\/other_accounts\/{OTHER_ACCOUNT_ID}\/metadata\/more_info",
             "description": "<p>Add a description of the counter party from the perpestive of the account e.g. My dentist.<\/p>",
@@ -474,11 +474,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "4a55bb31b7a41111626d9fc391129279",
+            "collectionId": "bc67719de9f63486cc4cfd5932a3825b",
             "rawModeData": ""
         },
         {
-            "id": "67af3e820f440261015c43f1445d1519",
+            "id": "e386af7afdf07af586e313c172501e6f",
             "name": "Update Counterparty More Info",
             "url": "http:\/\/api.openbankproject.com\/obp-counterparty-metadata\/obp\/v1.2.1\/banks\/{BANK_ID}\/accounts\/{ACCOUNT_ID}\/{VIEW_ID}\/other_accounts\/{OTHER_ACCOUNT_ID}\/metadata\/more_info",
             "description": "<p>Update the more info description of the counter party from the perpestive of the account e.g. My dentist.<\/p>",
@@ -526,11 +526,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "4a55bb31b7a41111626d9fc391129279",
+            "collectionId": "bc67719de9f63486cc4cfd5932a3825b",
             "rawModeData": ""
         },
         {
-            "id": "0170886cb6acf6ed14c6e4c84b6ea173",
+            "id": "4f423eb77a733b068ef129eb2ee208ba",
             "name": "Delete Counterparty Open Corporates URL",
             "url": "http:\/\/api.openbankproject.com\/obp-counterparty-metadata\/obp\/v1.2.1\/banks\/{BANK_ID}\/accounts\/{ACCOUNT_ID}\/{VIEW_ID}\/other_accounts\/{OTHER_ACCOUNT_ID}\/metadata\/open_corporates_url",
             "description": "<p>Delete open corporate url of other bank account.<\/p>",
@@ -578,11 +578,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "4a55bb31b7a41111626d9fc391129279",
+            "collectionId": "bc67719de9f63486cc4cfd5932a3825b",
             "rawModeData": ""
         },
         {
-            "id": "15931faa1ca618222078ed49dcf9a376",
+            "id": "495e249a0fb09048eb92e70f5b79455d",
             "name": "Add Open Corporates URL to Counterparty",
             "url": "http:\/\/api.openbankproject.com\/obp-counterparty-metadata\/obp\/v1.2.1\/banks\/{BANK_ID}\/accounts\/{ACCOUNT_ID}\/{VIEW_ID}\/other_accounts\/{OTHER_ACCOUNT_ID}\/metadata\/open_corporates_url",
             "description": "<p>Add open corporates url to other bank account.<\/p>",
@@ -630,11 +630,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "4a55bb31b7a41111626d9fc391129279",
+            "collectionId": "bc67719de9f63486cc4cfd5932a3825b",
             "rawModeData": ""
         },
         {
-            "id": "7cb9e5d2563d901a3e5858eaa764dd4c",
+            "id": "9dae53a43911df6eecc8615c9cb5b371",
             "name": "Update Open Corporates Url of Counterparty",
             "url": "http:\/\/api.openbankproject.com\/obp-counterparty-metadata\/obp\/v1.2.1\/banks\/{BANK_ID}\/accounts\/{ACCOUNT_ID}\/{VIEW_ID}\/other_accounts\/{OTHER_ACCOUNT_ID}\/metadata\/open_corporates_url",
             "description": "<p>Update open corporate url of other bank account.<\/p>",
@@ -682,11 +682,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "4a55bb31b7a41111626d9fc391129279",
+            "collectionId": "bc67719de9f63486cc4cfd5932a3825b",
             "rawModeData": ""
         },
         {
-            "id": "08129ea81b43355617eda8040c653cbe",
+            "id": "0c25f0fff9fe493bc52b02f02143ca3b",
             "name": "Delete Counterparty Physical Location.",
             "url": "http:\/\/api.openbankproject.com\/obp-counterparty-metadata\/obp\/v1.2.1\/banks\/{BANK_ID}\/accounts\/{ACCOUNT_ID}\/{VIEW_ID}\/other_accounts\/{OTHER_ACCOUNT_ID}\/metadata\/physical_location",
             "description": "<p>Delete physical location of other bank account.<\/p>",
@@ -734,11 +734,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "4a55bb31b7a41111626d9fc391129279",
+            "collectionId": "bc67719de9f63486cc4cfd5932a3825b",
             "rawModeData": ""
         },
         {
-            "id": "f7840143ffe8dc0f08a276b3a741a820",
+            "id": "a106364b4d37f69f15509ae37577b1e9",
             "name": "Add physical location to other bank account.",
             "url": "http:\/\/api.openbankproject.com\/obp-counterparty-metadata\/obp\/v1.2.1\/banks\/{BANK_ID}\/accounts\/{ACCOUNT_ID}\/{VIEW_ID}\/other_accounts\/{OTHER_ACCOUNT_ID}\/metadata\/physical_location",
             "description": "<p>Add geocoordinates of the counterparty's main location<\/p>",
@@ -786,11 +786,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "4a55bb31b7a41111626d9fc391129279",
+            "collectionId": "bc67719de9f63486cc4cfd5932a3825b",
             "rawModeData": ""
         },
         {
-            "id": "26f8e886c894520d2e64e89d16804088",
+            "id": "3a706b4936ba45a42c6b1e868ac4f378",
             "name": "Update Counterparty Physical Location",
             "url": "http:\/\/api.openbankproject.com\/obp-counterparty-metadata\/obp\/v1.2.1\/banks\/{BANK_ID}\/accounts\/{ACCOUNT_ID}\/{VIEW_ID}\/other_accounts\/{OTHER_ACCOUNT_ID}\/metadata\/physical_location",
             "description": "<p>Update geocoordinates of the counterparty's main location<\/p>",
@@ -838,11 +838,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "4a55bb31b7a41111626d9fc391129279",
+            "collectionId": "bc67719de9f63486cc4cfd5932a3825b",
             "rawModeData": ""
         },
         {
-            "id": "a99a861c813e701f395e5f8d761838b0",
+            "id": "3d5c90f9e204220b29dd6b148053266c",
             "name": "Delete url of other bank account.",
             "url": "http:\/\/api.openbankproject.com\/obp-counterparty-metadata\/obp\/v1.2.1\/banks\/{BANK_ID}\/accounts\/{ACCOUNT_ID}\/{VIEW_ID}\/other_accounts\/{OTHER_ACCOUNT_ID}\/metadata\/url",
             "description": "",
@@ -890,11 +890,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "4a55bb31b7a41111626d9fc391129279",
+            "collectionId": "bc67719de9f63486cc4cfd5932a3825b",
             "rawModeData": ""
         },
         {
-            "id": "3fc8be325dda6fe0eac816e27582ca42",
+            "id": "7eac189ed93c3033d41fffbfef639861",
             "name": "Add url to other bank account.",
             "url": "http:\/\/api.openbankproject.com\/obp-counterparty-metadata\/obp\/v1.2.1\/banks\/{BANK_ID}\/accounts\/{ACCOUNT_ID}\/{VIEW_ID}\/other_accounts\/{OTHER_ACCOUNT_ID}\/metadata\/url",
             "description": "<p>A url which represents the counterparty (home page url etc.)<\/p>",
@@ -942,11 +942,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "4a55bb31b7a41111626d9fc391129279",
+            "collectionId": "bc67719de9f63486cc4cfd5932a3825b",
             "rawModeData": ""
         },
         {
-            "id": "e5136999980bbaf26c0804f29635c1cc",
+            "id": "976f003bd74079ce576fa2701acc0636",
             "name": "Update url of other bank account.",
             "url": "http:\/\/api.openbankproject.com\/obp-counterparty-metadata\/obp\/v1.2.1\/banks\/{BANK_ID}\/accounts\/{ACCOUNT_ID}\/{VIEW_ID}\/other_accounts\/{OTHER_ACCOUNT_ID}\/metadata\/url",
             "description": "<p>A url which represents the counterparty (home page url etc.)<\/p>",
@@ -994,11 +994,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "4a55bb31b7a41111626d9fc391129279",
+            "collectionId": "bc67719de9f63486cc4cfd5932a3825b",
             "rawModeData": ""
         },
         {
-            "id": "be8eec62231a2dc36925b6f346ccc84a",
+            "id": "fbf908f1ffb602da92ff472382cb4db5",
             "name": "Delete Counterparty Private Alias",
             "url": "http:\/\/api.openbankproject.com\/obp-counterparty-metadata\/obp\/v1.2.1\/banks\/{BANK_ID}\/accounts\/{ACCOUNT_ID}\/{VIEW_ID}\/other_accounts\/{OTHER_ACCOUNT_ID}\/private_alias",
             "description": "<p>Deletes the private alias of the other account OTHER_ACCOUNT_ID.<\/p><p>Authentication is Optional Authentication is required if the view is not public.<\/p>",
@@ -1046,11 +1046,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "4a55bb31b7a41111626d9fc391129279",
+            "collectionId": "bc67719de9f63486cc4cfd5932a3825b",
             "rawModeData": ""
         },
         {
-            "id": "a000520415e39443a030748f48c3226e",
+            "id": "57fe4cd9b7c9486f7c7eeb267ff9fb51",
             "name": "Get Other Account Private Alias",
             "url": "http:\/\/api.openbankproject.com\/obp-counterparty-metadata\/obp\/v1.2.1\/banks\/{BANK_ID}\/accounts\/{ACCOUNT_ID}\/{VIEW_ID}\/other_accounts\/{OTHER_ACCOUNT_ID}\/private_alias",
             "description": "<p>Returns the private alias of the other account OTHER_ACCOUNT_ID.<\/p><p>Authentication is Optional Authentication is required if the view is not public.<\/p>",
@@ -1098,11 +1098,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "4a55bb31b7a41111626d9fc391129279",
+            "collectionId": "bc67719de9f63486cc4cfd5932a3825b",
             "rawModeData": ""
         },
         {
-            "id": "a0c3d7061932085801b66d74313ffd7f",
+            "id": "644051771b41ca320697ddff8845e9e0",
             "name": "Create Other Account Private Alias",
             "url": "http:\/\/api.openbankproject.com\/obp-counterparty-metadata\/obp\/v1.2.1\/banks\/{BANK_ID}\/accounts\/{ACCOUNT_ID}\/{VIEW_ID}\/other_accounts\/{OTHER_ACCOUNT_ID}\/private_alias",
             "description": "<p>Creates a private alias for the other account OTHER_ACCOUNT_ID.<\/p><p>Authentication is Optional Authentication is required if the view is not public.<\/p>",
@@ -1150,11 +1150,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "4a55bb31b7a41111626d9fc391129279",
+            "collectionId": "bc67719de9f63486cc4cfd5932a3825b",
             "rawModeData": ""
         },
         {
-            "id": "0694a2b60ff04b0a4434ee3974d72147",
+            "id": "b34f018608f6c10e2601b6dfcfeda13c",
             "name": "Update Counterparty Private Alias",
             "url": "http:\/\/api.openbankproject.com\/obp-counterparty-metadata\/obp\/v1.2.1\/banks\/{BANK_ID}\/accounts\/{ACCOUNT_ID}\/{VIEW_ID}\/other_accounts\/{OTHER_ACCOUNT_ID}\/private_alias",
             "description": "<p>Updates the private alias of the counterparty (AKA other account) OTHER_ACCOUNT_ID.<\/p><p>Authentication is Optional Authentication is required if the view is not public.<\/p>",
@@ -1202,11 +1202,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "4a55bb31b7a41111626d9fc391129279",
+            "collectionId": "bc67719de9f63486cc4cfd5932a3825b",
             "rawModeData": ""
         },
         {
-            "id": "1746593242d8ab0bb554a274177bb437",
+            "id": "47b8bb087f6536b293e60bc7b4226b7c",
             "name": "Delete Counterparty Public Alias",
             "url": "http:\/\/api.openbankproject.com\/obp-counterparty-metadata\/obp\/v1.2.1\/banks\/{BANK_ID}\/accounts\/{ACCOUNT_ID}\/{VIEW_ID}\/other_accounts\/{OTHER_ACCOUNT_ID}\/public_alias",
             "description": "<p>Deletes the public alias of the other account OTHER_ACCOUNT_ID.<\/p><p>Authentication is Optional Authentication is required if the view is not public.<\/p>",
@@ -1254,11 +1254,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "4a55bb31b7a41111626d9fc391129279",
+            "collectionId": "bc67719de9f63486cc4cfd5932a3825b",
             "rawModeData": ""
         },
         {
-            "id": "d949e5e59f5a507b8706528336555ff6",
+            "id": "610fbfdaf28e9db45e147de951e15f2d",
             "name": "Get public alias of other bank account.",
             "url": "http:\/\/api.openbankproject.com\/obp-counterparty-metadata\/obp\/v1.2.1\/banks\/{BANK_ID}\/accounts\/{ACCOUNT_ID}\/{VIEW_ID}\/other_accounts\/{OTHER_ACCOUNT_ID}\/public_alias",
             "description": "<p>Returns the public alias of the other account OTHER_ACCOUNT_ID. Authentication is Optional Authentication is Mandatory if the view is not public.<\/p>",
@@ -1306,11 +1306,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "4a55bb31b7a41111626d9fc391129279",
+            "collectionId": "bc67719de9f63486cc4cfd5932a3825b",
             "rawModeData": ""
         },
         {
-            "id": "f3c15d23e7b435c6b32152c9a03e48aa",
+            "id": "0cce701249e46db8e9841a47eefbbd20",
             "name": "Add public alias to other bank account.",
             "url": "http:\/\/api.openbankproject.com\/obp-counterparty-metadata\/obp\/v1.2.1\/banks\/{BANK_ID}\/accounts\/{ACCOUNT_ID}\/{VIEW_ID}\/other_accounts\/{OTHER_ACCOUNT_ID}\/public_alias",
             "description": "<p>Creates the public alias for the other account OTHER_ACCOUNT_ID.<\/p><p>Authentication is Optional Authentication is required if the view is not public.<\/p><p>Note: Public aliases are automatically generated for new 'other accounts \/ counterparties', so this call should only be used if the public alias was deleted.<\/p><p>The VIEW_ID parameter should be a view the caller is permitted to access to and that has permission to create public aliases.<\/p>",
@@ -1358,11 +1358,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "4a55bb31b7a41111626d9fc391129279",
+            "collectionId": "bc67719de9f63486cc4cfd5932a3825b",
             "rawModeData": ""
         },
         {
-            "id": "2c9f8a1d8025be1bbd22fb379606ee21",
+            "id": "68281449489a3f4702849f2e295ebc47",
             "name": "Update public alias of other bank account.",
             "url": "http:\/\/api.openbankproject.com\/obp-counterparty-metadata\/obp\/v1.2.1\/banks\/{BANK_ID}\/accounts\/{ACCOUNT_ID}\/{VIEW_ID}\/other_accounts\/{OTHER_ACCOUNT_ID}\/public_alias",
             "description": "<p>Updates the public alias of the other account \/ counterparty OTHER_ACCOUNT_ID.<\/p><p>Authentication is Optional Authentication is required if the view is not public.<\/p>",
@@ -1410,11 +1410,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "4a55bb31b7a41111626d9fc391129279",
+            "collectionId": "bc67719de9f63486cc4cfd5932a3825b",
             "rawModeData": ""
         },
         {
-            "id": "a77c759edf164beddfa6ceb5cfbaa57f",
+            "id": "86d1525599d6d18b7ababc99c9c974a9",
             "name": "Get Counterparty by Counterparty Id.(Explicit).",
             "url": "http:\/\/api.openbankproject.com\/obp-counterparty-metadata\/obp\/v2.2.0\/banks\/{BANK_ID}\/accounts\/{ACCOUNT_ID}\/{VIEW_ID}\/counterparties\/COUNTERPARTY_ID",
             "description": "<p>Information returned about the Counterparty specified by COUNTERPARTY_ID:<\/p><p>Authentication is Mandatory<\/p>",
@@ -1455,7 +1455,7 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "4a55bb31b7a41111626d9fc391129279",
+            "collectionId": "bc67719de9f63486cc4cfd5932a3825b",
             "rawModeData": ""
         }
     ]
