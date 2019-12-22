@@ -1,5 +1,5 @@
 {
-    "id": "f864b50005234fcc8cf3bea7403fdc4a",
+    "id": "1cb4b409fbdf0793eff7cf02b723497a",
     "name": "OpenBankProject-Account-Firehose",
     "description": null,
     "auth": null,
@@ -10,7 +10,7 @@
     "folders": [],
     "requests": [
         {
-            "id": "1b28e4232b67469456f74badb6a1895c",
+            "id": "fe6f702b4500fe7163b5b14034f332a1",
             "name": "Get Firehose Transactions for Account",
             "url": "http:\/\/api.openbankproject.com\/obp-account-firehose\/obp\/v3.0.0\/banks\/{BANK_ID}\/firehose\/accounts\/{ACCOUNT_ID}\/views\/{VIEW_ID}\/transactions",
             "description": "<p>Get Transactions for an Account that has a firehose View.<\/p><p>Allows bulk access to an account's transactions. User must have the CanUseFirehoseAtAnyBank Role<\/p><p>To find ACCOUNT_IDs, use the getFirehoseAccountsAtOneBank call.<\/p><p>For VIEW_ID try 'firehose'<\/p><p>Authentication is Mandatory<\/p>",
@@ -51,11 +51,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "f864b50005234fcc8cf3bea7403fdc4a",
+            "collectionId": "1cb4b409fbdf0793eff7cf02b723497a",
             "rawModeData": ""
         },
         {
-            "id": "1f60bdc68d23bf1b17563cd51ca5a97a",
+            "id": "a5f058d882dae6c95bd97f1a7cc9048b",
             "name": "Get Firehose Accounts at Bank",
             "url": "http:\/\/api.openbankproject.com\/obp-account-firehose\/obp\/v3.0.0\/banks\/{BANK_ID}\/firehose\/accounts\/views\/{VIEW_ID}",
             "description": "<p>Get Accounts which have a firehose view assigned to them.<\/p><p>This endpoint allows bulk access to accounts.<\/p><p>Requires the CanUseFirehoseAtAnyBank Role<\/p><p>To be shown on the list, each Account must have a firehose View linked to it.<\/p><p>For VIEW_ID try 'firehose'<\/p><p>Authentication is Mandatory<\/p>",
@@ -89,11 +89,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "f864b50005234fcc8cf3bea7403fdc4a",
+            "collectionId": "1cb4b409fbdf0793eff7cf02b723497a",
             "rawModeData": ""
         },
         {
-            "id": "d63c19ade79a337dde7c6231ba02c609",
+            "id": "a73617d19662826716ca024989058d06",
             "name": "Get Firehose Customers",
             "url": "http:\/\/api.openbankproject.com\/obp-account-firehose\/obp\/v3.1.0\/banks\/{BANK_ID}\/firehose\/customers",
             "description": "<p>Get Customers that has a firehose View.<\/p><p>Allows bulk access to customers. User must have the CanUseFirehoseAtAnyBank Role<\/p><p>For VIEW_ID try 'firehose'<\/p><p>Possible custom URL parameters for pagination:<\/p><ul>  <li>sort_direction=ASC\/DESC<\/li>  <li>limit=NUMBER ==&gt; default value: 50<\/li>  <li>offset=NUMBER ==&gt; default value: 0<\/li>  <li>from_date=DATE =&gt; default value: date of the oldest customer created (format below)<\/li>  <li>to_date=DATE =&gt; default value: date of th",
@@ -120,7 +120,7 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "f864b50005234fcc8cf3bea7403fdc4a",
+            "collectionId": "1cb4b409fbdf0793eff7cf02b723497a",
             "rawModeData": ""
         }
     ]
