@@ -1,5 +1,5 @@
 {
-    "id": "b939c33e38314ed30a68fc580e502339",
+    "id": "6200e52e46c7f5a3ac70630480621aea",
     "name": "API URI: \/banks\/{BANK_ID}\/accounts\/{ACCOUNT_ID}\/{VIEW_ID}\/transaction-request-types\/SANDBOX_TAN\/transaction-requests",
     "description": null,
     "auth": null,
@@ -10,7 +10,7 @@
     "folders": [],
     "requests": [
         {
-            "id": "e6fd0a05f56aa777adf2949c385e871f",
+            "id": "7640a28680f853c6e97c76b1b470eb3f",
             "name": "Create Transaction Request (SANDBOX_TAN)",
             "url": "http:\/\/apisandbox.openbankproject.com\/obp\/v3_0_0\/banks\/{BANK_ID}\/accounts\/{ACCOUNT_ID}\/{VIEW_ID}\/transaction-request-types\/SANDBOX_TAN\/transaction-requests",
             "description": "<p>When using SANDBOX_TAN, the payee is set in the request body.<\/p><p>Money goes into the BANK_ID and ACCOUNT_ID specified in the request body.<\/p><p>Initiate a Payment via creating a Transaction Request.<\/p><p>In OBP, a <code>transaction request<\/code> may or may not result in a <code>transaction<\/code>. However, a <code>transaction<\/code> only has one possible state: completed.<\/p><p>A <code>Transaction Request<\/code> can have one of several states.<\/p><p><code>Transactions<\/code> are modeled",
@@ -51,7 +51,7 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "b939c33e38314ed30a68fc580e502339",
+            "collectionId": "6200e52e46c7f5a3ac70630480621aea",
             "rawModeData": ""
         }
     ]
