@@ -1,6 +1,6 @@
 {
     "id": "092701d44c72d591e53de5a73bebf168",
-    "name": "API URI: \/banks\/{BANK_ID}\/accounts\/{ACCOUNT_ID}\/{VIEW_ID}\/transactions",
+    "name": "API URI: /banks/{BANK_ID}/accounts/{ACCOUNT_ID}/{VIEW_ID}/transactions",
     "description": null,
     "auth": null,
     "events": null,
@@ -12,8 +12,8 @@
         {
             "id": "02b54108dcd534f4a1593d9243271156",
             "name": "Get Transactions for Account (Full)",
-            "url": "http:\/\/apisandbox.openbankproject.com\/obp\/v3_0_0\/banks\/{BANK_ID}\/accounts\/{ACCOUNT_ID}\/{VIEW_ID}\/transactions",
-            "description": "<p>Returns transactions list of the account specified by ACCOUNT_ID and <a href=\"#1_2_1-getViewsForBankAccount\">moderated<\/a> by the view (VIEW_ID).<\/p><p>Authentication via OAuth is required if the view is not public.<\/p><p>Possible custom headers for pagination:<\/p><ul>  <li>obp_sort_by=CRITERIA ==&gt; default value: \"completed\" field<\/li>  <li>obp_sort_direction=ASC\/DESC ==&gt; default value: DESC<\/li>  <li>obp_limit=NUMBER ==&gt; default value: 50<\/li>  <li>obp_offset=NUMBER ==&gt; default v",
+            "url": "http://apisandbox.openbankproject.com/obp/v3_0_0/banks/{BANK_ID}/accounts/{ACCOUNT_ID}/{VIEW_ID}/transactions",
+            "description": "<p>Returns transactions list of the account specified by ACCOUNT_ID and <a href=\"#1_2_1-getViewsForBankAccount\">moderated</a> by the view (VIEW_ID).</p><p>Authentication via OAuth is required if the view is not public.</p><p>Possible custom headers for pagination:</p><ul>  <li>obp_sort_by=CRITERIA ==&gt; default value: \"completed\" field</li>  <li>obp_sort_direction=ASC/DESC ==&gt; default value: DESC</li>  <li>obp_limit=NUMBER ==&gt; default value: 50</li>  <li>obp_offset=NUMBER ==&gt; default v",
             "data": [],
             "dataMode": "raw",
             "headerData": null,

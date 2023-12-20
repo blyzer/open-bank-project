@@ -1,6 +1,6 @@
 {
     "id": "c4e043bf4f4b66a1902f8f5c0bfcebb0",
-    "name": "API URI: \/banks\/{BANK_ID}\/accounts\/{ACCOUNT_ID}\/{VIEW_ID}\/transaction-request-types\/SEPA\/transaction-requests",
+    "name": "API URI: /banks/{BANK_ID}/accounts/{ACCOUNT_ID}/{VIEW_ID}/transaction-request-types/SEPA/transaction-requests",
     "description": null,
     "auth": null,
     "events": null,
@@ -12,8 +12,8 @@
         {
             "id": "09b399d7de0d4601189fc811615f78bd",
             "name": "Create Transaction Request (SEPA)",
-            "url": "http:\/\/apisandbox.openbankproject.com\/obp\/v3_0_0\/banks\/{BANK_ID}\/accounts\/{ACCOUNT_ID}\/{VIEW_ID}\/transaction-request-types\/SEPA\/transaction-requests",
-            "description": "<p>Special instructions for SEPA:<\/p><p>When using a SEPA Transaction Request, you specify the IBAN of a Counterparty in the body of the request. The routing details (IBAN) of the counterparty will be forwarded to the core banking system for the transfer.<\/p><p>Initiate a Payment via creating a Transaction Request.<\/p><p>In OBP, a <code>transaction request<\/code> may or may not result in a <code>transaction<\/code>. However, a <code>transaction<\/code> only has one possible state: completed.<\/p><p",
+            "url": "http://apisandbox.openbankproject.com/obp/v3_0_0/banks/{BANK_ID}/accounts/{ACCOUNT_ID}/{VIEW_ID}/transaction-request-types/SEPA/transaction-requests",
+            "description": "<p>Special instructions for SEPA:</p><p>When using a SEPA Transaction Request, you specify the IBAN of a Counterparty in the body of the request. The routing details (IBAN) of the counterparty will be forwarded to the core banking system for the transfer.</p><p>Initiate a Payment via creating a Transaction Request.</p><p>In OBP, a <code>transaction request</code> may or may not result in a <code>transaction</code>. However, a <code>transaction</code> only has one possible state: completed.</p><p",
             "data": [],
             "dataMode": "raw",
             "headerData": null,

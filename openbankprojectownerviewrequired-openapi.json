@@ -4,16 +4,19 @@
         "version": "v3_1_0",
         "title": "OpenBankProject-OwnerViewRequired",
         "description": "An Open Source API for Banks. (c) TESOBE Ltd. 2011 - 2018. Licensed under the AGPL and commercial licences.",
-        "termsOfService": "http:\/\/exmple.com\/license\/"
+        "termsOfService": "http://exmple.com/license/"
     },
     "servers": [
-        "http:\/\/api.openbankproject.com\/obp-ownerviewrequired"
+        {
+            "description": "An Open Source API for Banks.",
+            "url": "http://api.openbankproject.com/obp-ownerviewrequired"
+        }
     ],
     "paths": {
-        "\/obp\/v1.2.1\/banks\/{BANK_ID}\/accounts\/{ACCOUNT_ID}\/permissions\/PROVIDER\/{PROVIDER_ID}\/views": {
+        "/obp/v1.2.1/banks/{BANK_ID}/accounts/{ACCOUNT_ID}/permissions/PROVIDER/{PROVIDER_ID}/views": {
             "post": {
                 "summary": "Grant User access to a list of views.",
-                "description": "<p>Grants the user identified by PROVIDER_ID at their provider PROVIDER access to a list of views at BANK_ID for account ACCOUNT_ID.<\/p><p>All url parameters must be <a href=\"http:\/\/en.wikipedia.org\/wiki\/Percent-encoding\">%-encoded<\/a>, which is often especially relevant for PROVIDER_ID and PROVIDER.<\/p><p>Authentication is Mandatory<\/p><p>The User needs to have access to the owner view.<\/p>",
+                "description": "<p>Grants the user identified by PROVIDER_ID at their provider PROVIDER access to a list of views at BANK_ID for account ACCOUNT_ID.</p><p>All url parameters must be <a href=\"http://en.wikipedia.org/wiki/Percent-encoding\">%-encoded</a>, which is often especially relevant for PROVIDER_ID and PROVIDER.</p><p>Authentication is Mandatory</p><p>The User needs to have access to the owner view.</p>",
                 "operationId": "Vv121AddPermissionForUserForBankAccountForMultipleViews",
                 "deprecated": 0,
                 "parameters": [
@@ -37,9 +40,9 @@
                     "201": {
                         "description": "Success",
                         "content": {
-                            "application\/json": {
+                            "application/json": {
                                 "schema": {
-                                    "$href": "#\/components\/schemas\/ViewsJSONV121"
+                                    "$href": "#/components/schemas/ViewsJSONV121"
                                 }
                             }
                         }
@@ -47,10 +50,10 @@
                 }
             }
         },
-        "\/obp\/v1.2.1\/banks\/{BANK_ID}\/accounts\/{ACCOUNT_ID}\/permissions\/PROVIDER\/{PROVIDER_ID}\/views\/{VIEW_ID}": {
+        "/obp/v1.2.1/banks/{BANK_ID}/accounts/{ACCOUNT_ID}/permissions/PROVIDER/{PROVIDER_ID}/views/{VIEW_ID}": {
             "post": {
                 "summary": "Grant User access to View.",
-                "description": "<p>Grants the User identified by PROVIDER_ID at PROVIDER access to the view VIEW_ID at BANK_ID for account ACCOUNT_ID.<\/p><p>All url parameters must be <a href=\"http:\/\/en.wikipedia.org\/wiki\/Percent-encoding\">%-encoded<\/a>, which is often especially relevant for PROVIDER and PROVIDER_ID.<\/p><p>Authentication is Mandatory and the user needs to have access to the owner view.<\/p><p>Granting access to a public view will return an error message, as the user already has access.<\/p>",
+                "description": "<p>Grants the User identified by PROVIDER_ID at PROVIDER access to the view VIEW_ID at BANK_ID for account ACCOUNT_ID.</p><p>All url parameters must be <a href=\"http://en.wikipedia.org/wiki/Percent-encoding\">%-encoded</a>, which is often especially relevant for PROVIDER and PROVIDER_ID.</p><p>Authentication is Mandatory and the user needs to have access to the owner view.</p><p>Granting access to a public view will return an error message, as the user already has access.</p>",
                 "operationId": "Vv121AddPermissionForUserForBankAccountForOneView",
                 "deprecated": 0,
                 "parameters": [
@@ -79,9 +82,9 @@
                     "201": {
                         "description": "Success",
                         "content": {
-                            "application\/json": {
+                            "application/json": {
                                 "schema": {
-                                    "$href": "#\/components\/schemas\/ViewsJSONV121"
+                                    "$href": "#/components/schemas/ViewsJSONV121"
                                 }
                             }
                         }
@@ -89,10 +92,10 @@
                 }
             }
         },
-        "\/obp\/v1.2.1\/banks\/{BANK_ID}\/accounts\/{ACCOUNT_ID}\/permissions\/{PROVIDER_ID}\/{USER_ID}\/views": {
+        "/obp/v1.2.1/banks/{BANK_ID}/accounts/{ACCOUNT_ID}/permissions/{PROVIDER_ID}/{USER_ID}/views": {
             "delete": {
                 "summary": "Revoke access to all Views on Account",
-                "description": "<p>Revokes the user identified by PROVIDER_ID at their provider PROVIDER access to all the views at BANK_ID for account ACCOUNT_ID.<\/p><p>Authentication is Mandatory and the user needs to have access to the owner view.<\/p>",
+                "description": "<p>Revokes the user identified by PROVIDER_ID at their provider PROVIDER access to all the views at BANK_ID for account ACCOUNT_ID.</p><p>Authentication is Mandatory and the user needs to have access to the owner view.</p>",
                 "operationId": "Vv121RemovePermissionForUserForBankAccountForAllViews",
                 "deprecated": 0,
                 "parameters": [
@@ -121,9 +124,9 @@
                     "204": {
                         "description": "Success",
                         "content": {
-                            "application\/json": {
+                            "application/json": {
                                 "schema": {
-                                    "$href": "#\/components\/schemas\/EmptyClassJson"
+                                    "$href": "#/components/schemas/EmptyClassJson"
                                 }
                             }
                         }
@@ -131,10 +134,10 @@
                 }
             }
         },
-        "\/obp\/v1.2.1\/banks\/{BANK_ID}\/accounts\/{ACCOUNT_ID}\/permissions\/{PROVIDER_ID}\/{USER_ID}\/views\/{VIEW_ID}": {
+        "/obp/v1.2.1/banks/{BANK_ID}/accounts/{ACCOUNT_ID}/permissions/{PROVIDER_ID}/{USER_ID}/views/{VIEW_ID}": {
             "delete": {
                 "summary": "Revoke access to one View.",
-                "description": "<p>Revokes the user identified by PROVIDER_ID at their provider PROVIDER access to the view VIEW_ID at BANK_ID for account ACCOUNT_ID.<\/p><p>Revoking a user access to a public view will return an error message.<\/p><p>Authentication is Mandatory and the user needs to have access to the owner view.<\/p>",
+                "description": "<p>Revokes the user identified by PROVIDER_ID at their provider PROVIDER access to the view VIEW_ID at BANK_ID for account ACCOUNT_ID.</p><p>Revoking a user access to a public view will return an error message.</p><p>Authentication is Mandatory and the user needs to have access to the owner view.</p>",
                 "operationId": "Vv121RemovePermissionForUserForBankAccountForOneView",
                 "deprecated": 0,
                 "parameters": [
@@ -168,9 +171,9 @@
                     "204": {
                         "description": "Success",
                         "content": {
-                            "application\/json": {
+                            "application/json": {
                                 "schema": {
-                                    "$href": "#\/components\/schemas\/EmptyClassJson"
+                                    "$href": "#/components/schemas/EmptyClassJson"
                                 }
                             }
                         }

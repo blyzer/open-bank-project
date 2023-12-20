@@ -1,6 +1,6 @@
 {
     "id": "649842a2d1f25fa5d79e206f5a18e7bf",
-    "name": "API URI: \/banks\/{BANK_ID}\/products\/PRODUCT_CODE",
+    "name": "API URI: /banks/{BANK_ID}/products/PRODUCT_CODE",
     "description": null,
     "auth": null,
     "events": null,
@@ -12,8 +12,8 @@
         {
             "id": "a850072d320e175f81c967f777bdb4be",
             "name": "Get Bank Product",
-            "url": "http:\/\/apisandbox.openbankproject.com\/obp\/v3_0_0\/banks\/{BANK_ID}\/products\/PRODUCT_CODE",
-            "description": "<p>Returns information about the financial products offered by a bank specified by BANK_ID and PRODUCT_CODE including:<\/p><ul>  <li>Name<\/li>  <li>Code<\/li>  <li>Category<\/li>  <li>Family<\/li>  <li>Super Family<\/li>  <li>More info URL<\/li>  <li>Description<\/li>  <li>Terms and Conditions<\/li>  <li>License the data under this endpoint is released under Authentication is Optional<\/li><\/ul>",
+            "url": "http://apisandbox.openbankproject.com/obp/v3_0_0/banks/{BANK_ID}/products/PRODUCT_CODE",
+            "description": "<p>Returns information about the financial products offered by a bank specified by BANK_ID and PRODUCT_CODE including:</p><ul>  <li>Name</li>  <li>Code</li>  <li>Category</li>  <li>Family</li>  <li>Super Family</li>  <li>More info URL</li>  <li>Description</li>  <li>Terms and Conditions</li>  <li>License the data under this endpoint is released under Authentication is Optional</li></ul>",
             "data": [],
             "dataMode": "raw",
             "headerData": null,

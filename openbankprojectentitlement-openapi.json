@@ -4,16 +4,19 @@
         "version": "v3_1_0",
         "title": "OpenBankProject-Entitlement",
         "description": "An Open Source API for Banks. (c) TESOBE Ltd. 2011 - 2018. Licensed under the AGPL and commercial licences.",
-        "termsOfService": "http:\/\/exmple.com\/license\/"
+        "termsOfService": "http://exmple.com/license/"
     },
     "servers": [
-        "http:\/\/api.openbankproject.com\/obp-entitlement"
+        {
+            "description": "An Open Source API for Banks.",
+            "url": "http://api.openbankproject.com/obp-entitlement"
+        }
     ],
     "paths": {
-        "\/obp\/v1.2.1\/banks\/{BANK_ID}\/accounts\/{ACCOUNT_ID}\/permissions\/{PROVIDER_ID}\/{USER_ID}\/views\/{VIEW_ID}": {
+        "/obp/v1.2.1/banks/{BANK_ID}/accounts/{ACCOUNT_ID}/permissions/{PROVIDER_ID}/{USER_ID}/views/{VIEW_ID}": {
             "delete": {
                 "summary": "Revoke access to one View.",
-                "description": "<p>Revokes the user identified by PROVIDER_ID at their provider PROVIDER access to the view VIEW_ID at BANK_ID for account ACCOUNT_ID.<\/p><p>Revoking a user access to a public view will return an error message.<\/p><p>Authentication is Mandatory and the user needs to have access to the owner view.<\/p>",
+                "description": "<p>Revokes the user identified by PROVIDER_ID at their provider PROVIDER access to the view VIEW_ID at BANK_ID for account ACCOUNT_ID.</p><p>Revoking a user access to a public view will return an error message.</p><p>Authentication is Mandatory and the user needs to have access to the owner view.</p>",
                 "operationId": "Vv121RemovePermissionForUserForBankAccountForOneView",
                 "deprecated": 0,
                 "parameters": [
@@ -47,9 +50,9 @@
                     "204": {
                         "description": "Success",
                         "content": {
-                            "application\/json": {
+                            "application/json": {
                                 "schema": {
-                                    "$href": "#\/components\/schemas\/EmptyClassJson"
+                                    "$href": "#/components/schemas/EmptyClassJson"
                                 }
                             }
                         }
@@ -57,10 +60,10 @@
                 }
             }
         },
-        "\/obp\/v2.0.0\/banks\/{BANK_ID}\/accounts\/{ACCOUNT_ID}\/permissions": {
+        "/obp/v2.0.0/banks/{BANK_ID}/accounts/{ACCOUNT_ID}/permissions": {
             "get": {
                 "summary": "Get access.",
-                "description": "<p>Returns the list of the permissions at BANK_ID for account ACCOUNT_ID, with each time a pair composed of the user and the views that he has access to.<\/p><p>Authentication is Mandatory and the user needs to have access to the owner view.<\/p>",
+                "description": "<p>Returns the list of the permissions at BANK_ID for account ACCOUNT_ID, with each time a pair composed of the user and the views that he has access to.</p><p>Authentication is Mandatory and the user needs to have access to the owner view.</p>",
                 "operationId": "Vv200GetPermissionsForBankAccount",
                 "deprecated": 0,
                 "parameters": [
@@ -79,9 +82,9 @@
                     "200": {
                         "description": "Success",
                         "content": {
-                            "application\/json": {
+                            "application/json": {
                                 "schema": {
-                                    "$href": "#\/components\/schemas\/PermissionsJSON"
+                                    "$href": "#/components/schemas/PermissionsJSON"
                                 }
                             }
                         }
@@ -89,10 +92,10 @@
                 }
             }
         },
-        "\/obp\/v2.0.0\/entitlements": {
+        "/obp/v2.0.0/entitlements": {
             "get": {
                 "summary": "Get all Entitlements",
-                "description": "<p>Login is required.<\/p>",
+                "description": "<p>Login is required.</p>",
                 "operationId": "Vv200GetAllEntitlements",
                 "deprecated": 0,
                 "parameters": [],
@@ -100,9 +103,9 @@
                     "200": {
                         "description": "Success",
                         "content": {
-                            "application\/json": {
+                            "application/json": {
                                 "schema": {
-                                    "$href": "#\/components\/schemas\/PermissionsJSON"
+                                    "$href": "#/components/schemas/PermissionsJSON"
                                 }
                             }
                         }
@@ -110,10 +113,10 @@
                 }
             }
         },
-        "\/obp\/v2.0.0\/users\/{USER_ID}\/entitlement\/{ENTITLEMENT_ID}": {
+        "/obp/v2.0.0/users/{USER_ID}/entitlement/{ENTITLEMENT_ID}": {
             "delete": {
                 "summary": "Delete Entitlement",
-                "description": "<p>Delete Entitlement specified by ENTITLEMENT_ID for an user specified by USER_ID<\/p><p>Authentication is required and the user needs to be a Super Admin. Super Admins are listed in the Props file.<\/p>",
+                "description": "<p>Delete Entitlement specified by ENTITLEMENT_ID for an user specified by USER_ID</p><p>Authentication is required and the user needs to be a Super Admin. Super Admins are listed in the Props file.</p>",
                 "operationId": "Vv200DeleteEntitlement",
                 "deprecated": 0,
                 "parameters": [
@@ -132,9 +135,9 @@
                     "204": {
                         "description": "Success",
                         "content": {
-                            "application\/json": {
+                            "application/json": {
                                 "schema": {
-                                    "$href": "#\/components\/schemas\/EmptyClassJson"
+                                    "$href": "#/components/schemas/EmptyClassJson"
                                 }
                             }
                         }
@@ -142,10 +145,10 @@
                 }
             }
         },
-        "\/obp\/v2.0.0\/users\/{USER_ID}\/entitlements": {
+        "/obp/v2.0.0/users/{USER_ID}/entitlements": {
             "get": {
                 "summary": "Get Entitlements for User",
-                "description": "<p>Authentication is Mandatory<\/p>",
+                "description": "<p>Authentication is Mandatory</p>",
                 "operationId": "Vv200GetEntitlements",
                 "deprecated": 0,
                 "parameters": [
@@ -159,9 +162,9 @@
                     "200": {
                         "description": "Success",
                         "content": {
-                            "application\/json": {
+                            "application/json": {
                                 "schema": {
-                                    "$href": "#\/components\/schemas\/PermissionsJSON"
+                                    "$href": "#/components/schemas/PermissionsJSON"
                                 }
                             }
                         }
@@ -170,7 +173,7 @@
             },
             "post": {
                 "summary": "Add Entitlement for a User.",
-                "description": "<p>Create Entitlement. Grant Role to User.<\/p><p>Entitlements are used to grant System or Bank level roles to Users. (For Account level privileges, see Views)<\/p><p>For a System level Role (.e.g CanGetAnyUser), set bank_id to an empty string i.e. \"bank_id\":\"\"<\/p><p>For a Bank level Role (e.g. CanCreateAccount), set bank_id to a valid value e.g. \"bank_id\":\"my-bank-id\"<\/p><p>Authentication is required and the user needs to be a Super Admin. Super Admins are listed in the Props file.<\/p>",
+                "description": "<p>Create Entitlement. Grant Role to User.</p><p>Entitlements are used to grant System or Bank level roles to Users. (For Account level privileges, see Views)</p><p>For a System level Role (.e.g CanGetAnyUser), set bank_id to an empty string i.e. \"bank_id\":\"\"</p><p>For a Bank level Role (e.g. CanCreateAccount), set bank_id to a valid value e.g. \"bank_id\":\"my-bank-id\"</p><p>Authentication is required and the user needs to be a Super Admin. Super Admins are listed in the Props file.</p>",
                 "operationId": "Vv200AddEntitlement",
                 "deprecated": 0,
                 "parameters": [
@@ -184,9 +187,9 @@
                     "201": {
                         "description": "Success",
                         "content": {
-                            "application\/json": {
+                            "application/json": {
                                 "schema": {
-                                    "$href": "#\/components\/schemas\/EntitlementJSON"
+                                    "$href": "#/components/schemas/EntitlementJSON"
                                 }
                             }
                         }
@@ -194,10 +197,10 @@
                 }
             }
         },
-        "\/obp\/v2.1.0\/banks\/{BANK_ID}\/users\/{USER_ID}\/entitlements": {
+        "/obp/v2.1.0/banks/{BANK_ID}/users/{USER_ID}/entitlements": {
             "get": {
                 "summary": "Get Entitlements for User at Bank.",
-                "description": "<p>Get Entitlements specified by BANK_ID and USER_ID<\/p><p>Authentication is Mandatory<\/p>",
+                "description": "<p>Get Entitlements specified by BANK_ID and USER_ID</p><p>Authentication is Mandatory</p>",
                 "operationId": "Vv210GetEntitlementsByBankAndUser",
                 "deprecated": 0,
                 "parameters": [
@@ -216,9 +219,9 @@
                     "200": {
                         "description": "Success",
                         "content": {
-                            "application\/json": {
+                            "application/json": {
                                 "schema": {
-                                    "$href": "#\/components\/schemas\/PermissionsJSON"
+                                    "$href": "#/components/schemas/PermissionsJSON"
                                 }
                             }
                         }
@@ -226,10 +229,10 @@
                 }
             }
         },
-        "\/obp\/v3.0.0\/consumers\/{CONSUMER_ID}\/scope\/SCOPE_ID": {
+        "/obp/v3.0.0/consumers/{CONSUMER_ID}/scope/SCOPE_ID": {
             "delete": {
                 "summary": "Delete Consumer Scope",
-                "description": "<p>Delete Consumer Scope specified by SCOPE_ID for an consumer specified by CONSUMER_ID<\/p><p>Authentication is required and the user needs to be a Super Admin. Super Admins are listed in the Props file.<\/p>",
+                "description": "<p>Delete Consumer Scope specified by SCOPE_ID for an consumer specified by CONSUMER_ID</p><p>Authentication is required and the user needs to be a Super Admin. Super Admins are listed in the Props file.</p>",
                 "operationId": "Vv300DeleteScope",
                 "deprecated": 0,
                 "parameters": [
@@ -243,9 +246,9 @@
                     "204": {
                         "description": "Success",
                         "content": {
-                            "application\/json": {
+                            "application/json": {
                                 "schema": {
-                                    "$href": "#\/components\/schemas\/EmptyClassJson"
+                                    "$href": "#/components/schemas/EmptyClassJson"
                                 }
                             }
                         }
@@ -253,10 +256,10 @@
                 }
             }
         },
-        "\/obp\/v3.0.0\/consumers\/{CONSUMER_ID}\/scopes": {
+        "/obp/v3.0.0/consumers/{CONSUMER_ID}/scopes": {
             "get": {
                 "summary": "Get Scopes for Consumer",
-                "description": "<p>Get all the scopes for an consumer specified by CONSUMER_ID<\/p><p>Authentication is Mandatory<\/p>",
+                "description": "<p>Get all the scopes for an consumer specified by CONSUMER_ID</p><p>Authentication is Mandatory</p>",
                 "operationId": "Vv300GetScopes",
                 "deprecated": 0,
                 "parameters": [
@@ -270,9 +273,9 @@
                     "200": {
                         "description": "Success",
                         "content": {
-                            "application\/json": {
+                            "application/json": {
                                 "schema": {
-                                    "$href": "#\/components\/schemas\/PermissionsJSON"
+                                    "$href": "#/components/schemas/PermissionsJSON"
                                 }
                             }
                         }
@@ -281,7 +284,7 @@
             },
             "post": {
                 "summary": "Add Scope for a Consumer.",
-                "description": "<p>Create Scope. Grant Role to Consumer.<\/p><p>Scopes are used to grant System or Bank level roles to the Consumer (App). (For Account level privileges, see Views)<\/p><p>For a System level Role (.e.g CanGetAnyUser), set bank_id to an empty string i.e. \"bank_id\":\"\"<\/p><p>For a Bank level Role (e.g. CanCreateAccount), set bank_id to a valid value e.g. \"bank_id\":\"my-bank-id\"<\/p>",
+                "description": "<p>Create Scope. Grant Role to Consumer.</p><p>Scopes are used to grant System or Bank level roles to the Consumer (App). (For Account level privileges, see Views)</p><p>For a System level Role (.e.g CanGetAnyUser), set bank_id to an empty string i.e. \"bank_id\":\"\"</p><p>For a Bank level Role (e.g. CanCreateAccount), set bank_id to a valid value e.g. \"bank_id\":\"my-bank-id\"</p>",
                 "operationId": "Vv300AddScope",
                 "deprecated": 0,
                 "parameters": [
@@ -295,9 +298,9 @@
                     "201": {
                         "description": "Success",
                         "content": {
-                            "application\/json": {
+                            "application/json": {
                                 "schema": {
-                                    "$href": "#\/components\/schemas\/EntitlementJSON"
+                                    "$href": "#/components/schemas/EntitlementJSON"
                                 }
                             }
                         }
@@ -305,10 +308,10 @@
                 }
             }
         },
-        "\/obp\/v3.0.0\/entitlement-requests": {
+        "/obp/v3.0.0/entitlement-requests": {
             "get": {
                 "summary": "Get all Entitlement Requests",
-                "description": "<p>Get all Entitlement Requests<\/p><p>Authentication is Mandatory<\/p>",
+                "description": "<p>Get all Entitlement Requests</p><p>Authentication is Mandatory</p>",
                 "operationId": "Vv300GetAllEntitlementRequests",
                 "deprecated": 0,
                 "parameters": [],
@@ -316,9 +319,9 @@
                     "200": {
                         "description": "Success",
                         "content": {
-                            "application\/json": {
+                            "application/json": {
                                 "schema": {
-                                    "$href": "#\/components\/schemas\/PermissionsJSON"
+                                    "$href": "#/components/schemas/PermissionsJSON"
                                 }
                             }
                         }
@@ -327,7 +330,7 @@
             },
             "post": {
                 "summary": "Add Entitlement Request for a Logged User.",
-                "description": "<p>Create Entitlement Request.<\/p><p>Any logged in User can use this endpoint to request an Entitlement<\/p><p>Entitlements are used to grant System or Bank level roles to Users. (For Account level privileges, see Views)<\/p><p>For a System level Role (.e.g CanGetAnyUser), set bank_id to an empty string i.e. \"bank_id\":\"\"<\/p><p>For a Bank level Role (e.g. CanCreateAccount), set bank_id to a valid value e.g. \"bank_id\":\"my-bank-id\"<\/p><p>Authentication is Mandatory<\/p>",
+                "description": "<p>Create Entitlement Request.</p><p>Any logged in User can use this endpoint to request an Entitlement</p><p>Entitlements are used to grant System or Bank level roles to Users. (For Account level privileges, see Views)</p><p>For a System level Role (.e.g CanGetAnyUser), set bank_id to an empty string i.e. \"bank_id\":\"\"</p><p>For a Bank level Role (e.g. CanCreateAccount), set bank_id to a valid value e.g. \"bank_id\":\"my-bank-id\"</p><p>Authentication is Mandatory</p>",
                 "operationId": "Vv300AddEntitlementRequest",
                 "deprecated": 0,
                 "parameters": [],
@@ -335,9 +338,9 @@
                     "201": {
                         "description": "Success",
                         "content": {
-                            "application\/json": {
+                            "application/json": {
                                 "schema": {
-                                    "$href": "#\/components\/schemas\/EntitlementJSON"
+                                    "$href": "#/components/schemas/EntitlementJSON"
                                 }
                             }
                         }
@@ -345,10 +348,10 @@
                 }
             }
         },
-        "\/obp\/v3.0.0\/entitlement-requests\/ENTITLEMENT_REQUEST_ID": {
+        "/obp/v3.0.0/entitlement-requests/ENTITLEMENT_REQUEST_ID": {
             "delete": {
                 "summary": "Delete Entitlement Request",
-                "description": "<p>Delete the Entitlement Request specified by ENTITLEMENT_REQUEST_ID for a user specified by USER_ID<\/p><p>Authentication is Mandatory<\/p>",
+                "description": "<p>Delete the Entitlement Request specified by ENTITLEMENT_REQUEST_ID for a user specified by USER_ID</p><p>Authentication is Mandatory</p>",
                 "operationId": "Vv300DeleteEntitlementRequest",
                 "deprecated": 0,
                 "parameters": [],
@@ -356,9 +359,9 @@
                     "204": {
                         "description": "Success",
                         "content": {
-                            "application\/json": {
+                            "application/json": {
                                 "schema": {
-                                    "$href": "#\/components\/schemas\/EmptyClassJson"
+                                    "$href": "#/components/schemas/EmptyClassJson"
                                 }
                             }
                         }
@@ -366,10 +369,10 @@
                 }
             }
         },
-        "\/obp\/v3.0.0\/my\/entitlement-requests": {
+        "/obp/v3.0.0/my/entitlement-requests": {
             "get": {
                 "summary": "Get Entitlement Requests for the current User.",
-                "description": "<p>Get Entitlement Requests for the current User.<\/p><p>Authentication is Mandatory<\/p>",
+                "description": "<p>Get Entitlement Requests for the current User.</p><p>Authentication is Mandatory</p>",
                 "operationId": "Vv300GetEntitlementRequestsForCurrentUser",
                 "deprecated": 0,
                 "parameters": [],
@@ -377,9 +380,9 @@
                     "200": {
                         "description": "Success",
                         "content": {
-                            "application\/json": {
+                            "application/json": {
                                 "schema": {
-                                    "$href": "#\/components\/schemas\/PermissionsJSON"
+                                    "$href": "#/components/schemas/PermissionsJSON"
                                 }
                             }
                         }
@@ -387,10 +390,10 @@
                 }
             }
         },
-        "\/obp\/v3.0.0\/my\/entitlements": {
+        "/obp/v3.0.0/my/entitlements": {
             "get": {
                 "summary": "Get Entitlements for the current User.",
-                "description": "<p>Get Entitlements for the current User.<\/p><p>Authentication is Mandatory<\/p>",
+                "description": "<p>Get Entitlements for the current User.</p><p>Authentication is Mandatory</p>",
                 "operationId": "Vv300GetEntitlementsForCurrentUser",
                 "deprecated": 0,
                 "parameters": [],
@@ -398,9 +401,9 @@
                     "200": {
                         "description": "Success",
                         "content": {
-                            "application\/json": {
+                            "application/json": {
                                 "schema": {
-                                    "$href": "#\/components\/schemas\/PermissionsJSON"
+                                    "$href": "#/components/schemas/PermissionsJSON"
                                 }
                             }
                         }
@@ -408,10 +411,10 @@
                 }
             }
         },
-        "\/obp\/v3.0.0\/users\/{USER_ID}\/entitlement-requests": {
+        "/obp/v3.0.0/users/{USER_ID}/entitlement-requests": {
             "get": {
                 "summary": "Get Entitlement Requests for a User.",
-                "description": "<p>Get Entitlement Requests for a User.<\/p><p>Authentication is Mandatory<\/p>",
+                "description": "<p>Get Entitlement Requests for a User.</p><p>Authentication is Mandatory</p>",
                 "operationId": "Vv300GetEntitlementRequests",
                 "deprecated": 0,
                 "parameters": [
@@ -425,9 +428,9 @@
                     "200": {
                         "description": "Success",
                         "content": {
-                            "application\/json": {
+                            "application/json": {
                                 "schema": {
-                                    "$href": "#\/components\/schemas\/PermissionsJSON"
+                                    "$href": "#/components/schemas/PermissionsJSON"
                                 }
                             }
                         }

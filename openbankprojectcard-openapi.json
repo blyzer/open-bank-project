@@ -4,13 +4,16 @@
         "version": "v3_1_0",
         "title": "OpenBankProject-Card",
         "description": "An Open Source API for Banks. (c) TESOBE Ltd. 2011 - 2018. Licensed under the AGPL and commercial licences.",
-        "termsOfService": "http:\/\/exmple.com\/license\/"
+        "termsOfService": "http://exmple.com/license/"
     },
     "servers": [
-        "http:\/\/api.openbankproject.com\/obp-card"
+        {
+            "description": "An Open Source API for Banks.",
+            "url": "http://api.openbankproject.com/obp-card"
+        }
     ],
     "paths": {
-        "\/obp\/v1.3.0\/banks\/{BANK_ID}\/cards": {
+        "/obp/v1.3.0/banks/{BANK_ID}/cards": {
             "get": {
                 "summary": "Get cards for the specified bank",
                 "description": "",
@@ -27,9 +30,9 @@
                     "200": {
                         "description": "Success",
                         "content": {
-                            "application\/json": {
+                            "application/json": {
                                 "schema": {
-                                    "$href": "#\/components\/schemas\/PhysicalCardsJSON"
+                                    "$href": "#/components/schemas/PhysicalCardsJSON"
                                 }
                             }
                         }
@@ -37,10 +40,10 @@
                 }
             }
         },
-        "\/obp\/v1.3.0\/cards": {
+        "/obp/v1.3.0/cards": {
             "get": {
                 "summary": "Get cards for the current user",
-                "description": "<p>Returns data about all the physical cards a user has been issued. These could be debit cards, credit cards, etc.<\/p>",
+                "description": "<p>Returns data about all the physical cards a user has been issued. These could be debit cards, credit cards, etc.</p>",
                 "operationId": "Vv130GetCards",
                 "deprecated": 0,
                 "parameters": [],
@@ -48,9 +51,9 @@
                     "200": {
                         "description": "Success",
                         "content": {
-                            "application\/json": {
+                            "application/json": {
                                 "schema": {
-                                    "$href": "#\/components\/schemas\/PhysicalCardsJSON"
+                                    "$href": "#/components/schemas/PhysicalCardsJSON"
                                 }
                             }
                         }
@@ -58,10 +61,10 @@
                 }
             }
         },
-        "\/obp\/v2.1.0\/banks\/{BANK_ID}\/cards": {
+        "/obp/v2.1.0/banks/{BANK_ID}/cards": {
             "post": {
                 "summary": "Create Card",
-                "description": "<p>Create Card at bank specified by BANK_ID .<\/p><p>Authentication is Mandatory<\/p>",
+                "description": "<p>Create Card at bank specified by BANK_ID .</p><p>Authentication is Mandatory</p>",
                 "operationId": "Vv210AddCardsForBank",
                 "deprecated": 0,
                 "parameters": [
@@ -75,9 +78,9 @@
                     "201": {
                         "description": "Success",
                         "content": {
-                            "application\/json": {
+                            "application/json": {
                                 "schema": {
-                                    "$href": "#\/components\/schemas\/PhysicalCardJSON"
+                                    "$href": "#/components/schemas/PhysicalCardJSON"
                                 }
                             }
                         }

@@ -1,500 +1,501 @@
 {
     "name": "Open Bank Project",
-    "description": "<p>The Open Bank Project is an open source API and App store for banks that empowers financial institutions to securely and rapidly enhance their digital offerings using an ecosystem of 3rd party applications and services.<\/p>",
-    "image": "http:\/\/kinlane-productions.s3.amazonaws.com\/api-evangelist-site\/company\/logos\/open-bank-project.png",
+    "description": "<p>The Open Bank Project is an open source API and App store for banks that empowers financial institutions to securely and rapidly enhance their digital offerings using an ecosystem of 3rd party applications and services.</p>",
+    "image": "http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/open-bank-project.png",
     "tags": [
         "banking",
         "have api",
         "have swagger"
+        }
     ],
     "created": "2019-12-21",
     "modified": "2019-12-21",
-    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/open-bank-project\/master\/apis.json",
+    "url": "https://raw.githubusercontent.com/api-evangelist/open-bank-project/master/apis.json",
     "specificationVersion": "0.14",
     "apis": [
         {
             "name": "OpenBankProject-API-Metric",
             "description": null,
-            "image": "http:\/\/kinlane-productions.s3.amazonaws.com\/api-evangelist-site\/company\/logos\/open-bank-project.png",
-            "humanURL": "https:\/\/openbankproject.com\/",
+            "image": "http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/open-bank-project.png",
+            "humanURL": "https://openbankproject.com/",
             "baseURL": "",
             "tags": [],
             "properties": [
                 {
                     "type": "x-openapi",
-                    "url": "http:\/\/kinlane-productions.s3.amazonaws.com\/api-evangelist-site\/company\/openapis\/openbankprojectapimetric.json"
+                    "url": "http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/openapis/openbankprojectapimetric.json"
                 },
                 {
                     "type": "x-openapi",
-                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/open-bank-project\/master\/openbankprojectapimetric-openapi.json"
+                    "url": "https://raw.githubusercontent.com/api-evangelist/open-bank-project/master/openbankprojectapimetric-openapi.json"
                 }
             ]
         },
         {
             "name": "OpenBankProject-Bank",
             "description": null,
-            "image": "http:\/\/kinlane-productions.s3.amazonaws.com\/api-evangelist-site\/company\/logos\/open-bank-project.png",
-            "humanURL": "https:\/\/openbankproject.com\/",
+            "image": "http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/open-bank-project.png",
+            "humanURL": "https://openbankproject.com/",
             "baseURL": "",
             "tags": [],
             "properties": [
                 {
                     "type": "x-openapi",
-                    "url": "http:\/\/kinlane-productions.s3.amazonaws.com\/api-evangelist-site\/company\/openapis\/openbankprojectbank.json"
+                    "url": "http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/openapis/openbankprojectbank.json"
                 },
                 {
                     "type": "x-openapi",
-                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/open-bank-project\/master\/openbankprojectbank-openapi.json"
+                    "url": "https://raw.githubusercontent.com/api-evangelist/open-bank-project/master/openbankprojectbank-openapi.json"
                 }
             ]
         },
         {
-            "name": "API URI: \/search\/warehouse",
+            "name": "API URI: /search/warehouse",
             "description": null,
-            "image": "http:\/\/kinlane-productions.s3.amazonaws.com\/api-evangelist-site\/company\/logos\/open-bank-project.png",
-            "humanURL": "https:\/\/openbankproject.com\/",
+            "image": "http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/open-bank-project.png",
+            "humanURL": "https://openbankproject.com/",
             "baseURL": "",
             "tags": [],
             "properties": [
                 {
                     "type": "x-openapi",
-                    "url": "http:\/\/kinlane-productions.s3.amazonaws.com\/api-evangelist-site\/company\/openapis\/api-uri-searchwarehouse.json"
+                    "url": "http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/openapis/api-uri-searchwarehouse.json"
                 },
                 {
                     "type": "x-openapi",
-                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/open-bank-project\/master\/api-uri-searchwarehouse-openapi.json"
+                    "url": "https://raw.githubusercontent.com/api-evangelist/open-bank-project/master/api-uri-searchwarehouse-openapi.json"
                 }
             ]
         },
         {
-            "name": "API URI: \/banks\/{BANK_ID}\/accounts\/{ACCOUNT_ID}\/{VIEW_ID}\/transactions",
+            "name": "API URI: /banks/{BANK_ID}/accounts/{ACCOUNT_ID}/{VIEW_ID}/transactions",
             "description": null,
-            "image": "http:\/\/kinlane-productions.s3.amazonaws.com\/api-evangelist-site\/company\/logos\/open-bank-project.png",
-            "humanURL": "https:\/\/openbankproject.com\/",
+            "image": "http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/open-bank-project.png",
+            "humanURL": "https://openbankproject.com/",
             "baseURL": "",
             "tags": [],
             "properties": [
                 {
                     "type": "x-openapi",
-                    "url": "http:\/\/kinlane-productions.s3.amazonaws.com\/api-evangelist-site\/company\/openapis\/api-uri-banksbank-idaccountsaccount-idview-idtransactions.json"
+                    "url": "http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/openapis/api-uri-banksbank-idaccountsaccount-idview-idtransactions.json"
                 },
                 {
                     "type": "x-openapi",
-                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/open-bank-project\/master\/api-uri-banksbank-idaccountsaccount-idview-idtransactions-openapi.json"
+                    "url": "https://raw.githubusercontent.com/api-evangelist/open-bank-project/master/api-uri-banksbank-idaccountsaccount-idview-idtransactions-openapi.json"
                 }
             ]
         },
         {
-            "name": "API URI: \/banks\/{BANK_ID}\/accounts\/{ACCOUNT_ID}\/{VIEW_ID}\/transactions\/{TRANSACTION_ID}\/transaction",
+            "name": "API URI: /banks/{BANK_ID}/accounts/{ACCOUNT_ID}/{VIEW_ID}/transactions/{TRANSACTION_ID}/transaction",
             "description": null,
-            "image": "http:\/\/kinlane-productions.s3.amazonaws.com\/api-evangelist-site\/company\/logos\/open-bank-project.png",
-            "humanURL": "https:\/\/openbankproject.com\/",
+            "image": "http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/open-bank-project.png",
+            "humanURL": "https://openbankproject.com/",
             "baseURL": "",
             "tags": [],
             "properties": [
                 {
                     "type": "x-openapi",
-                    "url": "http:\/\/kinlane-productions.s3.amazonaws.com\/api-evangelist-site\/company\/openapis\/api-uri-banksbank-idaccountsaccount-idview-idtransactionstransaction-idtransaction.json"
+                    "url": "http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/openapis/api-uri-banksbank-idaccountsaccount-idview-idtransactionstransaction-idtransaction.json"
                 },
                 {
                     "type": "x-openapi",
-                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/open-bank-project\/master\/api-uri-banksbank-idaccountsaccount-idview-idtransactionstransaction-idtransaction-openapi.json"
+                    "url": "https://raw.githubusercontent.com/api-evangelist/open-bank-project/master/api-uri-banksbank-idaccountsaccount-idview-idtransactionstransaction-idtransaction-openapi.json"
                 }
             ]
         },
         {
             "name": "OpenBankProject-Card",
             "description": null,
-            "image": "http:\/\/kinlane-productions.s3.amazonaws.com\/api-evangelist-site\/company\/logos\/open-bank-project.png",
-            "humanURL": "https:\/\/openbankproject.com\/",
+            "image": "http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/open-bank-project.png",
+            "humanURL": "https://openbankproject.com/",
             "baseURL": "",
             "tags": [],
             "properties": [
                 {
                     "type": "x-openapi",
-                    "url": "http:\/\/kinlane-productions.s3.amazonaws.com\/api-evangelist-site\/company\/openapis\/openbankprojectcard.json"
+                    "url": "http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/openapis/openbankprojectcard.json"
                 },
                 {
                     "type": "x-openapi",
-                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/open-bank-project\/master\/openbankprojectcard-openapi.json"
+                    "url": "https://raw.githubusercontent.com/api-evangelist/open-bank-project/master/openbankprojectcard-openapi.json"
                 }
             ]
         },
         {
             "name": "OpenBankProject-OwnerViewRequired",
             "description": null,
-            "image": "http:\/\/kinlane-productions.s3.amazonaws.com\/api-evangelist-site\/company\/logos\/open-bank-project.png",
-            "humanURL": "https:\/\/openbankproject.com\/",
+            "image": "http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/open-bank-project.png",
+            "humanURL": "https://openbankproject.com/",
             "baseURL": "",
             "tags": [],
             "properties": [
                 {
                     "type": "x-openapi",
-                    "url": "http:\/\/kinlane-productions.s3.amazonaws.com\/api-evangelist-site\/company\/openapis\/openbankprojectownerviewrequired.json"
+                    "url": "http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/openapis/openbankprojectownerviewrequired.json"
                 },
                 {
                     "type": "x-openapi",
-                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/open-bank-project\/master\/openbankprojectownerviewrequired-openapi.json"
+                    "url": "https://raw.githubusercontent.com/api-evangelist/open-bank-project/master/openbankprojectownerviewrequired-openapi.json"
                 }
             ]
         },
         {
-            "name": "API URI: \/banks\/{BANK_ID}\/accounts\/{ACCOUNT_ID}\/views",
+            "name": "API URI: /banks/{BANK_ID}/accounts/{ACCOUNT_ID}/views",
             "description": null,
-            "image": "http:\/\/kinlane-productions.s3.amazonaws.com\/api-evangelist-site\/company\/logos\/open-bank-project.png",
-            "humanURL": "https:\/\/openbankproject.com\/",
+            "image": "http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/open-bank-project.png",
+            "humanURL": "https://openbankproject.com/",
             "baseURL": "",
             "tags": [],
             "properties": [
                 {
                     "type": "x-openapi",
-                    "url": "http:\/\/kinlane-productions.s3.amazonaws.com\/api-evangelist-site\/company\/openapis\/api-uri-banksbank-idaccountsaccount-idviews.json"
+                    "url": "http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/openapis/api-uri-banksbank-idaccountsaccount-idviews.json"
                 },
                 {
                     "type": "x-openapi",
-                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/open-bank-project\/master\/api-uri-banksbank-idaccountsaccount-idviews-openapi.json"
+                    "url": "https://raw.githubusercontent.com/api-evangelist/open-bank-project/master/api-uri-banksbank-idaccountsaccount-idviews-openapi.json"
                 }
             ]
         },
         {
-            "name": "API URI: \/banks\/{BANK_ID}\/cards",
+            "name": "API URI: /banks/{BANK_ID}/cards",
             "description": null,
-            "image": "http:\/\/kinlane-productions.s3.amazonaws.com\/api-evangelist-site\/company\/logos\/open-bank-project.png",
-            "humanURL": "https:\/\/openbankproject.com\/",
+            "image": "http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/open-bank-project.png",
+            "humanURL": "https://openbankproject.com/",
             "baseURL": "",
             "tags": [],
             "properties": [
                 {
                     "type": "x-openapi",
-                    "url": "http:\/\/kinlane-productions.s3.amazonaws.com\/api-evangelist-site\/company\/openapis\/api-uri-banksbank-idcards.json"
+                    "url": "http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/openapis/api-uri-banksbank-idcards.json"
                 },
                 {
                     "type": "x-openapi",
-                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/open-bank-project\/master\/api-uri-banksbank-idcards-openapi.json"
+                    "url": "https://raw.githubusercontent.com/api-evangelist/open-bank-project/master/api-uri-banksbank-idcards-openapi.json"
                 }
             ]
         },
         {
             "name": "OpenBankProject-Counterparty-Metadata",
             "description": null,
-            "image": "http:\/\/kinlane-productions.s3.amazonaws.com\/api-evangelist-site\/company\/logos\/open-bank-project.png",
-            "humanURL": "https:\/\/openbankproject.com\/",
+            "image": "http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/open-bank-project.png",
+            "humanURL": "https://openbankproject.com/",
             "baseURL": "",
             "tags": [],
             "properties": [
                 {
                     "type": "x-openapi",
-                    "url": "http:\/\/kinlane-productions.s3.amazonaws.com\/api-evangelist-site\/company\/openapis\/openbankprojectcounterpartymetadata.json"
+                    "url": "http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/openapis/openbankprojectcounterpartymetadata.json"
                 },
                 {
                     "type": "x-openapi",
-                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/open-bank-project\/master\/openbankprojectcounterpartymetadata-openapi.json"
+                    "url": "https://raw.githubusercontent.com/api-evangelist/open-bank-project/master/openbankprojectcounterpartymetadata-openapi.json"
                 }
             ]
         },
         {
             "name": "OpenBankProject-Account-Firehose",
             "description": null,
-            "image": "http:\/\/kinlane-productions.s3.amazonaws.com\/api-evangelist-site\/company\/logos\/open-bank-project.png",
-            "humanURL": "https:\/\/openbankproject.com\/",
+            "image": "http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/open-bank-project.png",
+            "humanURL": "https://openbankproject.com/",
             "baseURL": "",
             "tags": [],
             "properties": [
                 {
                     "type": "x-openapi",
-                    "url": "http:\/\/kinlane-productions.s3.amazonaws.com\/api-evangelist-site\/company\/openapis\/openbankprojectaccountfirehose.json"
+                    "url": "http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/openapis/openbankprojectaccountfirehose.json"
                 },
                 {
                     "type": "x-openapi",
-                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/open-bank-project\/master\/openbankprojectaccountfirehose-openapi.json"
+                    "url": "https://raw.githubusercontent.com/api-evangelist/open-bank-project/master/openbankprojectaccountfirehose-openapi.json"
                 }
             ]
         },
         {
             "name": "OpenBankProject-FirehoseData",
             "description": null,
-            "image": "http:\/\/kinlane-productions.s3.amazonaws.com\/api-evangelist-site\/company\/logos\/open-bank-project.png",
-            "humanURL": "https:\/\/openbankproject.com\/",
+            "image": "http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/open-bank-project.png",
+            "humanURL": "https://openbankproject.com/",
             "baseURL": "",
             "tags": [],
             "properties": [
                 {
                     "type": "x-openapi",
-                    "url": "http:\/\/kinlane-productions.s3.amazonaws.com\/api-evangelist-site\/company\/openapis\/openbankprojectfirehosedata.json"
+                    "url": "http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/openapis/openbankprojectfirehosedata.json"
                 },
                 {
                     "type": "x-openapi",
-                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/open-bank-project\/master\/openbankprojectfirehosedata-openapi.json"
+                    "url": "https://raw.githubusercontent.com/api-evangelist/open-bank-project/master/openbankprojectfirehosedata-openapi.json"
                 }
             ]
         },
         {
             "name": "OpenBankProject-Account-View",
             "description": null,
-            "image": "http:\/\/kinlane-productions.s3.amazonaws.com\/api-evangelist-site\/company\/logos\/open-bank-project.png",
-            "humanURL": "https:\/\/openbankproject.com\/",
+            "image": "http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/open-bank-project.png",
+            "humanURL": "https://openbankproject.com/",
             "baseURL": "",
             "tags": [],
             "properties": [
                 {
                     "type": "x-openapi",
-                    "url": "http:\/\/kinlane-productions.s3.amazonaws.com\/api-evangelist-site\/company\/openapis\/openbankprojectaccountview.json"
+                    "url": "http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/openapis/openbankprojectaccountview.json"
                 },
                 {
                     "type": "x-openapi",
-                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/open-bank-project\/master\/openbankprojectaccountview-openapi.json"
+                    "url": "https://raw.githubusercontent.com/api-evangelist/open-bank-project/master/openbankprojectaccountview-openapi.json"
                 }
             ]
         },
         {
             "name": "OpenBankProject-Counterparty",
             "description": null,
-            "image": "http:\/\/kinlane-productions.s3.amazonaws.com\/api-evangelist-site\/company\/logos\/open-bank-project.png",
-            "humanURL": "https:\/\/openbankproject.com\/",
+            "image": "http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/open-bank-project.png",
+            "humanURL": "https://openbankproject.com/",
             "baseURL": "",
             "tags": [],
             "properties": [
                 {
                     "type": "x-openapi",
-                    "url": "http:\/\/kinlane-productions.s3.amazonaws.com\/api-evangelist-site\/company\/openapis\/openbankprojectcounterparty.json"
+                    "url": "http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/openapis/openbankprojectcounterparty.json"
                 },
                 {
                     "type": "x-openapi",
-                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/open-bank-project\/master\/openbankprojectcounterparty-openapi.json"
+                    "url": "https://raw.githubusercontent.com/api-evangelist/open-bank-project/master/openbankprojectcounterparty-openapi.json"
                 }
             ]
         },
         {
             "name": "OpenBankProject-Entitlement",
             "description": null,
-            "image": "http:\/\/kinlane-productions.s3.amazonaws.com\/api-evangelist-site\/company\/logos\/open-bank-project.png",
-            "humanURL": "https:\/\/openbankproject.com\/",
+            "image": "http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/open-bank-project.png",
+            "humanURL": "https://openbankproject.com/",
             "baseURL": "",
             "tags": [],
             "properties": [
                 {
                     "type": "x-openapi",
-                    "url": "http:\/\/kinlane-productions.s3.amazonaws.com\/api-evangelist-site\/company\/openapis\/openbankprojectentitlement.json"
+                    "url": "http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/openapis/openbankprojectentitlement.json"
                 },
                 {
                     "type": "x-openapi",
-                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/open-bank-project\/master\/openbankprojectentitlement-openapi.json"
+                    "url": "https://raw.githubusercontent.com/api-evangelist/open-bank-project/master/openbankprojectentitlement-openapi.json"
                 }
             ]
         },
         {
-            "name": "API URI: \/banks\/{BANK_ID}\/products\/PRODUCT_CODE",
+            "name": "API URI: /banks/{BANK_ID}/products/PRODUCT_CODE",
             "description": null,
-            "image": "http:\/\/kinlane-productions.s3.amazonaws.com\/api-evangelist-site\/company\/logos\/open-bank-project.png",
-            "humanURL": "https:\/\/openbankproject.com\/",
+            "image": "http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/open-bank-project.png",
+            "humanURL": "https://openbankproject.com/",
             "baseURL": "",
             "tags": [],
             "properties": [
                 {
                     "type": "x-openapi",
-                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/open-bank-project\/master\/api-uri-banksbank-idproductsproduct-code-openapi.json"
+                    "url": "https://raw.githubusercontent.com/api-evangelist/open-bank-project/master/api-uri-banksbank-idproductsproduct-code-openapi.json"
                 },
                 {
                     "type": "x-openapi",
-                    "url": "http:\/\/kinlane-productions.s3.amazonaws.com\/api-evangelist-site\/company\/openapis\/api-uri-banksbank-idproductsproduct-code.json"
+                    "url": "http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/openapis/api-uri-banksbank-idproductsproduct-code.json"
                 }
             ]
         },
         {
             "name": "OpenBankProject-User",
             "description": null,
-            "image": "http:\/\/kinlane-productions.s3.amazonaws.com\/api-evangelist-site\/company\/logos\/open-bank-project.png",
-            "humanURL": "https:\/\/openbankproject.com\/",
+            "image": "http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/open-bank-project.png",
+            "humanURL": "https://openbankproject.com/",
             "baseURL": "",
             "tags": [],
             "properties": [
                 {
                     "type": "x-openapi",
-                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/open-bank-project\/master\/openbankprojectuser-openapi.json"
+                    "url": "https://raw.githubusercontent.com/api-evangelist/open-bank-project/master/openbankprojectuser-openapi.json"
                 },
                 {
                     "type": "x-openapi",
-                    "url": "http:\/\/kinlane-productions.s3.amazonaws.com\/api-evangelist-site\/company\/openapis\/openbankprojectuser.json"
+                    "url": "http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/openapis/openbankprojectuser.json"
                 }
             ]
         },
         {
             "name": "OpenBankProject-API-Sandbox",
             "description": null,
-            "image": "http:\/\/kinlane-productions.s3.amazonaws.com\/api-evangelist-site\/company\/logos\/open-bank-project.png",
-            "humanURL": "https:\/\/openbankproject.com\/",
+            "image": "http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/open-bank-project.png",
+            "humanURL": "https://openbankproject.com/",
             "baseURL": "",
             "tags": [],
             "properties": [
                 {
                     "type": "x-openapi",
-                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/open-bank-project\/master\/openbankprojectapisandbox-openapi.json"
+                    "url": "https://raw.githubusercontent.com/api-evangelist/open-bank-project/master/openbankprojectapisandbox-openapi.json"
                 },
                 {
                     "type": "x-openapi",
-                    "url": "http:\/\/kinlane-productions.s3.amazonaws.com\/api-evangelist-site\/company\/openapis\/openbankprojectapisandbox.json"
+                    "url": "http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/openapis/openbankprojectapisandbox.json"
                 }
             ]
         },
         {
-            "name": "API URI: \/banks\/{BANK_ID}\/atms",
+            "name": "API URI: /banks/{BANK_ID}/atms",
             "description": null,
-            "image": "http:\/\/kinlane-productions.s3.amazonaws.com\/api-evangelist-site\/company\/logos\/open-bank-project.png",
-            "humanURL": "https:\/\/openbankproject.com\/",
+            "image": "http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/open-bank-project.png",
+            "humanURL": "https://openbankproject.com/",
             "baseURL": "",
             "tags": [],
             "properties": [
                 {
                     "type": "x-openapi",
-                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/open-bank-project\/master\/api-uri-banksbank-idatms-openapi.json"
+                    "url": "https://raw.githubusercontent.com/api-evangelist/open-bank-project/master/api-uri-banksbank-idatms-openapi.json"
                 },
                 {
                     "type": "x-openapi",
-                    "url": "http:\/\/kinlane-productions.s3.amazonaws.com\/api-evangelist-site\/company\/openapis\/api-uri-banksbank-idatms.json"
+                    "url": "http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/openapis/api-uri-banksbank-idatms.json"
                 }
             ]
         },
         {
-            "name": "API URI: \/banks\/{BANK_ID}\/branches\/{BRANCH_ID}",
+            "name": "API URI: /banks/{BANK_ID}/branches/{BRANCH_ID}",
             "description": null,
-            "image": "http:\/\/kinlane-productions.s3.amazonaws.com\/api-evangelist-site\/company\/logos\/open-bank-project.png",
-            "humanURL": "https:\/\/openbankproject.com\/",
+            "image": "http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/open-bank-project.png",
+            "humanURL": "https://openbankproject.com/",
             "baseURL": "",
             "tags": [],
             "properties": [
                 {
                     "type": "x-openapi",
-                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/open-bank-project\/master\/api-uri-banksbank-idbranchesbranch-id-openapi.json"
+                    "url": "https://raw.githubusercontent.com/api-evangelist/open-bank-project/master/api-uri-banksbank-idbranchesbranch-id-openapi.json"
                 },
                 {
                     "type": "x-openapi",
-                    "url": "http:\/\/kinlane-productions.s3.amazonaws.com\/api-evangelist-site\/company\/openapis\/api-uri-banksbank-idbranchesbranch-id.json"
+                    "url": "http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/openapis/api-uri-banksbank-idbranchesbranch-id.json"
                 }
             ]
         },
         {
             "name": "OpenBankProject-Bank-Branch",
             "description": null,
-            "image": "http:\/\/kinlane-productions.s3.amazonaws.com\/api-evangelist-site\/company\/logos\/open-bank-project.png",
-            "humanURL": "https:\/\/openbankproject.com\/",
+            "image": "http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/open-bank-project.png",
+            "humanURL": "https://openbankproject.com/",
             "baseURL": "",
             "tags": [],
             "properties": [
                 {
                     "type": "x-openapi",
-                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/open-bank-project\/master\/openbankprojectbankbranch-openapi.json"
+                    "url": "https://raw.githubusercontent.com/api-evangelist/open-bank-project/master/openbankprojectbankbranch-openapi.json"
                 },
                 {
                     "type": "x-openapi",
-                    "url": "http:\/\/kinlane-productions.s3.amazonaws.com\/api-evangelist-site\/company\/openapis\/openbankprojectbankbranch.json"
+                    "url": "http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/openapis/openbankprojectbankbranch.json"
                 }
             ]
         },
         {
-            "name": "API URI: \/message-docs\/mar2017",
+            "name": "API URI: /message-docs/mar2017",
             "description": null,
-            "image": "http:\/\/kinlane-productions.s3.amazonaws.com\/api-evangelist-site\/company\/logos\/open-bank-project.png",
-            "humanURL": "https:\/\/openbankproject.com\/",
+            "image": "http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/open-bank-project.png",
+            "humanURL": "https://openbankproject.com/",
             "baseURL": "",
             "tags": [],
             "properties": [
                 {
                     "type": "x-openapi",
-                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/open-bank-project\/master\/api-uri-messagedocsmar2017-openapi.json"
+                    "url": "https://raw.githubusercontent.com/api-evangelist/open-bank-project/master/api-uri-messagedocsmar2017-openapi.json"
                 },
                 {
                     "type": "x-openapi",
-                    "url": "http:\/\/kinlane-productions.s3.amazonaws.com\/api-evangelist-site\/company\/openapis\/api-uri-messagedocsmar2017.json"
+                    "url": "http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/openapis/api-uri-messagedocsmar2017.json"
                 }
             ]
         },
         {
             "name": "OpenBankProject-Bank-FX",
             "description": null,
-            "image": "http:\/\/kinlane-productions.s3.amazonaws.com\/api-evangelist-site\/company\/logos\/open-bank-project.png",
-            "humanURL": "https:\/\/openbankproject.com\/",
+            "image": "http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/open-bank-project.png",
+            "humanURL": "https://openbankproject.com/",
             "baseURL": "",
             "tags": [],
             "properties": [
                 {
                     "type": "x-openapi",
-                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/open-bank-project\/master\/openbankprojectbankfx-openapi.json"
+                    "url": "https://raw.githubusercontent.com/api-evangelist/open-bank-project/master/openbankprojectbankfx-openapi.json"
                 },
                 {
                     "type": "x-openapi",
-                    "url": "http:\/\/kinlane-productions.s3.amazonaws.com\/api-evangelist-site\/company\/openapis\/openbankprojectbankfx.json"
+                    "url": "http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/openapis/openbankprojectbankfx.json"
                 }
             ]
         },
         {
-            "name": "API URI: \/banks\/{BANK_ID}\/accounts\/{ACCOUNT_ID}\/{VIEW_ID}\/transaction-request-types\/COUNTERPARTY\/transaction-requests",
+            "name": "API URI: /banks/{BANK_ID}/accounts/{ACCOUNT_ID}/{VIEW_ID}/transaction-request-types/COUNTERPARTY/transaction-requests",
             "description": null,
-            "image": "http:\/\/kinlane-productions.s3.amazonaws.com\/api-evangelist-site\/company\/logos\/open-bank-project.png",
-            "humanURL": "https:\/\/openbankproject.com\/",
+            "image": "http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/open-bank-project.png",
+            "humanURL": "https://openbankproject.com/",
             "baseURL": "",
             "tags": [],
             "properties": [
                 {
                     "type": "x-openapi",
-                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/open-bank-project\/master\/api-uri-banksbank-idaccountsaccount-idview-idtransactionrequesttypescounterpartytransactionrequests-openapi.json"
+                    "url": "https://raw.githubusercontent.com/api-evangelist/open-bank-project/master/api-uri-banksbank-idaccountsaccount-idview-idtransactionrequesttypescounterpartytransactionrequests-openapi.json"
                 },
                 {
                     "type": "x-openapi",
-                    "url": "http:\/\/kinlane-productions.s3.amazonaws.com\/api-evangelist-site\/company\/openapis\/api-uri-banksbank-idaccountsaccount-idview-idtransactionrequesttypescounterpartytransactionrequests.json"
+                    "url": "http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/openapis/api-uri-banksbank-idaccountsaccount-idview-idtransactionrequesttypescounterpartytransactionrequests.json"
                 }
             ]
         },
         {
-            "name": "API URI: \/banks\/{BANK_ID}\/accounts\/{ACCOUNT_ID}\/{VIEW_ID}\/transaction-request-types\/FREE_FORM\/transaction-requests",
+            "name": "API URI: /banks/{BANK_ID}/accounts/{ACCOUNT_ID}/{VIEW_ID}/transaction-request-types/FREE_FORM/transaction-requests",
             "description": null,
-            "image": "http:\/\/kinlane-productions.s3.amazonaws.com\/api-evangelist-site\/company\/logos\/open-bank-project.png",
-            "humanURL": "https:\/\/openbankproject.com\/",
+            "image": "http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/open-bank-project.png",
+            "humanURL": "https://openbankproject.com/",
             "baseURL": "",
             "tags": [],
             "properties": [
                 {
                     "type": "x-openapi",
-                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/open-bank-project\/master\/api-uri-banksbank-idaccountsaccount-idview-idtransactionrequesttypesfree-formtransactionrequests-openapi.json"
+                    "url": "https://raw.githubusercontent.com/api-evangelist/open-bank-project/master/api-uri-banksbank-idaccountsaccount-idview-idtransactionrequesttypesfree-formtransactionrequests-openapi.json"
                 },
                 {
                     "type": "x-openapi",
-                    "url": "http:\/\/kinlane-productions.s3.amazonaws.com\/api-evangelist-site\/company\/openapis\/api-uri-banksbank-idaccountsaccount-idview-idtransactionrequesttypesfree-formtransactionrequests.json"
+                    "url": "http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/openapis/api-uri-banksbank-idaccountsaccount-idview-idtransactionrequesttypesfree-formtransactionrequests.json"
                 }
             ]
         },
         {
-            "name": "API URI: \/banks\/{BANK_ID}\/accounts\/{ACCOUNT_ID}\/{VIEW_ID}\/transaction-request-types\/SANDBOX_TAN\/transaction-requests",
+            "name": "API URI: /banks/{BANK_ID}/accounts/{ACCOUNT_ID}/{VIEW_ID}/transaction-request-types/SANDBOX_TAN/transaction-requests",
             "description": null,
-            "image": "http:\/\/kinlane-productions.s3.amazonaws.com\/api-evangelist-site\/company\/logos\/open-bank-project.png",
-            "humanURL": "https:\/\/openbankproject.com\/",
+            "image": "http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/open-bank-project.png",
+            "humanURL": "https://openbankproject.com/",
             "baseURL": "",
             "tags": [],
             "properties": [
                 {
                     "type": "x-openapi",
-                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/open-bank-project\/master\/api-uri-banksbank-idaccountsaccount-idview-idtransactionrequesttypessandbox-tantransactionrequests-openapi.json"
+                    "url": "https://raw.githubusercontent.com/api-evangelist/open-bank-project/master/api-uri-banksbank-idaccountsaccount-idview-idtransactionrequesttypessandbox-tantransactionrequests-openapi.json"
                 },
                 {
                     "type": "x-openapi",
-                    "url": "http:\/\/kinlane-productions.s3.amazonaws.com\/api-evangelist-site\/company\/openapis\/api-uri-banksbank-idaccountsaccount-idview-idtransactionrequesttypessandbox-tantransactionrequests.json"
+                    "url": "http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/openapis/api-uri-banksbank-idaccountsaccount-idview-idtransactionrequesttypessandbox-tantransactionrequests.json"
                 }
             ]
         },
         {
-            "name": "API URI: \/banks\/{BANK_ID}\/accounts\/{ACCOUNT_ID}\/{VIEW_ID}\/transaction-request-types\/SEPA\/transaction-requests",
+            "name": "API URI: /banks/{BANK_ID}/accounts/{ACCOUNT_ID}/{VIEW_ID}/transaction-request-types/SEPA/transaction-requests",
             "description": null,
-            "image": "http:\/\/kinlane-productions.s3.amazonaws.com\/api-evangelist-site\/company\/logos\/open-bank-project.png",
-            "humanURL": "https:\/\/openbankproject.com\/",
+            "image": "http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/open-bank-project.png",
+            "humanURL": "https://openbankproject.com/",
             "baseURL": "",
             "tags": [],
             "properties": [
                 {
                     "type": "x-openapi",
-                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/open-bank-project\/master\/api-uri-banksbank-idaccountsaccount-idview-idtransactionrequesttypessepatransactionrequests-openapi.json"
+                    "url": "https://raw.githubusercontent.com/api-evangelist/open-bank-project/master/api-uri-banksbank-idaccountsaccount-idview-idtransactionrequesttypessepatransactionrequests-openapi.json"
                 },
                 {
                     "type": "x-openapi",
-                    "url": "http:\/\/kinlane-productions.s3.amazonaws.com\/api-evangelist-site\/company\/openapis\/api-uri-banksbank-idaccountsaccount-idview-idtransactionrequesttypessepatransactionrequests.json"
+                    "url": "http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/openapis/api-uri-banksbank-idaccountsaccount-idview-idtransactionrequesttypessepatransactionrequests.json"
                 }
             ]
         }
@@ -503,131 +504,131 @@
     "x-common": [
         {
             "type": "APIs.json",
-            "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/1forge\/master\/apis.json"
+            "url": "https://raw.githubusercontent.com/api-evangelist/1forge/master/apis.json"
         },
         {
             "type": "Github",
-            "url": "https:\/\/github.com\/OpenBankProject"
+            "url": "https://github.com/OpenBankProject"
         },
         {
             "type": "Swagger",
-            "url": "http:\/\/kinlane-productions.s3.amazonaws.com\/api-definitions\/swagger\/19987-2019-09-03-16-01-25.json"
+            "url": "http://kinlane-productions.s3.amazonaws.com/api-definitions/swagger/19987-2019-09-03-16-01-25.json"
         },
         {
             "type": "Swagger",
-            "url": "http:\/\/kinlane-productions.s3.amazonaws.com\/api-definitions\/swagger\/19987-2019-09-03-23-57-04.json"
+            "url": "http://kinlane-productions.s3.amazonaws.com/api-definitions/swagger/19987-2019-09-03-23-57-04.json"
         },
         {
             "type": "Swagger",
-            "url": "http:\/\/kinlane-productions.s3.amazonaws.com\/api-definitions\/swagger\/19987-2019-09-03-16-03-09.json"
+            "url": "http://kinlane-productions.s3.amazonaws.com/api-definitions/swagger/19987-2019-09-03-16-03-09.json"
         },
         {
             "type": "Swagger",
-            "url": "http:\/\/kinlane-productions.s3.amazonaws.com\/api-definitions\/swagger\/19987-2019-09-03-16-44-42.json"
+            "url": "http://kinlane-productions.s3.amazonaws.com/api-definitions/swagger/19987-2019-09-03-16-44-42.json"
         },
         {
             "type": "Swagger",
-            "url": "http:\/\/kinlane-productions.s3.amazonaws.com\/api-definitions\/swagger\/19987-2019-09-04-03-12-16.json"
+            "url": "http://kinlane-productions.s3.amazonaws.com/api-definitions/swagger/19987-2019-09-04-03-12-16.json"
         },
         {
             "type": "Swagger",
-            "url": "http:\/\/kinlane-productions.s3.amazonaws.com\/api-definitions\/swagger\/19987-2019-09-03-19-32-03.json"
+            "url": "http://kinlane-productions.s3.amazonaws.com/api-definitions/swagger/19987-2019-09-03-19-32-03.json"
         },
         {
             "type": "Swagger",
-            "url": "http:\/\/kinlane-productions.s3.amazonaws.com\/api-definitions\/swagger\/19987-2019-09-04-00-54-22.json"
+            "url": "http://kinlane-productions.s3.amazonaws.com/api-definitions/swagger/19987-2019-09-04-00-54-22.json"
         },
         {
             "type": "Swagger",
-            "url": "http:\/\/kinlane-productions.s3.amazonaws.com\/api-definitions\/swagger\/19987-2019-09-04-00-54-28.json"
+            "url": "http://kinlane-productions.s3.amazonaws.com/api-definitions/swagger/19987-2019-09-04-00-54-28.json"
         },
         {
             "type": "Swagger",
-            "url": "http:\/\/kinlane-productions.s3.amazonaws.com\/api-definitions\/swagger\/19987-2019-09-03-23-12-00.json"
+            "url": "http://kinlane-productions.s3.amazonaws.com/api-definitions/swagger/19987-2019-09-03-23-12-00.json"
         },
         {
             "type": "Swagger",
-            "url": "http:\/\/kinlane-productions.s3.amazonaws.com\/api-definitions\/swagger\/19987-2019-09-03-19-38-56.json"
+            "url": "http://kinlane-productions.s3.amazonaws.com/api-definitions/swagger/19987-2019-09-03-19-38-56.json"
         },
         {
             "type": "Swagger",
-            "url": "http:\/\/kinlane-productions.s3.amazonaws.com\/api-definitions\/swagger\/19987-2019-09-03-19-39-02.json"
+            "url": "http://kinlane-productions.s3.amazonaws.com/api-definitions/swagger/19987-2019-09-03-19-39-02.json"
         },
         {
             "type": "Swagger",
-            "url": "http:\/\/kinlane-productions.s3.amazonaws.com\/api-definitions\/swagger\/19987-2019-09-03-19-39-35.json"
+            "url": "http://kinlane-productions.s3.amazonaws.com/api-definitions/swagger/19987-2019-09-03-19-39-35.json"
         },
         {
             "type": "Swagger",
-            "url": "http:\/\/kinlane-productions.s3.amazonaws.com\/api-definitions\/swagger\/19987-2019-09-03-19-39-42.json"
+            "url": "http://kinlane-productions.s3.amazonaws.com/api-definitions/swagger/19987-2019-09-03-19-39-42.json"
         },
         {
             "type": "Swagger",
-            "url": "http:\/\/kinlane-productions.s3.amazonaws.com\/api-definitions\/swagger\/19987-2019-09-04-00-57-53.json"
+            "url": "http://kinlane-productions.s3.amazonaws.com/api-definitions/swagger/19987-2019-09-04-00-57-53.json"
         },
         {
             "type": "Swagger",
-            "url": "http:\/\/kinlane-productions.s3.amazonaws.com\/api-definitions\/swagger\/19987-2019-09-03-22-00-32.json"
+            "url": "http://kinlane-productions.s3.amazonaws.com/api-definitions/swagger/19987-2019-09-03-22-00-32.json"
         },
         {
             "type": "Swagger",
-            "url": "http:\/\/kinlane-productions.s3.amazonaws.com\/api-definitions\/swagger\/19987-2019-09-03-19-41-51.json"
+            "url": "http://kinlane-productions.s3.amazonaws.com/api-definitions/swagger/19987-2019-09-03-19-41-51.json"
         },
         {
             "type": "Swagger",
-            "url": "http:\/\/kinlane-productions.s3.amazonaws.com\/api-definitions\/swagger\/19987-2019-09-03-19-42-19.json"
+            "url": "http://kinlane-productions.s3.amazonaws.com/api-definitions/swagger/19987-2019-09-03-19-42-19.json"
         },
         {
             "type": "Swagger",
-            "url": "http:\/\/kinlane-productions.s3.amazonaws.com\/api-definitions\/swagger\/19987-2019-09-03-19-43-32.json"
+            "url": "http://kinlane-productions.s3.amazonaws.com/api-definitions/swagger/19987-2019-09-03-19-43-32.json"
         },
         {
             "type": "Swagger",
-            "url": "http:\/\/kinlane-productions.s3.amazonaws.com\/api-definitions\/swagger\/19987-2019-09-03-19-43-47.json"
+            "url": "http://kinlane-productions.s3.amazonaws.com/api-definitions/swagger/19987-2019-09-03-19-43-47.json"
         },
         {
             "type": "Swagger",
-            "url": "http:\/\/kinlane-productions.s3.amazonaws.com\/api-definitions\/swagger\/19987-2019-09-03-19-43-54.json"
+            "url": "http://kinlane-productions.s3.amazonaws.com/api-definitions/swagger/19987-2019-09-03-19-43-54.json"
         },
         {
             "type": "Swagger",
-            "url": "http:\/\/kinlane-productions.s3.amazonaws.com\/api-definitions\/swagger\/19987-2019-09-03-19-44-14.json"
+            "url": "http://kinlane-productions.s3.amazonaws.com/api-definitions/swagger/19987-2019-09-03-19-44-14.json"
         },
         {
             "type": "Swagger",
-            "url": "http:\/\/kinlane-productions.s3.amazonaws.com\/api-definitions\/swagger\/19987-2019-09-03-19-45-00.json"
+            "url": "http://kinlane-productions.s3.amazonaws.com/api-definitions/swagger/19987-2019-09-03-19-45-00.json"
         },
         {
             "type": "Swagger",
-            "url": "http:\/\/kinlane-productions.s3.amazonaws.com\/api-definitions\/swagger\/19987-2019-09-03-19-45-10.json"
+            "url": "http://kinlane-productions.s3.amazonaws.com/api-definitions/swagger/19987-2019-09-03-19-45-10.json"
         },
         {
             "type": "Swagger",
-            "url": "http:\/\/kinlane-productions.s3.amazonaws.com\/api-definitions\/swagger\/19987-2019-09-04-09-04-18.json"
+            "url": "http://kinlane-productions.s3.amazonaws.com/api-definitions/swagger/19987-2019-09-04-09-04-18.json"
         },
         {
             "type": "Swagger",
-            "url": "http:\/\/kinlane-productions.s3.amazonaws.com\/api-definitions\/swagger\/19987-2019-09-04-15-20-32.json"
+            "url": "http://kinlane-productions.s3.amazonaws.com/api-definitions/swagger/19987-2019-09-04-15-20-32.json"
         },
         {
             "type": "Swagger",
-            "url": "http:\/\/kinlane-productions.s3.amazonaws.com\/api-definitions\/swagger\/19987-2019-09-04-15-20-40.json"
+            "url": "http://kinlane-productions.s3.amazonaws.com/api-definitions/swagger/19987-2019-09-04-15-20-40.json"
         },
         {
             "type": "Swagger",
-            "url": "http:\/\/kinlane-productions.s3.amazonaws.com\/api-definitions\/swagger\/19987-2019-09-04-15-20-48.json"
+            "url": "http://kinlane-productions.s3.amazonaws.com/api-definitions/swagger/19987-2019-09-04-15-20-48.json"
         },
         {
             "type": "Swagger",
-            "url": "http:\/\/kinlane-productions.s3.amazonaws.com\/api-definitions\/swagger\/19987-2019-09-04-15-20-56.json"
+            "url": "http://kinlane-productions.s3.amazonaws.com/api-definitions/swagger/19987-2019-09-04-15-20-56.json"
         },
         {
             "type": "Twitter",
-            "url": "https:\/\/twitter.com\/openbankproject"
+            "url": "https://twitter.com/openbankproject"
         },
         {
             "type": "Website",
-            "url": "https:\/\/openbankproject.com\/"
+            "url": "https://openbankproject.com/"
         }
     ]
 }

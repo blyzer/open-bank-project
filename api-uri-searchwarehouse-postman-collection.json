@@ -1,6 +1,6 @@
 {
     "id": "318bd67fa8c4825ea3253405a7cbc1f7",
-    "name": "API URI: \/search\/warehouse",
+    "name": "API URI: /search/warehouse",
     "description": null,
     "auth": null,
     "events": null,
@@ -12,8 +12,8 @@
         {
             "id": "f2342ed1a8f27bccdb09ee313e0e6af6",
             "name": "Search Warehouse Data Via Elasticsearch",
-            "url": "http:\/\/apisandbox.openbankproject.com\/obp\/v3_0_0\/search\/warehouse",
-            "description": "<p>Search warehouse data via Elastic Search.<\/p><p>Login is required.<\/p><p>CanSearchWarehouse entitlement is required to search warehouse data!<\/p><p>Send your email, name, project name and user_id to the admins to get access.<\/p><p>Elastic (search) is used in the background. See links below for syntax.<\/p><p>This version differs from v2.0.0<\/p><p>Example of usage:<\/p><p>POST \/search\/warehouse<\/p><p>{  \"es_uri_part\": \"\/THE_INDEX_YOU_WANT_TO_USE\/_search?pretty=true\",  \"es_body_part\": {  \"query\":",
+            "url": "http://apisandbox.openbankproject.com/obp/v3_0_0/search/warehouse",
+            "description": "<p>Search warehouse data via Elastic Search.</p><p>Login is required.</p><p>CanSearchWarehouse entitlement is required to search warehouse data!</p><p>Send your email, name, project name and user_id to the admins to get access.</p><p>Elastic (search) is used in the background. See links below for syntax.</p><p>This version differs from v2.0.0</p><p>Example of usage:</p><p>POST /search/warehouse</p><p>{  \"es_uri_part\": \"/THE_INDEX_YOU_WANT_TO_USE/_search?pretty=true\",  \"es_body_part\": {  \"query\":",
             "data": [],
             "dataMode": "raw",
             "headerData": null,

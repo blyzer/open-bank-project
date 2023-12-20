@@ -4,16 +4,19 @@
         "version": "v3_1_0",
         "title": "OpenBankProject-Bank",
         "description": "An Open Source API for Banks. (c) TESOBE Ltd. 2011 - 2018. Licensed under the AGPL and commercial licences.",
-        "termsOfService": "http:\/\/exmple.com\/license\/"
+        "termsOfService": "http://exmple.com/license/"
     },
     "servers": [
-        "http:\/\/api.openbankproject.com\/obp-bank"
+        {
+            "description": "An Open Source API for Banks.",
+            "url": "http://api.openbankproject.com/obp-bank"
+        }
     ],
     "paths": {
-        "\/obp\/v2.0.0\/banks\/{BANK_ID}\/transaction-types": {
+        "/obp/v2.0.0/banks/{BANK_ID}/transaction-types": {
             "get": {
                 "summary": "Get Transaction Types at Bank",
-                "description": "<p>Get Transaction Types for the bank specified by BANK_ID:<\/p><p>Lists the possible Transaction Types available at the bank (as opposed to Transaction Request Types which are the possible ways Transactions can be created by this API Server).<\/p><ul>  <li>id : Unique transaction type id across the API instance. SHOULD be a UUID. MUST be unique.<\/li>  <li>bank_id : The bank that supports this TransactionType<\/li>  <li>short_code : A short code (SHOULD have no-spaces) which MUST be unique across t",
+                "description": "<p>Get Transaction Types for the bank specified by BANK_ID:</p><p>Lists the possible Transaction Types available at the bank (as opposed to Transaction Request Types which are the possible ways Transactions can be created by this API Server).</p><ul>  <li>id : Unique transaction type id across the API instance. SHOULD be a UUID. MUST be unique.</li>  <li>bank_id : The bank that supports this TransactionType</li>  <li>short_code : A short code (SHOULD have no-spaces) which MUST be unique across t",
                 "operationId": "Vv200GetTransactionTypes",
                 "deprecated": 0,
                 "parameters": [
@@ -27,9 +30,9 @@
                     "200": {
                         "description": "Success",
                         "content": {
-                            "application\/json": {
+                            "application/json": {
                                 "schema": {
-                                    "$href": "#\/components\/schemas\/TransactionTypesJsonV200"
+                                    "$href": "#/components/schemas/TransactionTypesJsonV200"
                                 }
                             }
                         }
@@ -37,10 +40,10 @@
                 }
             }
         },
-        "\/obp\/v2.1.0\/banks\/{BANK_ID}\/transaction-request-types": {
+        "/obp/v2.1.0/banks/{BANK_ID}/transaction-request-types": {
             "get": {
                 "summary": "Get supported Transaction Request Types",
-                "description": "<p>Get the list of the Transaction Request Types supported by the bank.<\/p><p>Authentication is Optional<\/p>",
+                "description": "<p>Get the list of the Transaction Request Types supported by the bank.</p><p>Authentication is Optional</p>",
                 "operationId": "Vv210GetTransactionRequestTypesSupportedByBank",
                 "deprecated": 0,
                 "parameters": [
@@ -54,9 +57,9 @@
                     "200": {
                         "description": "Success",
                         "content": {
-                            "application\/json": {
+                            "application/json": {
                                 "schema": {
-                                    "$href": "#\/components\/schemas\/TransactionTypesJsonV200"
+                                    "$href": "#/components/schemas/TransactionTypesJsonV200"
                                 }
                             }
                         }
@@ -64,10 +67,10 @@
                 }
             }
         },
-        "\/obp\/v2.1.0\/banks\/{BANK_ID}\/transaction-types": {
+        "/obp/v2.1.0/banks/{BANK_ID}/transaction-types": {
             "put": {
                 "summary": "Create Transaction Type at bank",
-                "description": "<p>Create Transaction Types for the bank specified by BANK_ID:<\/p><ul>  <li>id : Unique transaction type id across the API instance. SHOULD be a UUID. MUST be unique.<\/li>  <li>bank_id : The bank that supports this TransactionType<\/li>  <li>short_code : A short code (SHOULD have no-spaces) which MUST be unique across the bank. May be stored with Transactions to link here<\/li>  <li>summary : A succinct summary<\/li>  <li>description : A longer description<\/li>  <li>charge : The charge to the custo",
+                "description": "<p>Create Transaction Types for the bank specified by BANK_ID:</p><ul>  <li>id : Unique transaction type id across the API instance. SHOULD be a UUID. MUST be unique.</li>  <li>bank_id : The bank that supports this TransactionType</li>  <li>short_code : A short code (SHOULD have no-spaces) which MUST be unique across the bank. May be stored with Transactions to link here</li>  <li>summary : A succinct summary</li>  <li>description : A longer description</li>  <li>charge : The charge to the custo",
                 "operationId": "Vv210CreateTransactionType",
                 "deprecated": 0,
                 "parameters": [
@@ -81,9 +84,9 @@
                     "200": {
                         "description": "Success",
                         "content": {
-                            "application\/json": {
+                            "application/json": {
                                 "schema": {
-                                    "$href": "#\/components\/schemas\/TransactionTypesJsonV200"
+                                    "$href": "#/components/schemas/TransactionTypesJsonV200"
                                 }
                             }
                         }
@@ -91,10 +94,10 @@
                 }
             }
         },
-        "\/obp\/v2.2.0\/banks": {
+        "/obp/v2.2.0/banks": {
             "post": {
                 "summary": "Create Bank",
-                "description": "<p>Create a new bank (Authenticated access). Authentication is Mandatory<\/p>",
+                "description": "<p>Create a new bank (Authenticated access). Authentication is Mandatory</p>",
                 "operationId": "Vv220CreateBank",
                 "deprecated": 0,
                 "parameters": [],
@@ -102,9 +105,9 @@
                     "201": {
                         "description": "Success",
                         "content": {
-                            "application\/json": {
+                            "application/json": {
                                 "schema": {
-                                    "$href": "#\/components\/schemas\/BankJSONV220"
+                                    "$href": "#/components/schemas/BankJSONV220"
                                 }
                             }
                         }
@@ -112,10 +115,10 @@
                 }
             }
         },
-        "\/obp\/v3.0.0\/banks": {
+        "/obp/v3.0.0/banks": {
             "get": {
                 "summary": "Get Banks",
-                "description": "<p>Get banks on this API instance Returns a list of banks supported on this server:<\/p><ul>  <li>ID used as parameter in URLs<\/li>  <li>Short and full name of bank<\/li>  <li>Logo URL<\/li>  <li>Website<\/li><\/ul>",
+                "description": "<p>Get banks on this API instance Returns a list of banks supported on this server:</p><ul>  <li>ID used as parameter in URLs</li>  <li>Short and full name of bank</li>  <li>Logo URL</li>  <li>Website</li></ul>",
                 "operationId": "Vv300GetBanks",
                 "deprecated": 0,
                 "parameters": [],
@@ -123,9 +126,9 @@
                     "200": {
                         "description": "Success",
                         "content": {
-                            "application\/json": {
+                            "application/json": {
                                 "schema": {
-                                    "$href": "#\/components\/schemas\/TransactionTypesJsonV200"
+                                    "$href": "#/components/schemas/TransactionTypesJsonV200"
                                 }
                             }
                         }
@@ -133,10 +136,10 @@
                 }
             }
         },
-        "\/obp\/v3.0.0\/banks\/{BANK_ID}": {
+        "/obp/v3.0.0/banks/{BANK_ID}": {
             "get": {
                 "summary": "Get Bank",
-                "description": "<p>Get the bank specified by BANK_ID Returns information about a single bank specified by BANK_ID including:<\/p><ul>  <li>Short and full name of bank<\/li>  <li>Logo URL<\/li>  <li>Website<\/li><\/ul>",
+                "description": "<p>Get the bank specified by BANK_ID Returns information about a single bank specified by BANK_ID including:</p><ul>  <li>Short and full name of bank</li>  <li>Logo URL</li>  <li>Website</li></ul>",
                 "operationId": "Vv300BankById",
                 "deprecated": 0,
                 "parameters": [
@@ -150,9 +153,9 @@
                     "200": {
                         "description": "Success",
                         "content": {
-                            "application\/json": {
+                            "application/json": {
                                 "schema": {
-                                    "$href": "#\/components\/schemas\/TransactionTypesJsonV200"
+                                    "$href": "#/components/schemas/TransactionTypesJsonV200"
                                 }
                             }
                         }
@@ -160,10 +163,10 @@
                 }
             }
         },
-        "\/obp\/v3.0.0\/banks\/{BANK_ID}\/branches": {
+        "/obp/v3.0.0/banks/{BANK_ID}/branches": {
             "get": {
                 "summary": "Get Branches for a Bank",
-                "description": "<p>Returns information about branches for a single bank specified by BANK_ID including:<\/p><ul>  <li>Name<\/li>  <li>Address<\/li>  <li>Geo Location<\/li>  <li>License the data under this endpoint is released under<\/li>  <li>Structured opening hours<\/li>  <li>Accessible flag<\/li>  <li>Branch Type<\/li>  <li>More Info<\/li><\/ul><p>Pagination:<\/p><p>By default, 50 records are returned.<\/p><p>You can use the url query parameters <em>limit<\/em> and <em>offset<\/em> for pagination<\/p><p>Authentication is O",
+                "description": "<p>Returns information about branches for a single bank specified by BANK_ID including:</p><ul>  <li>Name</li>  <li>Address</li>  <li>Geo Location</li>  <li>License the data under this endpoint is released under</li>  <li>Structured opening hours</li>  <li>Accessible flag</li>  <li>Branch Type</li>  <li>More Info</li></ul><p>Pagination:</p><p>By default, 50 records are returned.</p><p>You can use the url query parameters <em>limit</em> and <em>offset</em> for pagination</p><p>Authentication is O",
                 "operationId": "Vv300GetBranches",
                 "deprecated": 0,
                 "parameters": [
@@ -177,9 +180,9 @@
                     "200": {
                         "description": "Success",
                         "content": {
-                            "application\/json": {
+                            "application/json": {
                                 "schema": {
-                                    "$href": "#\/components\/schemas\/TransactionTypesJsonV200"
+                                    "$href": "#/components/schemas/TransactionTypesJsonV200"
                                 }
                             }
                         }
@@ -187,10 +190,10 @@
                 }
             }
         },
-        "\/obp\/v3.0.0\/banks\/{BANK_ID}\/branches\/{BRANCH_ID}": {
+        "/obp/v3.0.0/banks/{BANK_ID}/branches/{BRANCH_ID}": {
             "get": {
                 "summary": "Get Branch",
-                "description": "<p>Returns information about a single Branch specified by BANK_ID and BRANCH_ID including:<\/p><ul>  <li>Name<\/li>  <li>Address<\/li>  <li>Geo Location<\/li>  <li>License the data under this endpoint is released under.<\/li><\/ul><p>Authentication is Optional<\/p>",
+                "description": "<p>Returns information about a single Branch specified by BANK_ID and BRANCH_ID including:</p><ul>  <li>Name</li>  <li>Address</li>  <li>Geo Location</li>  <li>License the data under this endpoint is released under.</li></ul><p>Authentication is Optional</p>",
                 "operationId": "Vv300GetBranch",
                 "deprecated": 0,
                 "parameters": [
@@ -209,9 +212,9 @@
                     "200": {
                         "description": "Success",
                         "content": {
-                            "application\/json": {
+                            "application/json": {
                                 "schema": {
-                                    "$href": "#\/components\/schemas\/TransactionTypesJsonV200"
+                                    "$href": "#/components/schemas/TransactionTypesJsonV200"
                                 }
                             }
                         }
@@ -219,10 +222,10 @@
                 }
             }
         },
-        "\/obp\/v3.1.0\/banks\/{BANK_ID}\/accounts\/{ACCOUNT_ID}\/{VIEW_ID}\/checkbook\/orders": {
+        "/obp/v3.1.0/banks/{BANK_ID}/accounts/{ACCOUNT_ID}/{VIEW_ID}/checkbook/orders": {
             "get": {
                 "summary": "get Checkbook orders",
-                "description": "<p>Get all checkbook orders<\/p>",
+                "description": "<p>Get all checkbook orders</p>",
                 "operationId": "Vv310GetCheckbookOrders",
                 "deprecated": 0,
                 "parameters": [
@@ -246,9 +249,9 @@
                     "200": {
                         "description": "Success",
                         "content": {
-                            "application\/json": {
+                            "application/json": {
                                 "schema": {
-                                    "$href": "#\/components\/schemas\/TransactionTypesJsonV200"
+                                    "$href": "#/components/schemas/TransactionTypesJsonV200"
                                 }
                             }
                         }
@@ -256,10 +259,10 @@
                 }
             }
         },
-        "\/obp\/v3.1.0\/banks\/{BANK_ID}\/accounts\/{ACCOUNT_ID}\/{VIEW_ID}\/credit_cards\/orders": {
+        "/obp/v3.1.0/banks/{BANK_ID}/accounts/{ACCOUNT_ID}/{VIEW_ID}/credit_cards/orders": {
             "get": {
                 "summary": "Get status of Credit Card order ",
-                "description": "<p>Get status of Credit Card orders Get all orders<\/p>",
+                "description": "<p>Get status of Credit Card orders Get all orders</p>",
                 "operationId": "Vv310GetStatusOfCreditCardOrder",
                 "deprecated": 0,
                 "parameters": [
@@ -283,9 +286,9 @@
                     "200": {
                         "description": "Success",
                         "content": {
-                            "application\/json": {
+                            "application/json": {
                                 "schema": {
-                                    "$href": "#\/components\/schemas\/TransactionTypesJsonV200"
+                                    "$href": "#/components/schemas/TransactionTypesJsonV200"
                                 }
                             }
                         }
@@ -293,10 +296,10 @@
                 }
             }
         },
-        "\/obp\/v3.1.0\/banks\/{BANK_ID}\/customers\/{CUSTOMER_ID}\/credit_limit\/requests": {
+        "/obp/v3.1.0/banks/{BANK_ID}/customers/{CUSTOMER_ID}/credit_limit/requests": {
             "get": {
                 "summary": "Get Credit Limit Order Requests ",
-                "description": "<p>Get Credit Limit Order Requests <\/p>",
+                "description": "<p>Get Credit Limit Order Requests </p>",
                 "operationId": "Vv310GetCreditLimitOrderRequests",
                 "deprecated": 0,
                 "parameters": [
@@ -315,9 +318,9 @@
                     "200": {
                         "description": "Success",
                         "content": {
-                            "application\/json": {
+                            "application/json": {
                                 "schema": {
-                                    "$href": "#\/components\/schemas\/TransactionTypesJsonV200"
+                                    "$href": "#/components/schemas/TransactionTypesJsonV200"
                                 }
                             }
                         }
@@ -326,7 +329,7 @@
             },
             "post": {
                 "summary": "Create Credit Limit Order Request",
-                "description": "<p>Create credit limit order request<\/p>",
+                "description": "<p>Create credit limit order request</p>",
                 "operationId": "Vv310CreateCreditLimitOrderRequest",
                 "deprecated": 0,
                 "parameters": [
@@ -345,9 +348,9 @@
                     "201": {
                         "description": "Success",
                         "content": {
-                            "application\/json": {
+                            "application/json": {
                                 "schema": {
-                                    "$href": "#\/components\/schemas\/BankJSONV220"
+                                    "$href": "#/components/schemas/BankJSONV220"
                                 }
                             }
                         }
@@ -355,10 +358,10 @@
                 }
             }
         },
-        "\/obp\/v3.1.0\/banks\/{BANK_ID}\/customers\/{CUSTOMER_ID}\/credit_limit\/requests\/REQUEST_ID": {
+        "/obp/v3.1.0/banks/{BANK_ID}/customers/{CUSTOMER_ID}/credit_limit/requests/REQUEST_ID": {
             "get": {
                 "summary": "Get Creadit Limit Order Request By Request Id",
-                "description": "<p>Get Creadit Limit Order Request By Request Id<\/p>",
+                "description": "<p>Get Creadit Limit Order Request By Request Id</p>",
                 "operationId": "Vv310GetCreditLimitOrderRequestByRequestId",
                 "deprecated": 0,
                 "parameters": [
@@ -377,9 +380,9 @@
                     "200": {
                         "description": "Success",
                         "content": {
-                            "application\/json": {
+                            "application/json": {
                                 "schema": {
-                                    "$href": "#\/components\/schemas\/TransactionTypesJsonV200"
+                                    "$href": "#/components/schemas/TransactionTypesJsonV200"
                                 }
                             }
                         }

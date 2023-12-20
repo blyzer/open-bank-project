@@ -4,16 +4,19 @@
         "version": "v3_1_0",
         "title": "OpenBankProject-Bank-FX",
         "description": "An Open Source API for Banks. (c) TESOBE Ltd. 2011 - 2018. Licensed under the AGPL and commercial licences.",
-        "termsOfService": "http:\/\/exmple.com\/license\/"
+        "termsOfService": "http://exmple.com/license/"
     },
     "servers": [
-        "http:\/\/api.openbankproject.com\/obp-bank-fx"
+        {
+            "description": "An Open Source API for Banks.",
+            "url": "http://api.openbankproject.com/obp-bank-fx"
+        }
     ],
     "paths": {
-        "\/obp\/v2.2.0\/banks\/{BANK_ID}\/fx": {
+        "/obp/v2.2.0/banks/{BANK_ID}/fx": {
             "put": {
                 "summary": "Create Fx",
-                "description": "<p>Create or Update Fx for the Bank.<\/p><p>Authentication is Mandatory<\/p><p>OBP-20006: User is missing one or more roles: CanCreateFxRate OR CanCreateFxRateAtAnyBank<\/p>",
+                "description": "<p>Create or Update Fx for the Bank.</p><p>Authentication is Mandatory</p><p>OBP-20006: User is missing one or more roles: CanCreateFxRate OR CanCreateFxRateAtAnyBank</p>",
                 "operationId": "Vv220CreateFx",
                 "deprecated": 0,
                 "parameters": [
@@ -27,9 +30,9 @@
                     "200": {
                         "description": "Success",
                         "content": {
-                            "application\/json": {
+                            "application/json": {
                                 "schema": {
-                                    "$href": "#\/components\/schemas\/FXRateJsonV220"
+                                    "$href": "#/components/schemas/FXRateJsonV220"
                                 }
                             }
                         }
@@ -37,10 +40,10 @@
                 }
             }
         },
-        "\/obp\/v2.2.0\/banks\/{BANK_ID}\/fx\/{FROM_CURRENCY_CODE}\/{TO_CURRENCY_CODE}": {
+        "/obp/v2.2.0/banks/{BANK_ID}/fx/{FROM_CURRENCY_CODE}/{TO_CURRENCY_CODE}": {
             "get": {
                 "summary": "Get Current FxRate",
-                "description": "<p>Get the latest FXRate specified by BANK_ID, FROM_CURRENCY_CODE and TO_CURRENCY_CODE <\/p>",
+                "description": "<p>Get the latest FXRate specified by BANK_ID, FROM_CURRENCY_CODE and TO_CURRENCY_CODE </p>",
                 "operationId": "Vv220GetCurrentFxRate",
                 "deprecated": 0,
                 "parameters": [
@@ -64,9 +67,9 @@
                     "200": {
                         "description": "Success",
                         "content": {
-                            "application\/json": {
+                            "application/json": {
                                 "schema": {
-                                    "$href": "#\/components\/schemas\/FXRateJsonV220"
+                                    "$href": "#/components/schemas/FXRateJsonV220"
                                 }
                             }
                         }

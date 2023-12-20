@@ -4,16 +4,19 @@
         "version": "v3_1_0",
         "title": "OpenBankProject-Counterparty",
         "description": "An Open Source API for Banks. (c) TESOBE Ltd. 2011 - 2018. Licensed under the AGPL and commercial licences.",
-        "termsOfService": "http:\/\/exmple.com\/license\/"
+        "termsOfService": "http://exmple.com/license/"
     },
     "servers": [
-        "http:\/\/api.openbankproject.com\/obp-counterparty"
+        {
+            "description": "An Open Source API for Banks.",
+            "url": "http://api.openbankproject.com/obp-counterparty"
+        }
     ],
     "paths": {
-        "\/obp\/v1.2.1\/banks\/{BANK_ID}\/accounts\/{ACCOUNT_ID}\/{VIEW_ID}\/other_accounts\/{OTHER_ACCOUNT_ID}\/metadata": {
+        "/obp/v1.2.1/banks/{BANK_ID}/accounts/{ACCOUNT_ID}/{VIEW_ID}/other_accounts/{OTHER_ACCOUNT_ID}/metadata": {
             "get": {
                 "summary": "Get Other Account Metadata.",
-                "description": "<p>Get metadata of one other account. Returns only the metadata about one other bank account (OTHER_ACCOUNT_ID) that had shared at least one transaction with ACCOUNT_ID at BANK_ID.<\/p><p>Authentication via OAuth is required if the view is not public.<\/p>",
+                "description": "<p>Get metadata of one other account. Returns only the metadata about one other bank account (OTHER_ACCOUNT_ID) that had shared at least one transaction with ACCOUNT_ID at BANK_ID.</p><p>Authentication via OAuth is required if the view is not public.</p>",
                 "operationId": "Vv121GetOtherAccountMetadata",
                 "deprecated": 0,
                 "parameters": [
@@ -42,9 +45,9 @@
                     "200": {
                         "description": "Success",
                         "content": {
-                            "application\/json": {
+                            "application/json": {
                                 "schema": {
-                                    "$href": "#\/components\/schemas\/OtherAccountMetadataJSON"
+                                    "$href": "#/components/schemas/OtherAccountMetadataJSON"
                                 }
                             }
                         }
@@ -52,10 +55,10 @@
                 }
             }
         },
-        "\/obp\/v1.2.1\/banks\/{BANK_ID}\/accounts\/{ACCOUNT_ID}\/{VIEW_ID}\/other_accounts\/{OTHER_ACCOUNT_ID}\/metadata\/corporate_location": {
+        "/obp/v1.2.1/banks/{BANK_ID}/accounts/{ACCOUNT_ID}/{VIEW_ID}/other_accounts/{OTHER_ACCOUNT_ID}/metadata/corporate_location": {
             "delete": {
                 "summary": "Delete Counterparty Corporate Location.",
-                "description": "<p>Delete corporate location of other bank account. Delete the geolocation of the counterparty's registered address<\/p>",
+                "description": "<p>Delete corporate location of other bank account. Delete the geolocation of the counterparty's registered address</p>",
                 "operationId": "Vv121DeleteCounterpartyCorporateLocation",
                 "deprecated": 0,
                 "parameters": [
@@ -84,9 +87,9 @@
                     "204": {
                         "description": "Success",
                         "content": {
-                            "application\/json": {
+                            "application/json": {
                                 "schema": {
-                                    "$href": "#\/components\/schemas\/EmptyClassJson"
+                                    "$href": "#/components/schemas/EmptyClassJson"
                                 }
                             }
                         }
@@ -95,7 +98,7 @@
             },
             "post": {
                 "summary": "Add Corporate Location to Counterparty",
-                "description": "<p>Add the geolocation of the counterparty's registered address<\/p>",
+                "description": "<p>Add the geolocation of the counterparty's registered address</p>",
                 "operationId": "Vv121AddCounterpartyCorporateLocation",
                 "deprecated": 0,
                 "parameters": [
@@ -124,9 +127,9 @@
                     "201": {
                         "description": "Success",
                         "content": {
-                            "application\/json": {
+                            "application/json": {
                                 "schema": {
-                                    "$href": "#\/components\/schemas\/SuccessMessage"
+                                    "$href": "#/components/schemas/SuccessMessage"
                                 }
                             }
                         }
@@ -135,7 +138,7 @@
             },
             "put": {
                 "summary": "Update Counterparty Corporate Location",
-                "description": "<p>Update the geolocation of the counterparty's registered address<\/p>",
+                "description": "<p>Update the geolocation of the counterparty's registered address</p>",
                 "operationId": "Vv121UpdateCounterpartyCorporateLocation",
                 "deprecated": 0,
                 "parameters": [
@@ -164,9 +167,9 @@
                     "200": {
                         "description": "Success",
                         "content": {
-                            "application\/json": {
+                            "application/json": {
                                 "schema": {
-                                    "$href": "#\/components\/schemas\/OtherAccountMetadataJSON"
+                                    "$href": "#/components/schemas/OtherAccountMetadataJSON"
                                 }
                             }
                         }
@@ -174,10 +177,10 @@
                 }
             }
         },
-        "\/obp\/v1.2.1\/banks\/{BANK_ID}\/accounts\/{ACCOUNT_ID}\/{VIEW_ID}\/other_accounts\/{OTHER_ACCOUNT_ID}\/metadata\/image_url": {
+        "/obp/v1.2.1/banks/{BANK_ID}/accounts/{ACCOUNT_ID}/{VIEW_ID}/other_accounts/{OTHER_ACCOUNT_ID}/metadata/image_url": {
             "delete": {
                 "summary": "Delete Counterparty Image URL",
-                "description": "<p>Delete image url of other bank account.<\/p>",
+                "description": "<p>Delete image url of other bank account.</p>",
                 "operationId": "Vv121DeleteCounterpartyImageUrl",
                 "deprecated": 0,
                 "parameters": [
@@ -206,9 +209,9 @@
                     "204": {
                         "description": "Success",
                         "content": {
-                            "application\/json": {
+                            "application/json": {
                                 "schema": {
-                                    "$href": "#\/components\/schemas\/EmptyClassJson"
+                                    "$href": "#/components/schemas/EmptyClassJson"
                                 }
                             }
                         }
@@ -217,7 +220,7 @@
             },
             "post": {
                 "summary": "Add image url to other bank account.",
-                "description": "<p>Add a url that points to the logo of the counterparty<\/p>",
+                "description": "<p>Add a url that points to the logo of the counterparty</p>",
                 "operationId": "Vv121AddCounterpartyImageUrl",
                 "deprecated": 0,
                 "parameters": [
@@ -246,9 +249,9 @@
                     "201": {
                         "description": "Success",
                         "content": {
-                            "application\/json": {
+                            "application/json": {
                                 "schema": {
-                                    "$href": "#\/components\/schemas\/SuccessMessage"
+                                    "$href": "#/components/schemas/SuccessMessage"
                                 }
                             }
                         }
@@ -257,7 +260,7 @@
             },
             "put": {
                 "summary": "Update Counterparty Image Url",
-                "description": "<p>Update the url that points to the logo of the counterparty<\/p>",
+                "description": "<p>Update the url that points to the logo of the counterparty</p>",
                 "operationId": "Vv121UpdateCounterpartyImageUrl",
                 "deprecated": 0,
                 "parameters": [
@@ -286,9 +289,9 @@
                     "200": {
                         "description": "Success",
                         "content": {
-                            "application\/json": {
+                            "application/json": {
                                 "schema": {
-                                    "$href": "#\/components\/schemas\/OtherAccountMetadataJSON"
+                                    "$href": "#/components/schemas/OtherAccountMetadataJSON"
                                 }
                             }
                         }
@@ -296,7 +299,7 @@
                 }
             }
         },
-        "\/obp\/v1.2.1\/banks\/{BANK_ID}\/accounts\/{ACCOUNT_ID}\/{VIEW_ID}\/other_accounts\/{OTHER_ACCOUNT_ID}\/metadata\/more_info": {
+        "/obp/v1.2.1/banks/{BANK_ID}/accounts/{ACCOUNT_ID}/{VIEW_ID}/other_accounts/{OTHER_ACCOUNT_ID}/metadata/more_info": {
             "delete": {
                 "summary": "Delete more info of other bank account.",
                 "description": "",
@@ -328,9 +331,9 @@
                     "204": {
                         "description": "Success",
                         "content": {
-                            "application\/json": {
+                            "application/json": {
                                 "schema": {
-                                    "$href": "#\/components\/schemas\/EmptyClassJson"
+                                    "$href": "#/components/schemas/EmptyClassJson"
                                 }
                             }
                         }
@@ -339,7 +342,7 @@
             },
             "post": {
                 "summary": "Add Counterparty More Info",
-                "description": "<p>Add a description of the counter party from the perpestive of the account e.g. My dentist.<\/p>",
+                "description": "<p>Add a description of the counter party from the perpestive of the account e.g. My dentist.</p>",
                 "operationId": "Vv121AddCounterpartyMoreInfo",
                 "deprecated": 0,
                 "parameters": [
@@ -368,9 +371,9 @@
                     "201": {
                         "description": "Success",
                         "content": {
-                            "application\/json": {
+                            "application/json": {
                                 "schema": {
-                                    "$href": "#\/components\/schemas\/SuccessMessage"
+                                    "$href": "#/components/schemas/SuccessMessage"
                                 }
                             }
                         }
@@ -379,7 +382,7 @@
             },
             "put": {
                 "summary": "Update Counterparty More Info",
-                "description": "<p>Update the more info description of the counter party from the perpestive of the account e.g. My dentist.<\/p>",
+                "description": "<p>Update the more info description of the counter party from the perpestive of the account e.g. My dentist.</p>",
                 "operationId": "Vv121UpdateCounterpartyMoreInfo",
                 "deprecated": 0,
                 "parameters": [
@@ -408,9 +411,9 @@
                     "200": {
                         "description": "Success",
                         "content": {
-                            "application\/json": {
+                            "application/json": {
                                 "schema": {
-                                    "$href": "#\/components\/schemas\/OtherAccountMetadataJSON"
+                                    "$href": "#/components/schemas/OtherAccountMetadataJSON"
                                 }
                             }
                         }
@@ -418,10 +421,10 @@
                 }
             }
         },
-        "\/obp\/v1.2.1\/banks\/{BANK_ID}\/accounts\/{ACCOUNT_ID}\/{VIEW_ID}\/other_accounts\/{OTHER_ACCOUNT_ID}\/metadata\/open_corporates_url": {
+        "/obp/v1.2.1/banks/{BANK_ID}/accounts/{ACCOUNT_ID}/{VIEW_ID}/other_accounts/{OTHER_ACCOUNT_ID}/metadata/open_corporates_url": {
             "delete": {
                 "summary": "Delete Counterparty Open Corporates URL",
-                "description": "<p>Delete open corporate url of other bank account.<\/p>",
+                "description": "<p>Delete open corporate url of other bank account.</p>",
                 "operationId": "Vv121DeleteCounterpartyOpenCorporatesUrl",
                 "deprecated": 0,
                 "parameters": [
@@ -450,9 +453,9 @@
                     "204": {
                         "description": "Success",
                         "content": {
-                            "application\/json": {
+                            "application/json": {
                                 "schema": {
-                                    "$href": "#\/components\/schemas\/EmptyClassJson"
+                                    "$href": "#/components/schemas/EmptyClassJson"
                                 }
                             }
                         }
@@ -461,7 +464,7 @@
             },
             "post": {
                 "summary": "Add Open Corporates URL to Counterparty",
-                "description": "<p>Add open corporates url to other bank account.<\/p>",
+                "description": "<p>Add open corporates url to other bank account.</p>",
                 "operationId": "Vv121AddCounterpartyOpenCorporatesUrl",
                 "deprecated": 0,
                 "parameters": [
@@ -490,9 +493,9 @@
                     "201": {
                         "description": "Success",
                         "content": {
-                            "application\/json": {
+                            "application/json": {
                                 "schema": {
-                                    "$href": "#\/components\/schemas\/SuccessMessage"
+                                    "$href": "#/components/schemas/SuccessMessage"
                                 }
                             }
                         }
@@ -501,7 +504,7 @@
             },
             "put": {
                 "summary": "Update Open Corporates Url of Counterparty",
-                "description": "<p>Update open corporate url of other bank account.<\/p>",
+                "description": "<p>Update open corporate url of other bank account.</p>",
                 "operationId": "Vv121UpdateCounterpartyOpenCorporatesUrl",
                 "deprecated": 0,
                 "parameters": [
@@ -530,9 +533,9 @@
                     "200": {
                         "description": "Success",
                         "content": {
-                            "application\/json": {
+                            "application/json": {
                                 "schema": {
-                                    "$href": "#\/components\/schemas\/OtherAccountMetadataJSON"
+                                    "$href": "#/components/schemas/OtherAccountMetadataJSON"
                                 }
                             }
                         }
@@ -540,10 +543,10 @@
                 }
             }
         },
-        "\/obp\/v1.2.1\/banks\/{BANK_ID}\/accounts\/{ACCOUNT_ID}\/{VIEW_ID}\/other_accounts\/{OTHER_ACCOUNT_ID}\/metadata\/physical_location": {
+        "/obp/v1.2.1/banks/{BANK_ID}/accounts/{ACCOUNT_ID}/{VIEW_ID}/other_accounts/{OTHER_ACCOUNT_ID}/metadata/physical_location": {
             "delete": {
                 "summary": "Delete Counterparty Physical Location.",
-                "description": "<p>Delete physical location of other bank account.<\/p>",
+                "description": "<p>Delete physical location of other bank account.</p>",
                 "operationId": "Vv121DeleteCounterpartyPhysicalLocation",
                 "deprecated": 0,
                 "parameters": [
@@ -572,9 +575,9 @@
                     "204": {
                         "description": "Success",
                         "content": {
-                            "application\/json": {
+                            "application/json": {
                                 "schema": {
-                                    "$href": "#\/components\/schemas\/EmptyClassJson"
+                                    "$href": "#/components/schemas/EmptyClassJson"
                                 }
                             }
                         }
@@ -583,7 +586,7 @@
             },
             "post": {
                 "summary": "Add physical location to other bank account.",
-                "description": "<p>Add geocoordinates of the counterparty's main location<\/p>",
+                "description": "<p>Add geocoordinates of the counterparty's main location</p>",
                 "operationId": "Vv121AddCounterpartyPhysicalLocation",
                 "deprecated": 0,
                 "parameters": [
@@ -612,9 +615,9 @@
                     "201": {
                         "description": "Success",
                         "content": {
-                            "application\/json": {
+                            "application/json": {
                                 "schema": {
-                                    "$href": "#\/components\/schemas\/SuccessMessage"
+                                    "$href": "#/components/schemas/SuccessMessage"
                                 }
                             }
                         }
@@ -623,7 +626,7 @@
             },
             "put": {
                 "summary": "Update Counterparty Physical Location",
-                "description": "<p>Update geocoordinates of the counterparty's main location<\/p>",
+                "description": "<p>Update geocoordinates of the counterparty's main location</p>",
                 "operationId": "Vv121UpdateCounterpartyPhysicalLocation",
                 "deprecated": 0,
                 "parameters": [
@@ -652,9 +655,9 @@
                     "200": {
                         "description": "Success",
                         "content": {
-                            "application\/json": {
+                            "application/json": {
                                 "schema": {
-                                    "$href": "#\/components\/schemas\/OtherAccountMetadataJSON"
+                                    "$href": "#/components/schemas/OtherAccountMetadataJSON"
                                 }
                             }
                         }
@@ -662,7 +665,7 @@
                 }
             }
         },
-        "\/obp\/v1.2.1\/banks\/{BANK_ID}\/accounts\/{ACCOUNT_ID}\/{VIEW_ID}\/other_accounts\/{OTHER_ACCOUNT_ID}\/metadata\/url": {
+        "/obp/v1.2.1/banks/{BANK_ID}/accounts/{ACCOUNT_ID}/{VIEW_ID}/other_accounts/{OTHER_ACCOUNT_ID}/metadata/url": {
             "delete": {
                 "summary": "Delete url of other bank account.",
                 "description": "",
@@ -694,9 +697,9 @@
                     "204": {
                         "description": "Success",
                         "content": {
-                            "application\/json": {
+                            "application/json": {
                                 "schema": {
-                                    "$href": "#\/components\/schemas\/EmptyClassJson"
+                                    "$href": "#/components/schemas/EmptyClassJson"
                                 }
                             }
                         }
@@ -705,7 +708,7 @@
             },
             "post": {
                 "summary": "Add url to other bank account.",
-                "description": "<p>A url which represents the counterparty (home page url etc.)<\/p>",
+                "description": "<p>A url which represents the counterparty (home page url etc.)</p>",
                 "operationId": "Vv121AddCounterpartyUrl",
                 "deprecated": 0,
                 "parameters": [
@@ -734,9 +737,9 @@
                     "201": {
                         "description": "Success",
                         "content": {
-                            "application\/json": {
+                            "application/json": {
                                 "schema": {
-                                    "$href": "#\/components\/schemas\/SuccessMessage"
+                                    "$href": "#/components/schemas/SuccessMessage"
                                 }
                             }
                         }
@@ -745,7 +748,7 @@
             },
             "put": {
                 "summary": "Update url of other bank account.",
-                "description": "<p>A url which represents the counterparty (home page url etc.)<\/p>",
+                "description": "<p>A url which represents the counterparty (home page url etc.)</p>",
                 "operationId": "Vv121UpdateCounterpartyUrl",
                 "deprecated": 0,
                 "parameters": [
@@ -774,9 +777,9 @@
                     "200": {
                         "description": "Success",
                         "content": {
-                            "application\/json": {
+                            "application/json": {
                                 "schema": {
-                                    "$href": "#\/components\/schemas\/OtherAccountMetadataJSON"
+                                    "$href": "#/components/schemas/OtherAccountMetadataJSON"
                                 }
                             }
                         }
@@ -784,10 +787,10 @@
                 }
             }
         },
-        "\/obp\/v1.2.1\/banks\/{BANK_ID}\/accounts\/{ACCOUNT_ID}\/{VIEW_ID}\/other_accounts\/{OTHER_ACCOUNT_ID}\/private_alias": {
+        "/obp/v1.2.1/banks/{BANK_ID}/accounts/{ACCOUNT_ID}/{VIEW_ID}/other_accounts/{OTHER_ACCOUNT_ID}/private_alias": {
             "delete": {
                 "summary": "Delete Counterparty Private Alias",
-                "description": "<p>Deletes the private alias of the other account OTHER_ACCOUNT_ID.<\/p><p>Authentication is Optional Authentication is required if the view is not public.<\/p>",
+                "description": "<p>Deletes the private alias of the other account OTHER_ACCOUNT_ID.</p><p>Authentication is Optional Authentication is required if the view is not public.</p>",
                 "operationId": "Vv121DeleteCounterpartyPrivateAlias",
                 "deprecated": 0,
                 "parameters": [
@@ -816,9 +819,9 @@
                     "204": {
                         "description": "Success",
                         "content": {
-                            "application\/json": {
+                            "application/json": {
                                 "schema": {
-                                    "$href": "#\/components\/schemas\/EmptyClassJson"
+                                    "$href": "#/components/schemas/EmptyClassJson"
                                 }
                             }
                         }
@@ -827,7 +830,7 @@
             },
             "get": {
                 "summary": "Get Other Account Private Alias",
-                "description": "<p>Returns the private alias of the other account OTHER_ACCOUNT_ID.<\/p><p>Authentication is Optional Authentication is required if the view is not public.<\/p>",
+                "description": "<p>Returns the private alias of the other account OTHER_ACCOUNT_ID.</p><p>Authentication is Optional Authentication is required if the view is not public.</p>",
                 "operationId": "Vv121GetOtherAccountPrivateAlias",
                 "deprecated": 0,
                 "parameters": [
@@ -856,9 +859,9 @@
                     "200": {
                         "description": "Success",
                         "content": {
-                            "application\/json": {
+                            "application/json": {
                                 "schema": {
-                                    "$href": "#\/components\/schemas\/OtherAccountMetadataJSON"
+                                    "$href": "#/components/schemas/OtherAccountMetadataJSON"
                                 }
                             }
                         }
@@ -867,7 +870,7 @@
             },
             "post": {
                 "summary": "Create Other Account Private Alias",
-                "description": "<p>Creates a private alias for the other account OTHER_ACCOUNT_ID.<\/p><p>Authentication is Optional Authentication is required if the view is not public.<\/p>",
+                "description": "<p>Creates a private alias for the other account OTHER_ACCOUNT_ID.</p><p>Authentication is Optional Authentication is required if the view is not public.</p>",
                 "operationId": "Vv121AddOtherAccountPrivateAlias",
                 "deprecated": 0,
                 "parameters": [
@@ -896,9 +899,9 @@
                     "201": {
                         "description": "Success",
                         "content": {
-                            "application\/json": {
+                            "application/json": {
                                 "schema": {
-                                    "$href": "#\/components\/schemas\/SuccessMessage"
+                                    "$href": "#/components/schemas/SuccessMessage"
                                 }
                             }
                         }
@@ -907,7 +910,7 @@
             },
             "put": {
                 "summary": "Update Counterparty Private Alias",
-                "description": "<p>Updates the private alias of the counterparty (AKA other account) OTHER_ACCOUNT_ID.<\/p><p>Authentication is Optional Authentication is required if the view is not public.<\/p>",
+                "description": "<p>Updates the private alias of the counterparty (AKA other account) OTHER_ACCOUNT_ID.</p><p>Authentication is Optional Authentication is required if the view is not public.</p>",
                 "operationId": "Vv121UpdateCounterpartyPrivateAlias",
                 "deprecated": 0,
                 "parameters": [
@@ -936,9 +939,9 @@
                     "200": {
                         "description": "Success",
                         "content": {
-                            "application\/json": {
+                            "application/json": {
                                 "schema": {
-                                    "$href": "#\/components\/schemas\/OtherAccountMetadataJSON"
+                                    "$href": "#/components/schemas/OtherAccountMetadataJSON"
                                 }
                             }
                         }
@@ -946,10 +949,10 @@
                 }
             }
         },
-        "\/obp\/v1.2.1\/banks\/{BANK_ID}\/accounts\/{ACCOUNT_ID}\/{VIEW_ID}\/other_accounts\/{OTHER_ACCOUNT_ID}\/public_alias": {
+        "/obp/v1.2.1/banks/{BANK_ID}/accounts/{ACCOUNT_ID}/{VIEW_ID}/other_accounts/{OTHER_ACCOUNT_ID}/public_alias": {
             "delete": {
                 "summary": "Delete Counterparty Public Alias",
-                "description": "<p>Deletes the public alias of the other account OTHER_ACCOUNT_ID.<\/p><p>Authentication is Optional Authentication is required if the view is not public.<\/p>",
+                "description": "<p>Deletes the public alias of the other account OTHER_ACCOUNT_ID.</p><p>Authentication is Optional Authentication is required if the view is not public.</p>",
                 "operationId": "Vv121DeleteCounterpartyPublicAlias",
                 "deprecated": 0,
                 "parameters": [
@@ -978,9 +981,9 @@
                     "204": {
                         "description": "Success",
                         "content": {
-                            "application\/json": {
+                            "application/json": {
                                 "schema": {
-                                    "$href": "#\/components\/schemas\/EmptyClassJson"
+                                    "$href": "#/components/schemas/EmptyClassJson"
                                 }
                             }
                         }
@@ -989,7 +992,7 @@
             },
             "get": {
                 "summary": "Get public alias of other bank account.",
-                "description": "<p>Returns the public alias of the other account OTHER_ACCOUNT_ID. Authentication is Optional Authentication is Mandatory if the view is not public.<\/p>",
+                "description": "<p>Returns the public alias of the other account OTHER_ACCOUNT_ID. Authentication is Optional Authentication is Mandatory if the view is not public.</p>",
                 "operationId": "Vv121GetCounterpartyPublicAlias",
                 "deprecated": 0,
                 "parameters": [
@@ -1018,9 +1021,9 @@
                     "200": {
                         "description": "Success",
                         "content": {
-                            "application\/json": {
+                            "application/json": {
                                 "schema": {
-                                    "$href": "#\/components\/schemas\/OtherAccountMetadataJSON"
+                                    "$href": "#/components/schemas/OtherAccountMetadataJSON"
                                 }
                             }
                         }
@@ -1029,7 +1032,7 @@
             },
             "post": {
                 "summary": "Add public alias to other bank account.",
-                "description": "<p>Creates the public alias for the other account OTHER_ACCOUNT_ID.<\/p><p>Authentication is Optional Authentication is required if the view is not public.<\/p><p>Note: Public aliases are automatically generated for new 'other accounts \/ counterparties', so this call should only be used if the public alias was deleted.<\/p><p>The VIEW_ID parameter should be a view the caller is permitted to access to and that has permission to create public aliases.<\/p>",
+                "description": "<p>Creates the public alias for the other account OTHER_ACCOUNT_ID.</p><p>Authentication is Optional Authentication is required if the view is not public.</p><p>Note: Public aliases are automatically generated for new 'other accounts / counterparties', so this call should only be used if the public alias was deleted.</p><p>The VIEW_ID parameter should be a view the caller is permitted to access to and that has permission to create public aliases.</p>",
                 "operationId": "Vv121AddCounterpartyPublicAlias",
                 "deprecated": 0,
                 "parameters": [
@@ -1058,9 +1061,9 @@
                     "201": {
                         "description": "Success",
                         "content": {
-                            "application\/json": {
+                            "application/json": {
                                 "schema": {
-                                    "$href": "#\/components\/schemas\/SuccessMessage"
+                                    "$href": "#/components/schemas/SuccessMessage"
                                 }
                             }
                         }
@@ -1069,7 +1072,7 @@
             },
             "put": {
                 "summary": "Update public alias of other bank account.",
-                "description": "<p>Updates the public alias of the other account \/ counterparty OTHER_ACCOUNT_ID.<\/p><p>Authentication is Optional Authentication is required if the view is not public.<\/p>",
+                "description": "<p>Updates the public alias of the other account / counterparty OTHER_ACCOUNT_ID.</p><p>Authentication is Optional Authentication is required if the view is not public.</p>",
                 "operationId": "Vv121UpdateCounterpartyPublicAlias",
                 "deprecated": 0,
                 "parameters": [
@@ -1098,9 +1101,9 @@
                     "200": {
                         "description": "Success",
                         "content": {
-                            "application\/json": {
+                            "application/json": {
                                 "schema": {
-                                    "$href": "#\/components\/schemas\/OtherAccountMetadataJSON"
+                                    "$href": "#/components/schemas/OtherAccountMetadataJSON"
                                 }
                             }
                         }
@@ -1108,10 +1111,10 @@
                 }
             }
         },
-        "\/obp\/v1.2.1\/banks\/{BANK_ID}\/accounts\/{ACCOUNT_ID}\/{VIEW_ID}\/transactions\/{TRANSACTION_ID}\/other_account": {
+        "/obp/v1.2.1/banks/{BANK_ID}/accounts/{ACCOUNT_ID}/{VIEW_ID}/transactions/{TRANSACTION_ID}/other_account": {
             "get": {
                 "summary": "Get Other Account of Transaction",
-                "description": "<p>Get other account of a transaction. Returns details of the other party involved in the transaction, moderated by the <a href=\"#1_2_1-getViewsForBankAccount\">view<\/a> (VIEW_ID).  Authentication via OAuth is required if the view is not public.<\/p>",
+                "description": "<p>Get other account of a transaction. Returns details of the other party involved in the transaction, moderated by the <a href=\"#1_2_1-getViewsForBankAccount\">view</a> (VIEW_ID).  Authentication via OAuth is required if the view is not public.</p>",
                 "operationId": "Vv121GetOtherAccountForTransaction",
                 "deprecated": 0,
                 "parameters": [
@@ -1140,9 +1143,9 @@
                     "200": {
                         "description": "Success",
                         "content": {
-                            "application\/json": {
+                            "application/json": {
                                 "schema": {
-                                    "$href": "#\/components\/schemas\/OtherAccountMetadataJSON"
+                                    "$href": "#/components/schemas/OtherAccountMetadataJSON"
                                 }
                             }
                         }
@@ -1150,10 +1153,10 @@
                 }
             }
         },
-        "\/obp\/v2.2.0\/banks\/{BANK_ID}\/accounts\/{ACCOUNT_ID}\/{VIEW_ID}\/counterparties": {
+        "/obp/v2.2.0/banks/{BANK_ID}/accounts/{ACCOUNT_ID}/{VIEW_ID}/counterparties": {
             "get": {
                 "summary": "Get Counterparties (Explicit).",
-                "description": "<p>Get the Counterparties (Explicit) for the account \/ view.<\/p><p>Authentication is Mandatory<\/p>",
+                "description": "<p>Get the Counterparties (Explicit) for the account / view.</p><p>Authentication is Mandatory</p>",
                 "operationId": "Vv220GetExplictCounterpartiesForAccount",
                 "deprecated": 0,
                 "parameters": [
@@ -1177,9 +1180,9 @@
                     "200": {
                         "description": "Success",
                         "content": {
-                            "application\/json": {
+                            "application/json": {
                                 "schema": {
-                                    "$href": "#\/components\/schemas\/OtherAccountMetadataJSON"
+                                    "$href": "#/components/schemas/OtherAccountMetadataJSON"
                                 }
                             }
                         }
@@ -1188,7 +1191,7 @@
             },
             "post": {
                 "summary": "Create Counterparty (Explicit)",
-                "description": "<p>Create Counterparty (Explicit) for an Account.<\/p><p>In OBP, there are two types of Counterparty.<\/p><ul>  <li>  <p>Explicit Counterparties (those here) which we create explicitly and are used in COUNTERPARTY Transaction Requests<\/p><\/li>  <li>  <p>Implicit Counterparties (AKA Other Accounts) which are generated automatically from the other sides of Transactions.<\/p><\/li><\/ul><p>Explicit Counterparties are created for the account \/ view They are how the user of the view (e.g. account owner) r",
+                "description": "<p>Create Counterparty (Explicit) for an Account.</p><p>In OBP, there are two types of Counterparty.</p><ul>  <li>  <p>Explicit Counterparties (those here) which we create explicitly and are used in COUNTERPARTY Transaction Requests</p></li>  <li>  <p>Implicit Counterparties (AKA Other Accounts) which are generated automatically from the other sides of Transactions.</p></li></ul><p>Explicit Counterparties are created for the account / view They are how the user of the view (e.g. account owner) r",
                 "operationId": "Vv220CreateCounterparty",
                 "deprecated": 0,
                 "parameters": [
@@ -1212,9 +1215,9 @@
                     "201": {
                         "description": "Success",
                         "content": {
-                            "application\/json": {
+                            "application/json": {
                                 "schema": {
-                                    "$href": "#\/components\/schemas\/SuccessMessage"
+                                    "$href": "#/components/schemas/SuccessMessage"
                                 }
                             }
                         }
@@ -1222,10 +1225,10 @@
                 }
             }
         },
-        "\/obp\/v2.2.0\/banks\/{BANK_ID}\/accounts\/{ACCOUNT_ID}\/{VIEW_ID}\/counterparties\/COUNTERPARTY_ID": {
+        "/obp/v2.2.0/banks/{BANK_ID}/accounts/{ACCOUNT_ID}/{VIEW_ID}/counterparties/COUNTERPARTY_ID": {
             "get": {
                 "summary": "Get Counterparty by Counterparty Id.(Explicit).",
-                "description": "<p>Information returned about the Counterparty specified by COUNTERPARTY_ID:<\/p><p>Authentication is Mandatory<\/p>",
+                "description": "<p>Information returned about the Counterparty specified by COUNTERPARTY_ID:</p><p>Authentication is Mandatory</p>",
                 "operationId": "Vv220GetExplictCounterpartyById",
                 "deprecated": 0,
                 "parameters": [
@@ -1249,9 +1252,9 @@
                     "200": {
                         "description": "Success",
                         "content": {
-                            "application\/json": {
+                            "application/json": {
                                 "schema": {
-                                    "$href": "#\/components\/schemas\/OtherAccountMetadataJSON"
+                                    "$href": "#/components/schemas/OtherAccountMetadataJSON"
                                 }
                             }
                         }
@@ -1259,10 +1262,10 @@
                 }
             }
         },
-        "\/obp\/v3.0.0\/banks\/{BANK_ID}\/accounts\/{ACCOUNT_ID}\/{VIEW_ID}\/other_accounts": {
+        "/obp/v3.0.0/banks/{BANK_ID}/accounts/{ACCOUNT_ID}/{VIEW_ID}/other_accounts": {
             "get": {
                 "summary": "Get Other Accounts of one Account.",
-                "description": "<p>Returns data about all the other accounts that have shared at least one transaction with the ACCOUNT_ID at BANK_ID. Authentication is Optional<\/p><p>Authentication is required if the view VIEW_ID is not public.<\/p>",
+                "description": "<p>Returns data about all the other accounts that have shared at least one transaction with the ACCOUNT_ID at BANK_ID. Authentication is Optional</p><p>Authentication is required if the view VIEW_ID is not public.</p>",
                 "operationId": "Vv300GetOtherAccountsForBankAccount",
                 "deprecated": 0,
                 "parameters": [
@@ -1286,9 +1289,9 @@
                     "200": {
                         "description": "Success",
                         "content": {
-                            "application\/json": {
+                            "application/json": {
                                 "schema": {
-                                    "$href": "#\/components\/schemas\/OtherAccountMetadataJSON"
+                                    "$href": "#/components/schemas/OtherAccountMetadataJSON"
                                 }
                             }
                         }
@@ -1296,10 +1299,10 @@
                 }
             }
         },
-        "\/obp\/v3.0.0\/banks\/{BANK_ID}\/accounts\/{ACCOUNT_ID}\/{VIEW_ID}\/other_accounts\/{OTHER_ACCOUNT_ID}": {
+        "/obp/v3.0.0/banks/{BANK_ID}/accounts/{ACCOUNT_ID}/{VIEW_ID}/other_accounts/{OTHER_ACCOUNT_ID}": {
             "get": {
                 "summary": "Get Other Account by Id.",
-                "description": "<p>Returns data about the Other Account that has shared at least one transaction with ACCOUNT_ID at BANK_ID. Authentication is Optional<\/p><p>Authentication is required if the view is not public.<\/p>",
+                "description": "<p>Returns data about the Other Account that has shared at least one transaction with ACCOUNT_ID at BANK_ID. Authentication is Optional</p><p>Authentication is required if the view is not public.</p>",
                 "operationId": "Vv300GetOtherAccountByIdForBankAccount",
                 "deprecated": 0,
                 "parameters": [
@@ -1328,9 +1331,9 @@
                     "200": {
                         "description": "Success",
                         "content": {
-                            "application\/json": {
+                            "application/json": {
                                 "schema": {
-                                    "$href": "#\/components\/schemas\/OtherAccountMetadataJSON"
+                                    "$href": "#/components/schemas/OtherAccountMetadataJSON"
                                 }
                             }
                         }

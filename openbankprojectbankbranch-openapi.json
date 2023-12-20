@@ -4,16 +4,19 @@
         "version": "v3_1_0",
         "title": "OpenBankProject-Bank-Branch",
         "description": "An Open Source API for Banks. (c) TESOBE Ltd. 2011 - 2018. Licensed under the AGPL and commercial licences.",
-        "termsOfService": "http:\/\/exmple.com\/license\/"
+        "termsOfService": "http://exmple.com/license/"
     },
     "servers": [
-        "http:\/\/api.openbankproject.com\/obp-bank-branch"
+        {
+            "description": "An Open Source API for Banks.",
+            "url": "http://api.openbankproject.com/obp-bank-branch"
+        }
     ],
     "paths": {
-        "\/obp\/v2.1.0\/banks\/{BANK_ID}\/branches\/{BRANCH_ID}": {
+        "/obp/v2.1.0/banks/{BANK_ID}/branches/{BRANCH_ID}": {
             "put": {
                 "summary": "Update Branch",
-                "description": "<p>Update an existing branch for a bank account (Authenticated access). Authentication is Mandatory<\/p>",
+                "description": "<p>Update an existing branch for a bank account (Authenticated access). Authentication is Mandatory</p>",
                 "operationId": "Vv210UpdateBranch",
                 "deprecated": 0,
                 "parameters": [
@@ -32,9 +35,9 @@
                     "200": {
                         "description": "Success",
                         "content": {
-                            "application\/json": {
+                            "application/json": {
                                 "schema": {
-                                    "$href": "#\/components\/schemas\/BranchJson"
+                                    "$href": "#/components/schemas/BranchJson"
                                 }
                             }
                         }
@@ -42,10 +45,10 @@
                 }
             }
         },
-        "\/obp\/v3.0.0\/banks\/{BANK_ID}\/branches": {
+        "/obp/v3.0.0/banks/{BANK_ID}/branches": {
             "get": {
                 "summary": "Get Branches for a Bank",
-                "description": "<p>Returns information about branches for a single bank specified by BANK_ID including:<\/p><ul>  <li>Name<\/li>  <li>Address<\/li>  <li>Geo Location<\/li>  <li>License the data under this endpoint is released under<\/li>  <li>Structured opening hours<\/li>  <li>Accessible flag<\/li>  <li>Branch Type<\/li>  <li>More Info<\/li><\/ul><p>Pagination:<\/p><p>By default, 50 records are returned.<\/p><p>You can use the url query parameters <em>limit<\/em> and <em>offset<\/em> for pagination<\/p><p>Authentication is O",
+                "description": "<p>Returns information about branches for a single bank specified by BANK_ID including:</p><ul>  <li>Name</li>  <li>Address</li>  <li>Geo Location</li>  <li>License the data under this endpoint is released under</li>  <li>Structured opening hours</li>  <li>Accessible flag</li>  <li>Branch Type</li>  <li>More Info</li></ul><p>Pagination:</p><p>By default, 50 records are returned.</p><p>You can use the url query parameters <em>limit</em> and <em>offset</em> for pagination</p><p>Authentication is O",
                 "operationId": "Vv300GetBranches",
                 "deprecated": 0,
                 "parameters": [
@@ -59,9 +62,9 @@
                     "200": {
                         "description": "Success",
                         "content": {
-                            "application\/json": {
+                            "application/json": {
                                 "schema": {
-                                    "$href": "#\/components\/schemas\/BranchJson"
+                                    "$href": "#/components/schemas/BranchJson"
                                 }
                             }
                         }
@@ -70,7 +73,7 @@
             },
             "post": {
                 "summary": "Create Branch",
-                "description": "<p>Create Branch for the Bank.<\/p><p>Authentication is Mandatory<\/p><p>OBP-20006: User is missing one or more roles: CanCreateBranch entitlements are required OR CanCreateBranchAtAnyBank<\/p>",
+                "description": "<p>Create Branch for the Bank.</p><p>Authentication is Mandatory</p><p>OBP-20006: User is missing one or more roles: CanCreateBranch entitlements are required OR CanCreateBranchAtAnyBank</p>",
                 "operationId": "Vv300CreateBranch",
                 "deprecated": 0,
                 "parameters": [
@@ -84,9 +87,9 @@
                     "201": {
                         "description": "Success",
                         "content": {
-                            "application\/json": {
+                            "application/json": {
                                 "schema": {
-                                    "$href": "#\/components\/schemas\/BranchJsonV300"
+                                    "$href": "#/components/schemas/BranchJsonV300"
                                 }
                             }
                         }
@@ -94,10 +97,10 @@
                 }
             }
         },
-        "\/obp\/v3.0.0\/banks\/{BANK_ID}\/branches\/{BRANCH_ID}": {
+        "/obp/v3.0.0/banks/{BANK_ID}/branches/{BRANCH_ID}": {
             "get": {
                 "summary": "Get Branch",
-                "description": "<p>Returns information about a single Branch specified by BANK_ID and BRANCH_ID including:<\/p><ul>  <li>Name<\/li>  <li>Address<\/li>  <li>Geo Location<\/li>  <li>License the data under this endpoint is released under.<\/li><\/ul><p>Authentication is Optional<\/p>",
+                "description": "<p>Returns information about a single Branch specified by BANK_ID and BRANCH_ID including:</p><ul>  <li>Name</li>  <li>Address</li>  <li>Geo Location</li>  <li>License the data under this endpoint is released under.</li></ul><p>Authentication is Optional</p>",
                 "operationId": "Vv300GetBranch",
                 "deprecated": 0,
                 "parameters": [
@@ -116,9 +119,9 @@
                     "200": {
                         "description": "Success",
                         "content": {
-                            "application\/json": {
+                            "application/json": {
                                 "schema": {
-                                    "$href": "#\/components\/schemas\/BranchJson"
+                                    "$href": "#/components/schemas/BranchJson"
                                 }
                             }
                         }

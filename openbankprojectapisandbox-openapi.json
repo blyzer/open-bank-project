@@ -4,16 +4,19 @@
         "version": "v3_1_0",
         "title": "OpenBankProject-API-Sandbox",
         "description": "An Open Source API for Banks. (c) TESOBE Ltd. 2011 - 2018. Licensed under the AGPL and commercial licences.",
-        "termsOfService": "http:\/\/exmple.com\/license\/"
+        "termsOfService": "http://exmple.com/license/"
     },
     "servers": [
-        "http:\/\/api.openbankproject.com\/obp-api-sandbox"
+        {
+            "description": "An Open Source API for Banks.",
+            "url": "http://api.openbankproject.com/obp-api-sandbox"
+        }
     ],
     "paths": {
-        "\/obp\/v2.1.0\/sandbox\/data-import": {
+        "/obp/v2.1.0/sandbox/data-import": {
             "post": {
                 "summary": "Create sandbox",
-                "description": "<p>Import bulk data into the sandbox (Authenticated access).<\/p><p>This call can be used to create banks, users, accounts and transactions which are stored in the local RDBMS.<\/p><p>The user needs to have CanCreateSandbox entitlement.<\/p><p>Note: This is a monolithic call. You could also use a combination of endpoints including create bank, create user, create account and create transaction request to create similar data.<\/p><p>An example of an import set of data (json) can be found <a href=\"htt",
+                "description": "<p>Import bulk data into the sandbox (Authenticated access).</p><p>This call can be used to create banks, users, accounts and transactions which are stored in the local RDBMS.</p><p>The user needs to have CanCreateSandbox entitlement.</p><p>Note: This is a monolithic call. You could also use a combination of endpoints including create bank, create user, create account and create transaction request to create similar data.</p><p>An example of an import set of data (json) can be found <a href=\"htt",
                 "operationId": "Vv210SandboxDataImport",
                 "deprecated": 0,
                 "parameters": [],
@@ -21,9 +24,9 @@
                     "201": {
                         "description": "Success",
                         "content": {
-                            "application\/json": {
+                            "application/json": {
                                 "schema": {
-                                    "$href": "#\/components\/schemas\/SuccessMessage"
+                                    "$href": "#/components/schemas/SuccessMessage"
                                 }
                             }
                         }

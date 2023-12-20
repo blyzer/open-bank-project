@@ -1,6 +1,6 @@
 {
     "id": "4fc661206ca2d626b67bde14838f350f",
-    "name": "API URI: \/banks\/{BANK_ID}\/branches\/{BRANCH_ID}",
+    "name": "API URI: /banks/{BANK_ID}/branches/{BRANCH_ID}",
     "description": null,
     "auth": null,
     "events": null,
@@ -12,8 +12,8 @@
         {
             "id": "320018b31785c909aed1a487b6c391d9",
             "name": "Get Branch",
-            "url": "http:\/\/apisandbox.openbankproject.com\/obp\/v3_0_0\/banks\/{BANK_ID}\/branches\/{BRANCH_ID}",
-            "description": "<p>Returns information about a single Branch specified by BANK_ID and BRANCH_ID including:<\/p><ul>  <li>Name<\/li>  <li>Address<\/li>  <li>Geo Location<\/li>  <li>License the data under this endpoint is released under.<\/li><\/ul><p>Authentication is Optional<\/p>",
+            "url": "http://apisandbox.openbankproject.com/obp/v3_0_0/banks/{BANK_ID}/branches/{BRANCH_ID}",
+            "description": "<p>Returns information about a single Branch specified by BANK_ID and BRANCH_ID including:</p><ul>  <li>Name</li>  <li>Address</li>  <li>Geo Location</li>  <li>License the data under this endpoint is released under.</li></ul><p>Authentication is Optional</p>",
             "data": [],
             "dataMode": "raw",
             "headerData": null,
@@ -50,8 +50,8 @@
         {
             "id": "b8467c1c30906f34bf600ae142a3f724",
             "name": "Update Branch",
-            "url": "http:\/\/apisandbox.openbankproject.com\/obp\/v3_0_0\/banks\/{BANK_ID}\/branches\/{BRANCH_ID}",
-            "description": "<p>Update an existing branch for a bank account (Authenticated access). Authentication is Mandatory<\/p>",
+            "url": "http://apisandbox.openbankproject.com/obp/v3_0_0/banks/{BANK_ID}/branches/{BRANCH_ID}",
+            "description": "<p>Update an existing branch for a bank account (Authenticated access). Authentication is Mandatory</p>",
             "data": [],
             "dataMode": "raw",
             "headerData": null,

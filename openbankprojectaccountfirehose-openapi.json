@@ -4,16 +4,19 @@
         "version": "v3_1_0",
         "title": "OpenBankProject-Account-Firehose",
         "description": "An Open Source API for Banks. (c) TESOBE Ltd. 2011 - 2018. Licensed under the AGPL and commercial licences.",
-        "termsOfService": "http:\/\/exmple.com\/license\/"
+        "termsOfService": "http://exmple.com/license/"
     },
     "servers": [
-        "http:\/\/api.openbankproject.com\/obp-account-firehose"
+        {
+            "description": "An Open Source API for Banks.",
+            "url": "http://api.openbankproject.com/obp-account-firehose"
+        }
     ],
     "paths": {
-        "\/obp\/v3.0.0\/banks\/{BANK_ID}\/firehose\/accounts\/{ACCOUNT_ID}\/views\/{VIEW_ID}\/transactions": {
+        "/obp/v3.0.0/banks/{BANK_ID}/firehose/accounts/{ACCOUNT_ID}/views/{VIEW_ID}/transactions": {
             "get": {
                 "summary": "Get Firehose Transactions for Account",
-                "description": "<p>Get Transactions for an Account that has a firehose View.<\/p><p>Allows bulk access to an account's transactions. User must have the CanUseFirehoseAtAnyBank Role<\/p><p>To find ACCOUNT_IDs, use the getFirehoseAccountsAtOneBank call.<\/p><p>For VIEW_ID try 'firehose'<\/p><p>Authentication is Mandatory<\/p>",
+                "description": "<p>Get Transactions for an Account that has a firehose View.</p><p>Allows bulk access to an account's transactions. User must have the CanUseFirehoseAtAnyBank Role</p><p>To find ACCOUNT_IDs, use the getFirehoseAccountsAtOneBank call.</p><p>For VIEW_ID try 'firehose'</p><p>Authentication is Mandatory</p>",
                 "operationId": "Vv300GetFirehoseTransactionsForBankAccount",
                 "deprecated": 0,
                 "parameters": [
@@ -37,9 +40,9 @@
                     "200": {
                         "description": "Success",
                         "content": {
-                            "application\/json": {
+                            "application/json": {
                                 "schema": {
-                                    "$href": "#\/components\/schemas\/TransactionsJsonV300"
+                                    "$href": "#/components/schemas/TransactionsJsonV300"
                                 }
                             }
                         }
@@ -47,10 +50,10 @@
                 }
             }
         },
-        "\/obp\/v3.0.0\/banks\/{BANK_ID}\/firehose\/accounts\/views\/{VIEW_ID}": {
+        "/obp/v3.0.0/banks/{BANK_ID}/firehose/accounts/views/{VIEW_ID}": {
             "get": {
                 "summary": "Get Firehose Accounts at Bank",
-                "description": "<p>Get Accounts which have a firehose view assigned to them.<\/p><p>This endpoint allows bulk access to accounts.<\/p><p>Requires the CanUseFirehoseAtAnyBank Role<\/p><p>To be shown on the list, each Account must have a firehose View linked to it.<\/p><p>For VIEW_ID try 'firehose'<\/p><p>Authentication is Mandatory<\/p>",
+                "description": "<p>Get Accounts which have a firehose view assigned to them.</p><p>This endpoint allows bulk access to accounts.</p><p>Requires the CanUseFirehoseAtAnyBank Role</p><p>To be shown on the list, each Account must have a firehose View linked to it.</p><p>For VIEW_ID try 'firehose'</p><p>Authentication is Mandatory</p>",
                 "operationId": "Vv300GetFirehoseAccountsAtOneBank",
                 "deprecated": 0,
                 "parameters": [
@@ -69,9 +72,9 @@
                     "200": {
                         "description": "Success",
                         "content": {
-                            "application\/json": {
+                            "application/json": {
                                 "schema": {
-                                    "$href": "#\/components\/schemas\/TransactionsJsonV300"
+                                    "$href": "#/components/schemas/TransactionsJsonV300"
                                 }
                             }
                         }
@@ -79,10 +82,10 @@
                 }
             }
         },
-        "\/obp\/v3.1.0\/banks\/{BANK_ID}\/firehose\/customers": {
+        "/obp/v3.1.0/banks/{BANK_ID}/firehose/customers": {
             "get": {
                 "summary": "Get Firehose Customers",
-                "description": "<p>Get Customers that has a firehose View.<\/p><p>Allows bulk access to customers. User must have the CanUseFirehoseAtAnyBank Role<\/p><p>For VIEW_ID try 'firehose'<\/p><p>Possible custom URL parameters for pagination:<\/p><ul>  <li>sort_direction=ASC\/DESC<\/li>  <li>limit=NUMBER ==&gt; default value: 50<\/li>  <li>offset=NUMBER ==&gt; default value: 0<\/li>  <li>from_date=DATE =&gt; default value: date of the oldest customer created (format below)<\/li>  <li>to_date=DATE =&gt; default value: date of th",
+                "description": "<p>Get Customers that has a firehose View.</p><p>Allows bulk access to customers. User must have the CanUseFirehoseAtAnyBank Role</p><p>For VIEW_ID try 'firehose'</p><p>Possible custom URL parameters for pagination:</p><ul>  <li>sort_direction=ASC/DESC</li>  <li>limit=NUMBER ==&gt; default value: 50</li>  <li>offset=NUMBER ==&gt; default value: 0</li>  <li>from_date=DATE =&gt; default value: date of the oldest customer created (format below)</li>  <li>to_date=DATE =&gt; default value: date of th",
                 "operationId": "Vv310GetFirehoseCustomers",
                 "deprecated": 0,
                 "parameters": [
@@ -96,9 +99,9 @@
                     "200": {
                         "description": "Success",
                         "content": {
-                            "application\/json": {
+                            "application/json": {
                                 "schema": {
-                                    "$href": "#\/components\/schemas\/TransactionsJsonV300"
+                                    "$href": "#/components/schemas/TransactionsJsonV300"
                                 }
                             }
                         }

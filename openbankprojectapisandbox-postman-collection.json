@@ -12,8 +12,8 @@
         {
             "id": "1879a441bf95cce61bf732b730549766",
             "name": "Create sandbox",
-            "url": "http:\/\/api.openbankproject.com\/obp-api-sandbox\/obp\/v2.1.0\/sandbox\/data-import",
-            "description": "<p>Import bulk data into the sandbox (Authenticated access).<\/p><p>This call can be used to create banks, users, accounts and transactions which are stored in the local RDBMS.<\/p><p>The user needs to have CanCreateSandbox entitlement.<\/p><p>Note: This is a monolithic call. You could also use a combination of endpoints including create bank, create user, create account and create transaction request to create similar data.<\/p><p>An example of an import set of data (json) can be found <a href=\"htt",
+            "url": "http://api.openbankproject.com/obp-api-sandbox/obp/v2.1.0/sandbox/data-import",
+            "description": "<p>Import bulk data into the sandbox (Authenticated access).</p><p>This call can be used to create banks, users, accounts and transactions which are stored in the local RDBMS.</p><p>The user needs to have CanCreateSandbox entitlement.</p><p>Note: This is a monolithic call. You could also use a combination of endpoints including create bank, create user, create account and create transaction request to create similar data.</p><p>An example of an import set of data (json) can be found <a href=\"htt",
             "data": [],
             "dataMode": "raw",
             "headerData": null,

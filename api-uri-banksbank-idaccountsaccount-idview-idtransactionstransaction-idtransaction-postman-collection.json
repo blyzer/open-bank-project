@@ -1,6 +1,6 @@
 {
     "id": "26305b1f29b99ce01a072e1e31c3dd92",
-    "name": "API URI: \/banks\/{BANK_ID}\/accounts\/{ACCOUNT_ID}\/{VIEW_ID}\/transactions\/{TRANSACTION_ID}\/transaction",
+    "name": "API URI: /banks/{BANK_ID}/accounts/{ACCOUNT_ID}/{VIEW_ID}/transactions/{TRANSACTION_ID}/transaction",
     "description": null,
     "auth": null,
     "events": null,
@@ -12,8 +12,8 @@
         {
             "id": "e58924f3ac0ae32c48150a8a9faa3df2",
             "name": "Get Transaction by Id.",
-            "url": "http:\/\/apisandbox.openbankproject.com\/obp\/v3_0_0\/banks\/{BANK_ID}\/accounts\/{ACCOUNT_ID}\/{VIEW_ID}\/transactions\/{TRANSACTION_ID}\/transaction",
-            "description": "<p>Returns one transaction specified by TRANSACTION_ID of the account ACCOUNT_ID and <a href=\"#1_2_1-getViewsForBankAccount\">moderated<\/a> by the view (VIEW_ID).<\/p><p>Authentication is Optional Authentication is required if the view is not public.<\/p>",
+            "url": "http://apisandbox.openbankproject.com/obp/v3_0_0/banks/{BANK_ID}/accounts/{ACCOUNT_ID}/{VIEW_ID}/transactions/{TRANSACTION_ID}/transaction",
+            "description": "<p>Returns one transaction specified by TRANSACTION_ID of the account ACCOUNT_ID and <a href=\"#1_2_1-getViewsForBankAccount\">moderated</a> by the view (VIEW_ID).</p><p>Authentication is Optional Authentication is required if the view is not public.</p>",
             "data": [],
             "dataMode": "raw",
             "headerData": null,
